@@ -1,0 +1,64 @@
+name: Daily Video Pipeline
+
+on:
+  schedule:
+    # Morning run: ~8:00am Belfast time (currently BST = UTC+1)
+    - cron: "0 7 * * *"
+    # Evening run: ~6:00pm Belfast time (currently BST = UTC+1)
+    - cron: "0 17 * * *"
+    # NOTE: GitHub Actions cron is always UTC and does NOT auto-adjust
+    # for daylight saving. When UK clocks go back in autumn (GMT,
+    # UTC+0), shift both times back by 1 hour (0 8 * * * and 0 18 * * *)
+    # to keep the same real-world posting times. Reverse the change
+    # each spring.
+  workflow_dispatch: {}  # allows manual "Run workflow" trigger for testing
+
+jobs:
+  generate-and-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_script.py
+
+      - name: Generate AI video clips (Kling)
+        env:
+          KLING_API_KEY: ${{ secrets.KLING_API_KEY }}
+        run: python scripts/generate_clips.py
+
+      - name: Assemble final video (JSON2Video)
+        env:
+          JSON2VIDEO_API_KEY: ${{ secrets.JSON2VIDEO_API_KEY }}
+        run: python scripts/assemble_video.py
+
+      - name: Upload to YouTube
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python scripts/upload_youtube.py
+
+      - name: Upload artifacts for debugging
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-output
+          path: |
+            script.json
+            clip_manifest.json
+            final_video.mp4
+          retention-days: 3
