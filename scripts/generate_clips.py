@@ -31,10 +31,16 @@ class InsufficientCreditsError(Exception):
 
 def start_generation(scene: dict) -> str:
     """Kick off a Kling generation job for one scene. Returns task_id."""
+    # Kling only accepts duration "5" or "10" (as strings) - round to
+    # whichever is closer to the scene's intended length.
+    duration = "5" if scene["duration_seconds"] <= 7 else "10"
+
     payload = {
-        "model_name": "kling-v2.6-pro",
+        "model_name": "kling-v2-6",
         "prompt": scene["visual_prompt"],
-        "duration": str(min(max(scene["duration_seconds"], 3), 10)),
+        "negative_prompt": "",
+        "duration": duration,
+        "mode": "pro",
         "aspect_ratio": "9:16",
     }
 
@@ -50,6 +56,9 @@ def start_generation(scene: dict) -> str:
             "Kling API: insufficient balance. Top up credits at "
             "kling.ai before re-running this workflow."
         )
+
+    if resp.status_code == 400:
+        raise RuntimeError(f"Kling API rejected the request: {resp.text}")
 
     resp.raise_for_status()
     data = resp.json()
