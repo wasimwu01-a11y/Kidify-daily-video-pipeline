@@ -1,17 +1,16 @@
 """
 Sends each scene's visual_prompt to Wan 2.6 (via fal.ai) and gets back
-a moving video clip URL per scene. Runs after generate_script.py.
+a moving video clip URL per scene.
 
-Switched from Kling to fal.ai/Wan 2.6 because:
-- Kling's official platform currently has no self-serve top-up (only
-  "contact sales"), which breaks unattended automation
-- fal.ai has instant card-based billing
-- Wan 2.6 is cheaper per-second than Kling and has explicit tooling
-  for character consistency across shots (useful for recurring
-  characters like brainrot-skit characters)
+RESUME SUPPORT: if clip_manifest.json already exists (loaded from a
+previous run's checkpoint), scenes already present in it are SKIPPED -
+only missing scenes are generated. This means a run that dies partway
+through (insufficient credits, network issue, etc.) never wastes the
+clips it already paid for.
 
-Handles insufficient-balance explicitly so failures are clear in the
-GitHub Actions log rather than a vague timeout.
+Progress is saved to disk after EVERY successful clip, not just at the
+end - so even a hard crash mid-run leaves recoverable progress on disk
+for the workflow to checkpoint.
 """
 
 import os
@@ -38,9 +37,6 @@ class InsufficientCreditsError(Exception):
 
 
 def start_generation(scene: dict, max_retries: int = 3) -> dict:
-    """Kick off a Wan 2.6 generation job for one scene.
-    Returns dict with status_url and response_url."""
-    # Wan 2.6 accepts 5 or 10 second durations
     duration = "5" if scene["duration_seconds"] <= 7 else "10"
 
     payload = {
@@ -83,7 +79,6 @@ def start_generation(scene: dict, max_retries: int = 3) -> dict:
 
 
 def poll_for_result(urls: dict) -> str:
-    """Poll until the clip is ready. Returns the video download URL."""
     for attempt in range(MAX_POLL_ATTEMPTS):
         resp = requests.get(urls["status_url"], headers=HEADERS, timeout=30)
         resp.raise_for_status()
@@ -113,44 +108,63 @@ def poll_for_result(urls: dict) -> str:
     raise TimeoutError("fal.ai task did not finish in time")
 
 
-def generate_all_clips(script: dict, output_dir: str) -> list[dict]:
-    os.makedirs(output_dir, exist_ok=True)
-    clip_manifest = []
+def load_existing_manifest(manifest_path: str) -> list[dict]:
+    if os.path.exists(manifest_path):
+        with open(manifest_path) as f:
+            existing = json.load(f)
+        if existing:
+            print(f"Resuming: found {len(existing)} already-generated clip(s) in {manifest_path}")
+        return existing
+    return []
+
+
+def save_manifest(manifest: list[dict], manifest_path: str):
+    with open(manifest_path, "w") as f:
+        json.dump(manifest, f, indent=2)
+
+
+def generate_scene_with_retry(scene: dict):
+    try:
+        urls = start_generation(scene)
+        return poll_for_result(urls)
+    except RuntimeError as e:
+        if "content moderation" in str(e).lower() or "422" in str(e):
+            print(f"  Scene flagged, retrying with softened prompt: {e}")
+            softened_scene = dict(scene)
+            softened_scene["visual_prompt"] = (
+                scene["visual_prompt"]
+                .replace("crash", "bump")
+                .replace("snap", "wobble")
+                .replace("face-plant", "plop down")
+                .replace("collide", "bounce off")
+            )
+            urls = start_generation(softened_scene)
+            return poll_for_result(urls)
+        raise
+
+
+def generate_all_clips(script: dict, manifest_path: str) -> list[dict]:
+    clip_manifest = load_existing_manifest(manifest_path)
+    already_done_ids = {c["scene_id"] for c in clip_manifest}
 
     for scene in script["scenes"]:
+        if scene["id"] in already_done_ids:
+            print(f"Skipping {scene['id']} - already generated in a previous run.")
+            continue
+
         print(f"Generating clip for {scene['id']}...")
         try:
-            urls = start_generation(scene)
-            video_url = poll_for_result(urls)
+            video_url = generate_scene_with_retry(scene)
         except InsufficientCreditsError as e:
+            # Save whatever we have so far before failing - this is
+            # what makes the resume system actually work.
+            save_manifest(clip_manifest, manifest_path)
             print(f"::error::{e}")
             sys.exit(1)
-        except RuntimeError as e:
-            if "content moderation" in str(e).lower() or "422" in str(e):
-                # Likely a flagged prompt - retry once with a softened
-                # version rather than failing the whole video over one
-                # scene. Strips common trigger words as a blunt fallback.
-                print(f"  Scene flagged, retrying with softened prompt: {e}")
-                softened_scene = dict(scene)
-                softened_scene["visual_prompt"] = (
-                    scene["visual_prompt"]
-                    .replace("crash", "bump")
-                    .replace("snap", "wobble")
-                    .replace("face-plant", "plop down")
-                    .replace("collide", "bounce off")
-                )
-                try:
-                    urls = start_generation(softened_scene)
-                    video_url = poll_for_result(urls)
-                except Exception as retry_error:
-                    raise RuntimeError(
-                        f"Scene {scene['id']} failed even after softening "
-                        f"the prompt. Original error: {e}. Retry error: "
-                        f"{retry_error}. Consider reviewing this scene's "
-                        f"visual_prompt manually."
-                    )
-            else:
-                raise
+        except Exception as e:
+            save_manifest(clip_manifest, manifest_path)
+            print(f"::error::Scene {scene['id']} failed: {e}")
+            sys.exit(1)
 
         clip_manifest.append({
             "scene_id": scene["id"],
@@ -159,6 +173,9 @@ def generate_all_clips(script: dict, output_dir: str) -> list[dict]:
             "on_screen_text": scene["on_screen_text"],
             "duration_seconds": scene["duration_seconds"],
         })
+        # Save after EVERY clip, not just at the end - protects
+        # progress even if the process dies unexpectedly.
+        save_manifest(clip_manifest, manifest_path)
         print(f"  -> clip ready: {video_url}")
 
     return clip_manifest
@@ -166,15 +183,11 @@ def generate_all_clips(script: dict, output_dir: str) -> list[dict]:
 
 if __name__ == "__main__":
     script_path = os.environ.get("SCRIPT_OUTPUT_PATH", "script.json")
-    output_dir = os.environ.get("CLIPS_OUTPUT_DIR", "clips")
     manifest_path = os.environ.get("MANIFEST_OUTPUT_PATH", "clip_manifest.json")
 
     with open(script_path) as f:
         script = json.load(f)
 
-    manifest = generate_all_clips(script, output_dir)
-
-    with open(manifest_path, "w") as f:
-        json.dump(manifest, f, indent=2)
+    manifest = generate_all_clips(script, manifest_path)
 
     print(f"All clips generated. Manifest saved to {manifest_path}")
