@@ -61,13 +61,12 @@ def build_movie_json(manifest: list[dict], script: dict) -> dict:
         "height": 1920,
         "quality": "high",
         "scenes": scenes,
-        "elements": [
-            {
-                "type": "audio",
-                "src": "https://assets.json2video.com/music/kids-upbeat-1.mp3",
-                "volume": 0.15,
-            }
-        ],
+        # No background music for now - JSON2Video needs a real,
+        # publicly-hosted MP3 URL (it has no built-in music library).
+        # To add music later: host a royalty-free track somewhere
+        # public (e.g. commit an mp3 into this repo and reference it
+        # via its raw.githubusercontent.com URL), then add an "audio"
+        # element here pointing to that URL.
     }
 
 
