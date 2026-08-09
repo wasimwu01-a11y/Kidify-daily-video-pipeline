@@ -35,18 +35,25 @@ trigger a run outside the daily schedule (useful for testing).
 
 ## Checkpoint / resume system (protects your fal.ai credits)
 
-Right after clips are generated, the workflow commits them into a
-`pending_video/` folder in this repo before attempting assembly or
-upload. If either of those later steps fails, the clips aren't lost —
-the *next* run detects `pending_video/` and resumes straight from
-assembly, skipping script + clip generation entirely (no wasted
-credits). Once a video uploads successfully, `pending_video/` is
-automatically cleared so the next scheduled run starts fresh.
+After EVERY successfully generated clip (not just at the end), progress
+is saved. If the run then fails for any reason - out of credits, a
+network blip, JSON2Video or YouTube erroring - the workflow still
+commits whatever clips were generated into a `pending_video/` folder
+in this repo before ending.
 
-If you ever want to manually discard a stuck pending video (e.g. you
-decided you don't want that particular one after all), just delete the
-`pending_video/` folder from the repo yourself and commit - the next
-run will generate a brand new video from scratch.
+On the *next* run, it loads that pending state and **only generates
+the clips that are still missing** - already-generated clips are
+never re-paid-for or regenerated. Once all clips exist, it proceeds to
+assembly and upload automatically. Once upload succeeds, `pending_video/`
+is cleared so the next scheduled run starts a brand new video.
+
+If clip generation is still incomplete (e.g. you haven't topped up
+credits yet), the workflow simply stops cleanly after checkpointing -
+no error spam, it'll just pick up again on the next scheduled run (or
+you can trigger it manually once you've topped up).
+
+To manually discard a stuck pending video, delete the `pending_video/`
+folder from the repo and commit - the next run starts fresh.
 
 ## Common failure: insufficient fal.ai credits
 
