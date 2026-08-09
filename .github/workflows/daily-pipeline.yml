@@ -13,6 +13,9 @@ on:
     # each spring.
   workflow_dispatch: {}  # allows manual "Run workflow" trigger for testing
 
+permissions:
+  contents: write  # needed so the workflow can commit checkpoint files
+
 jobs:
   generate-and-upload:
     runs-on: ubuntu-latest
@@ -30,15 +33,45 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Check for a pending (already-paid-for) video
+        id: check_pending
+        run: |
+          if [ -f "pending_video/clip_manifest.json" ]; then
+            echo "has_pending=true" >> "$GITHUB_OUTPUT"
+            echo "Found a pending video from a previous run that didn't finish - resuming from there instead of generating new clips."
+          else
+            echo "has_pending=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Load pending video state
+        if: steps.check_pending.outputs.has_pending == 'true'
+        run: |
+          cp pending_video/script.json script.json
+          cp pending_video/clip_manifest.json clip_manifest.json
+
       - name: Generate script
+        if: steps.check_pending.outputs.has_pending == 'false'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/generate_script.py
 
       - name: Generate AI video clips (Wan 2.6 via fal.ai)
+        if: steps.check_pending.outputs.has_pending == 'false'
         env:
           FAL_API_KEY: ${{ secrets.FAL_API_KEY }}
         run: python scripts/generate_clips.py
+
+      - name: Save checkpoint (clips are paid for - protect them)
+        if: steps.check_pending.outputs.has_pending == 'false'
+        run: |
+          mkdir -p pending_video
+          cp script.json pending_video/script.json
+          cp clip_manifest.json pending_video/clip_manifest.json
+          git config user.name "kidify-pipeline-bot"
+          git config user.email "actions@github.com"
+          git add pending_video/
+          git commit -m "Checkpoint: clips generated, awaiting assembly/upload" || echo "Nothing to commit"
+          git push
 
       - name: Assemble final video (JSON2Video)
         env:
@@ -51,6 +84,15 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: python scripts/upload_youtube.py
+
+      - name: Clear checkpoint (upload succeeded)
+        if: success()
+        run: |
+          git config user.name "kidify-pipeline-bot"
+          git config user.email "actions@github.com"
+          git rm -r --ignore-unmatch pending_video/
+          git commit -m "Checkpoint cleared: video uploaded successfully" || echo "Nothing to commit"
+          git push
 
       - name: Upload artifacts for debugging
         if: always()
