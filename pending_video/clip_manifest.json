@@ -1,0 +1,30 @@
+[
+  {
+    "scene_id": "scene_1",
+    "clip_url": "https://v3b.fal.media/files/b/0aa5acf0/jwceevejOv2anNCGn6KE4_7bcyhExA.mp4",
+    "narration": "Deep in the sparkling ocean lived a tiny fish named Glimmerfish \u2014 and she had the brightest glow in the whole sea!",
+    "on_screen_text": "Meet GLIMMERFISH! \u2728",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_2",
+    "clip_url": "https://v3b.fal.media/files/b/0aa5acf5/QKYVHtJDnNrgVCxPD7yTK_g05bsR0W.mp4",
+    "narration": "One morning, she spotted something strange on the ocean floor \u2014 a big glowing star, just sitting in the sand!",
+    "on_screen_text": "A STAR! \u2b50",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_3",
+    "clip_url": "https://v3b.fal.media/files/b/0aa5ad0d/dYog-pK8zM8LH802uFhbE_lNgd5jKd.mp4",
+    "narration": "She tried to lift it \u2014 but it was SO heavy! She wiggled and wobbled and spun in circles, but the star didn't budge!",
+    "on_screen_text": "Too heavy! \ud83d\ude05",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "clip_url": "https://v3b.fal.media/files/b/0aa5ad13/7vaI7F7aJ_5jE0GcFOPWc_q2thtulV.mp4",
+    "narration": "Then Glimmerfish had a brilliant idea! She called ALL her friends \u2014 the crab, the seahorse, and even a giant friendly jellyfish \u2014 and together they pushed\u2026 and up, up, UP the star floated!",
+    "on_screen_text": "TEAMWORK! \ud83d\ude4c",
+    "duration_seconds": 6
+  }
+]

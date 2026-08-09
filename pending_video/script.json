@@ -1,0 +1,50 @@
+{
+  "format": "cartoon_adventure",
+  "title": "Glimmerfish and the Sunken Star",
+  "youtube_title": "\ud83c\udf1f The Tiny Fish Who Found a Falling Star! #Shorts",
+  "youtube_description": "Deep under the sea, a brave little glowing fish named Glimmerfish discovers something magical on the ocean floor \u2014 but can she bring it back to the sky? Watch to find out! \ud83d\udc1f\u2728 Come back tomorrow for Glimmerfish's next big adventure!\n\n#Shorts #KidsCartoon #Kidify #CartoonAdventure #OceanAnimals #KidsYouTube #AnimatedShorts #FunForKids #GlimmerfishAdventure",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 4,
+      "narration": "Deep in the sparkling ocean lived a tiny fish named Glimmerfish \u2014 and she had the brightest glow in the whole sea!",
+      "visual_prompt": "Bright, colorful underwater world with coral reefs in pink, purple, and orange. A small, round fish with shimmering golden scales and big friendly eyes swims into frame from the left, leaving a trail of soft glowing light. Bubbles float upward around her. Slow gentle camera pan right following her swim. Cheerful and vibrant, cartoon style for young children.",
+      "on_screen_text": "Meet GLIMMERFISH! \u2728"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 5,
+      "narration": "One morning, she spotted something strange on the ocean floor \u2014 a big glowing star, just sitting in the sand!",
+      "visual_prompt": "Ocean floor covered in soft white sand and gently swaying sea plants. A large five-pointed star glows with warm yellow and white light, half-buried in the sand. Glimmerfish swims down toward it, eyes wide with wonder, tilting her head curiously side to side. Small fish and a friendly crab peek out from behind coral to look too. Camera slowly zooms in on the star. Bright, magical, cartoon style.",
+      "on_screen_text": "A STAR! \u2b50"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 5,
+      "narration": "She tried to lift it \u2014 but it was SO heavy! She wiggled and wobbled and spun in circles, but the star didn't budge!",
+      "visual_prompt": "Glimmerfish wraps her tiny fins around the glowing star and strains with effort. Her cheeks puff out comically, her body wiggles and wobbles like a wobbling spinning top, and she spins in a silly circle, fins flailing. The star stays perfectly still in the sand. Small bubbles pop around her from the effort. Her friends \u2014 a wide-eyed orange crab and a purple spotted seahorse \u2014 watch from nearby and giggle. Cartoon slapstick energy, bouncy and silly, no impacts or injuries.",
+      "on_screen_text": "Too heavy! \ud83d\ude05"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 6,
+      "narration": "Then Glimmerfish had a brilliant idea! She called ALL her friends \u2014 the crab, the seahorse, and even a giant friendly jellyfish \u2014 and together they pushed\u2026 and up, up, UP the star floated!",
+      "visual_prompt": "Glimmerfish swims fast between her friends \u2014 a round orange crab, a purple spotted seahorse, and a big soft pink translucent jellyfish with a kind smiley face. They all gather around the glowing star and gently push it upward together. The star slowly rises through the water, glowing brighter as it goes up, trailing sparkles. The friends cheer with big smiles, waving fins and claws. Camera pans upward following the star rising toward the shimmering surface of the water. Joyful and colorful cartoon style.",
+      "on_screen_text": "TEAMWORK! \ud83d\ude4c"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "The star burst through the surface and shot back into the sky \u2014 sparkling brighter than ever! The whole ocean lit up with golden light!",
+      "visual_prompt": "The glowing star bursts through the shimmering surface of the ocean in an explosion of golden sparkles and light beams, soaring upward into a soft twilight sky filled with other twinkling stars. Below, the ocean surface glitters with reflected golden light. Glimmerfish and her friends pop their heads above the water, eyes wide with joy, looking up at the sky. Wide cinematic shot showing the sky and ocean together. Magical, warm, and triumphant feeling. Cartoon style.",
+      "on_screen_text": "\u2728 Back where it belongs!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 4,
+      "narration": "And from that night on, Glimmerfish's glow shone even brighter \u2014 because the star said thank you! Come back tomorrow\u2026 because something is falling from the sky again!",
+      "visual_prompt": "Glimmerfish floats happily in the calm ocean at night, glowing twice as bright as before, golden light radiating softly all around her. Her friends float beside her smiling. Above the water visible through a gentle wave, the night sky twinkles with stars. One star in the sky blinks playfully as if winking. The camera slowly zooms out to show the whole magical glowing ocean scene. Warm, dreamy, and cozy cartoon style. End-card feel.",
+      "on_screen_text": "See you TOMORROW! \ud83c\udf1f"
+    }
+  ]
+}
