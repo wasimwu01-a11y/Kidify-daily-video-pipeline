@@ -1,0 +1,51 @@
+[
+  {
+    "scene_id": "scene_1",
+    "clip_url": "https://v3b.fal.media/files/b/0aa594d4/9ufY4B0Z3DHgMh-8y5QXI_s7jU04g6.mp4",
+    "narration": "One of these boxes hides a golden treasure \u2014 but which one IS it?!",
+    "on_screen_text": "WHICH BOX?! \ud83c\udf81",
+    "duration_seconds": 2
+  },
+  {
+    "scene_id": "scene_2",
+    "clip_url": "https://v3b.fal.media/files/b/0aa594db/LldXEXMOWvADiTlzpL2E-_4OyrWFtO.mp4",
+    "narration": "Is it the red box? The blue box? Or the green box? Pick your favourite \u2014 fast!",
+    "on_screen_text": "RED? BLUE? GREEN? \ud83e\udd14",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "clip_url": "https://v3b.fal.media/files/b/0aa594e1/FmFxq3JhbxvK6ROyZrH2C_okzOsBEx.mp4",
+    "narration": "Okay okay \u2014 countdown time! Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd25",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "clip_url": "https://v3b.fal.media/files/b/0aa594e6/CfTofyVoVvzWfjjokYh1x_N7rtGTWi.mp4",
+    "narration": "Let's check the RED box first! The lid flies open and\u2026 it's a rubber chicken! Bock bock! Not the treasure!",
+    "on_screen_text": "\u274c NOPE! Rubber Chicken! \ud83d\udc14",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_5",
+    "clip_url": "https://v3b.fal.media/files/b/0aa594ed/pPFhTmDJ92J2yAV_XPNNp_kf1dvORa.mp4",
+    "narration": "Now the GREEN box! It pops open and\u2026 oh wow, it's a giant pile of spaghetti! That's NOT it either!",
+    "on_screen_text": "\u274c NOPE! Giant Spaghetti! \ud83c\udf5d",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "clip_url": "https://v3b.fal.media/files/b/0aa594f3/U4odcWVLkGLrMhgBTsYRC_Ll8lzzuh.mp4",
+    "narration": "That means\u2026 the BLUE box! Let's open it! The lid shoots off and \u2014 YES! It's the golden treasure! You got it!",
+    "on_screen_text": "\u2705 THE BLUE BOX WINS! \ud83c\udfc6\u2728",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_7",
+    "clip_url": "https://v3b.fal.media/files/b/0aa5950a/0FSV9QbbRpWCF8xIxe-F3_d88ZEF0V.mp4",
+    "narration": "Amazing! Did you pick blue? Come back tomorrow for Level 2 \u2014 it's going to be even trickier!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\ude80",
+    "duration_seconds": 4
+  }
+]
