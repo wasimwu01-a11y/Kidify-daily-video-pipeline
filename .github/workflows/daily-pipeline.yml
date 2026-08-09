@@ -2,19 +2,14 @@ name: Daily Video Pipeline
 
 on:
   schedule:
-    # Morning run: ~8:00am Belfast time (currently BST = UTC+1)
     - cron: "0 7 * * *"
-    # Evening run: ~6:00pm Belfast time (currently BST = UTC+1)
     - cron: "0 17 * * *"
-    # NOTE: GitHub Actions cron is always UTC and does NOT auto-adjust
-    # for daylight saving. When UK clocks go back in autumn (GMT,
-    # UTC+0), shift both times back by 1 hour (0 8 * * * and 0 18 * * *)
-    # to keep the same real-world posting times. Reverse the change
-    # each spring.
-  workflow_dispatch: {}  # allows manual "Run workflow" trigger for testing
+    # NOTE: GitHub Actions cron is always UTC, no daylight-saving
+    # auto-adjust. Shift both by 1 hour when UK clocks change.
+  workflow_dispatch: {}
 
 permissions:
-  contents: write  # needed so the workflow can commit checkpoint files
+  contents: write  # needed to commit checkpoint files
 
 jobs:
   generate-and-upload:
@@ -33,12 +28,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Check for a pending (already-paid-for) video
+      - name: Check for a pending (partially-paid-for) video
         id: check_pending
         run: |
-          if [ -f "pending_video/clip_manifest.json" ]; then
+          if [ -f "pending_video/script.json" ]; then
             echo "has_pending=true" >> "$GITHUB_OUTPUT"
-            echo "Found a pending video from a previous run that didn't finish - resuming from there instead of generating new clips."
+            echo "Found a pending video from a previous run - resuming."
           else
             echo "has_pending=false" >> "$GITHUB_OUTPUT"
           fi
@@ -47,7 +42,9 @@ jobs:
         if: steps.check_pending.outputs.has_pending == 'true'
         run: |
           cp pending_video/script.json script.json
-          cp pending_video/clip_manifest.json clip_manifest.json
+          if [ -f "pending_video/clip_manifest.json" ]; then
+            cp pending_video/clip_manifest.json clip_manifest.json
+          fi
 
       - name: Generate script
         if: steps.check_pending.outputs.has_pending == 'false'
@@ -56,37 +53,50 @@ jobs:
         run: python scripts/generate_script.py
 
       - name: Generate AI video clips (Wan 2.6 via fal.ai)
-        if: steps.check_pending.outputs.has_pending == 'false'
+        id: generate_clips
         env:
           FAL_API_KEY: ${{ secrets.FAL_API_KEY }}
         run: python scripts/generate_clips.py
 
-      - name: Save checkpoint (clips are paid for - protect them)
-        if: steps.check_pending.outputs.has_pending == 'false'
+      - name: Save checkpoint (protects clips you already paid for)
+        if: always()
         run: |
-          mkdir -p pending_video
-          cp script.json pending_video/script.json
-          cp clip_manifest.json pending_video/clip_manifest.json
-          git config user.name "kidify-pipeline-bot"
-          git config user.email "actions@github.com"
-          git add pending_video/
-          git commit -m "Checkpoint: clips generated, awaiting assembly/upload" || echo "Nothing to commit"
-          git push
+          if [ -f "clip_manifest.json" ] && [ -f "script.json" ]; then
+            mkdir -p pending_video
+            cp script.json pending_video/script.json
+            cp clip_manifest.json pending_video/clip_manifest.json
+            git config user.name "kidify-pipeline-bot"
+            git config user.email "actions@github.com"
+            git add pending_video/
+            git commit -m "Checkpoint: clip progress saved" || echo "Nothing new to commit"
+            git push
+          else
+            echo "No clip progress to checkpoint yet."
+          fi
+
+      - name: Check if video is complete
+        id: check_complete
+        if: always()
+        run: python scripts/check_complete.py
 
       - name: Assemble final video (JSON2Video)
+        id: assemble
+        if: always() && steps.check_complete.outputs.complete == 'true'
         env:
           JSON2VIDEO_API_KEY: ${{ secrets.JSON2VIDEO_API_KEY }}
         run: python scripts/assemble_video.py
 
       - name: Upload to YouTube
+        id: upload
+        if: always() && steps.check_complete.outputs.complete == 'true' && steps.assemble.outcome == 'success'
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: python scripts/upload_youtube.py
 
-      - name: Clear checkpoint (upload succeeded)
-        if: success()
+      - name: Clear checkpoint (upload succeeded - video is fully posted)
+        if: always() && steps.upload.outcome == 'success'
         run: |
           git config user.name "kidify-pipeline-bot"
           git config user.email "actions@github.com"
