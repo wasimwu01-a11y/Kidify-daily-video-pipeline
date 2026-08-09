@@ -92,6 +92,12 @@ def poll_for_result(urls: dict) -> str:
 
         if status == "COMPLETED":
             result_resp = requests.get(urls["response_url"], headers=HEADERS, timeout=30)
+            if result_resp.status_code == 422:
+                raise RuntimeError(
+                    f"fal.ai rejected this clip at the result stage (422). "
+                    f"This usually means the prompt was flagged by content "
+                    f"moderation. Response: {result_resp.text}"
+                )
             result_resp.raise_for_status()
             result = result_resp.json()
             video_url = result.get("video", {}).get("url")
