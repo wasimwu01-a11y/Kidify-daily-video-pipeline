@@ -39,7 +39,7 @@ def build_movie_json(manifest: list[dict], script: dict) -> dict:
                 {
                     "type": "voice",
                     "text": scene["narration"],
-                    "voice": "en-US-Neural2-F",
+                    "voice": "en-US-EmmaMultilingualNeural",
                 },
                 *([{
                     "type": "text",
