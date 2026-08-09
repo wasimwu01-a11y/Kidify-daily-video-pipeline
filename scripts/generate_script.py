@@ -86,6 +86,18 @@ invented specifically for this channel. This is a hard requirement,
 not a style preference - using real IP risks copyright strikes and
 channel termination.
 
+CRITICAL RULE - avoid injury/impact imagery in visual prompts:
+AI video generation safety filters often reject prompts describing
+things like "snaps forward," "face-plants," "crashes into," ropes
+combined with sudden force, or any wording that reads as a character
+being hurt or in an impact, even in obviously silly cartoon slapstick.
+Instead of impact/injury language, describe comedy through bounce,
+wobble, squish, spin, or silly failed attempts WITHOUT a collision or
+snap moment. For example, instead of "pulls a rope, it snaps, he
+face-plants" write "pulls with all his strength, wobbles like jelly,
+and plops down comically" - same comedic beat, no impact/injury
+framing that trips safety filters.
+
 Rules for every script:
 - Total spoken duration: 25-30 seconds
 - Hook must land in the first 2 seconds
