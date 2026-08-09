@@ -35,9 +35,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/generate_script.py
 
-      - name: Generate AI video clips (Kling)
-        env:
-          KLING_API_KEY: ${{ secrets.KLING_API_KEY }}
+      - name: Generate AI video clips (Wan 2.6 via fal.ai) followed by env: FAL_API_KEY: ${{ secrets.FAL_API_KEY }} 
+    
         run: python scripts/generate_clips.py
 
       - name: Assemble final video (JSON2Video)
