@@ -125,6 +125,32 @@ def generate_all_clips(script: dict, output_dir: str) -> list[dict]:
         except InsufficientCreditsError as e:
             print(f"::error::{e}")
             sys.exit(1)
+        except RuntimeError as e:
+            if "content moderation" in str(e).lower() or "422" in str(e):
+                # Likely a flagged prompt - retry once with a softened
+                # version rather than failing the whole video over one
+                # scene. Strips common trigger words as a blunt fallback.
+                print(f"  Scene flagged, retrying with softened prompt: {e}")
+                softened_scene = dict(scene)
+                softened_scene["visual_prompt"] = (
+                    scene["visual_prompt"]
+                    .replace("crash", "bump")
+                    .replace("snap", "wobble")
+                    .replace("face-plant", "plop down")
+                    .replace("collide", "bounce off")
+                )
+                try:
+                    urls = start_generation(softened_scene)
+                    video_url = poll_for_result(urls)
+                except Exception as retry_error:
+                    raise RuntimeError(
+                        f"Scene {scene['id']} failed even after softening "
+                        f"the prompt. Original error: {e}. Retry error: "
+                        f"{retry_error}. Consider reviewing this scene's "
+                        f"visual_prompt manually."
+                    )
+            else:
+                raise
 
         clip_manifest.append({
             "scene_id": scene["id"],
