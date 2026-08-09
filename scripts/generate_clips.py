@@ -1,10 +1,17 @@
 """
-Sends each scene's visual_prompt to Kling AI and downloads the
-resulting video clip. Runs after generate_script.py.
+Sends each scene's visual_prompt to Wan 2.6 (via fal.ai) and gets back
+a moving video clip URL per scene. Runs after generate_script.py.
 
-Handles the most common real-world failure explicitly: running out of
-credits. When that happens, this script fails LOUDLY with a clear
-message in the GitHub Actions log, rather than a vague timeout.
+Switched from Kling to fal.ai/Wan 2.6 because:
+- Kling's official platform currently has no self-serve top-up (only
+  "contact sales"), which breaks unattended automation
+- fal.ai has instant card-based billing
+- Wan 2.6 is cheaper per-second than Kling and has explicit tooling
+  for character consistency across shots (useful for recurring
+  characters like brainrot-skit characters)
+
+Handles insufficient-balance explicitly so failures are clear in the
+GitHub Actions log rather than a vague timeout.
 """
 
 import os
@@ -13,103 +20,102 @@ import json
 import time
 import requests
 
-KLING_API_KEY = os.environ["KLING_API_KEY"]
-KLING_BASE_URL = "https://api-singapore.klingai.com"  # international endpoint
+FAL_API_KEY = os.environ["FAL_API_KEY"]
+FAL_BASE_URL = "https://queue.fal.run"
+MODEL_ID = "wan/v2.6/text-to-video"
 
 HEADERS = {
-    "Authorization": f"Bearer {KLING_API_KEY}",
+    "Authorization": f"Key {FAL_API_KEY}",
     "Content-Type": "application/json",
 }
 
-POLL_INTERVAL_SECONDS = 10
-MAX_POLL_ATTEMPTS = 60  # ~10 minutes per clip
+POLL_INTERVAL_SECONDS = 8
+MAX_POLL_ATTEMPTS = 60  # ~8 minutes per clip
 
 
 class InsufficientCreditsError(Exception):
     pass
 
 
-def start_generation(scene: dict) -> str:
-    """Kick off a Kling generation job for one scene. Returns task_id."""
-    # Kling only accepts duration "5" or "10" (as strings) - round to
-    # whichever is closer to the scene's intended length.
+def start_generation(scene: dict, max_retries: int = 3) -> dict:
+    """Kick off a Wan 2.6 generation job for one scene.
+    Returns dict with status_url and response_url."""
+    # Wan 2.6 accepts 5 or 10 second durations
     duration = "5" if scene["duration_seconds"] <= 7 else "10"
 
     payload = {
-        "model_name": "kling-v2-6",
         "prompt": scene["visual_prompt"],
-        "negative_prompt": "",
-        "duration": duration,
-        "mode": "pro",
         "aspect_ratio": "9:16",
+        "duration": duration,
     }
 
-    resp = requests.post(
-        f"{KLING_BASE_URL}/v1/videos/text2video",
-        headers=HEADERS,
-        json=payload,
-        timeout=30,
-    )
-
-    if resp.status_code == 402 or "insufficient" in resp.text.lower():
-        raise InsufficientCreditsError(
-            "Kling API: insufficient balance. Top up credits at "
-            "kling.ai before re-running this workflow."
-        )
-
-    if resp.status_code == 400:
-        raise RuntimeError(f"Kling API rejected the request: {resp.text}")
-
-    resp.raise_for_status()
-    data = resp.json()
-    task_id = data.get("data", {}).get("task_id") or data.get("task_id")
-    if not task_id:
-        raise RuntimeError(f"Kling API did not return a task_id: {data}")
-    return task_id
-
-
-def poll_for_result(task_id: str) -> str:
-    """Poll until the clip is ready. Returns the video download URL."""
-    for attempt in range(MAX_POLL_ATTEMPTS):
-        resp = requests.get(
-            f"{KLING_BASE_URL}/v1/videos/text2video/{task_id}",
+    for attempt in range(max_retries):
+        resp = requests.post(
+            f"{FAL_BASE_URL}/{MODEL_ID}",
             headers=HEADERS,
+            json=payload,
             timeout=30,
         )
+
+        if resp.status_code == 429:
+            wait_time = 20 * (attempt + 1)
+            print(f"  Rate limited. Waiting {wait_time}s before retry.")
+            time.sleep(wait_time)
+            continue
+
+        if resp.status_code in (402, 403) or "insufficient" in resp.text.lower() or "balance" in resp.text.lower():
+            raise InsufficientCreditsError(
+                "fal.ai: insufficient balance. Top up credits at "
+                "fal.ai/dashboard/billing before re-running this workflow."
+            )
+
+        if resp.status_code == 400:
+            raise RuntimeError(f"fal.ai rejected the request: {resp.text}")
+
         resp.raise_for_status()
-        data = resp.json().get("data", {})
-        status = data.get("task_status")
+        data = resp.json()
+        return {
+            "status_url": data["status_url"],
+            "response_url": data["response_url"],
+        }
 
-        if status == "succeed":
-            videos = data.get("task_result", {}).get("videos", [])
-            if not videos:
-                raise RuntimeError(f"Kling task succeeded but no video URL: {data}")
-            return videos[0]["url"]
+    raise RuntimeError(f"fal.ai still rate-limited after {max_retries} retries.")
 
-        if status == "failed":
-            raise RuntimeError(f"Kling generation failed: {data}")
+
+def poll_for_result(urls: dict) -> str:
+    """Poll until the clip is ready. Returns the video download URL."""
+    for attempt in range(MAX_POLL_ATTEMPTS):
+        resp = requests.get(urls["status_url"], headers=HEADERS, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        status = data.get("status")
+
+        if status == "COMPLETED":
+            result_resp = requests.get(urls["response_url"], headers=HEADERS, timeout=30)
+            result_resp.raise_for_status()
+            result = result_resp.json()
+            video_url = result.get("video", {}).get("url")
+            if not video_url:
+                raise RuntimeError(f"fal.ai completed but no video URL found: {result}")
+            return video_url
+
+        if status in ("ERROR", "FAILED"):
+            raise RuntimeError(f"fal.ai generation failed: {data}")
 
         time.sleep(POLL_INTERVAL_SECONDS)
 
-    raise TimeoutError(f"Kling task {task_id} did not finish in time")
+    raise TimeoutError("fal.ai task did not finish in time")
 
 
 def generate_all_clips(script: dict, output_dir: str) -> list[dict]:
-    """
-    NOTE: we deliberately do NOT download clips to local disk here.
-    JSON2Video's assembly step needs a publicly reachable URL for each
-    clip's "src" field, and Kling's own result URL already is one
-    (typically valid for a limited time window, which is fine since
-    assembly runs immediately after in the same workflow run).
-    """
     os.makedirs(output_dir, exist_ok=True)
     clip_manifest = []
 
     for scene in script["scenes"]:
         print(f"Generating clip for {scene['id']}...")
         try:
-            task_id = start_generation(scene)
-            video_url = poll_for_result(task_id)
+            urls = start_generation(scene)
+            video_url = poll_for_result(urls)
         except InsufficientCreditsError as e:
             print(f"::error::{e}")
             sys.exit(1)
