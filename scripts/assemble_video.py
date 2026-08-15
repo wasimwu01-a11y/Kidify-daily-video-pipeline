@@ -1,11 +1,9 @@
 """
-Takes the clip manifest (real moving-video clips from Kling, one per
-scene) plus narration text, and assembles the final vertical short
-using JSON2Video: adds voiceover (TTS), burned-in captions, and stitches
-clips in order.
-
-This replaces the old "static images + pan" JSON2Video template with a
-video-clip-based template.
+Takes the visuals manifest (either AI-generated video clips or free
+stock images with pan/zoom, depending on the video's format) plus
+narration text, and assembles the final vertical short using
+JSON2Video: adds voiceover (TTS), burned-in captions, and stitches
+everything together in order.
 """
 
 import os
@@ -28,14 +26,29 @@ MAX_POLL_ATTEMPTS = 60
 def build_movie_json(manifest: list[dict], script: dict) -> dict:
     scenes = []
     for scene in manifest:
+        media_type = scene.get("media_type", "video")
+
+        if media_type == "image":
+            visual_element = {
+                "type": "image",
+                "src": scene["media_url"],
+                "resize": "cover",
+                # Ken Burns style pan/zoom so a still photo doesn't
+                # feel static - JSON2Video zooms in slowly over the
+                # scene's duration.
+                "zoom": 3,
+            }
+        else:
+            visual_element = {
+                "type": "video",
+                "src": scene["media_url"],
+                "resize": "cover",
+            }
+
         scenes.append({
             "duration": scene["duration_seconds"],
             "elements": [
-                {
-                    "type": "video",
-                    "src": scene["clip_url"],
-                    "resize": "cover",
-                },
+                visual_element,
                 {
                     "type": "voice",
                     "text": scene["narration"],

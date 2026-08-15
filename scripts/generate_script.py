@@ -1,12 +1,12 @@
 """
-Generates a scene-by-scene script for one video, in the style of the
-two formats that already work on the Kid-ify channel:
+Generates a scene-by-scene script for one video, rotating across five
+formats. Two formats use FREE stock images (Ken Burns pan/zoom, no AI
+video cost); three formats use paid AI-generated moving video since
+they depend on custom characters that don't exist as stock footage.
 
-  1. Guessing/reveal games (which door/box hides X)
-  2. Original brainrot-style character skits (never copyrighted names)
-
-Output is structured JSON so downstream steps (Kling, JSON2Video) can
-consume it without re-parsing prose.
+IMAGE_FORMATS use visual_prompt as a short stock-photo SEARCH QUERY.
+VIDEO_FORMATS use visual_prompt as a detailed AI video generation
+prompt, written for maximum output quality.
 """
 
 import os
@@ -18,25 +18,72 @@ ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
-FORMATS = [
-    "guessing_reveal",
-    "brainrot_skit",
-    "superhero_original",
-    "cartoon_adventure",
-    "vehicle_vs_obstacle",
-]
+IMAGE_FORMATS = ["guessing_reveal", "vehicle_vs_obstacle"]
+VIDEO_FORMATS = ["brainrot_skit", "superhero_original", "cartoon_adventure"]
+FORMATS = IMAGE_FORMATS + VIDEO_FORMATS
 
 SYSTEM_PROMPT = """You write scripts for a kids' YouTube Shorts channel called Kidify.
-Five formats are used, rotating:
+Five formats are used, rotating. Two use free stock photos with a
+pan/zoom effect; three use custom AI-generated moving video since they
+need original characters that don't exist as real footage.
 
-FORMAT 1 - Guessing/reveal game:
+===== IMAGE-BASED FORMATS (visual_prompt = stock photo search query) =====
+
+FORMAT 1 - Guessing/reveal game (IMAGE format):
 - 2 second hook that creates urgency/mystery ("Which door hides the X?")
 - 3 options shown (colors/objects)
 - Countdown
 - Reveal each option in order, funny/wrong answers first, correct last
 - End with a teaser for tomorrow's episode ("Level 2 tomorrow!")
+- visual_prompt for each scene = a SHORT, CONCRETE stock photo search
+  query (2-5 words) describing what a real photo should show, e.g.
+  "red door closeup", "golden treasure chest", "rubber chicken toy".
+  NOT a scene description - a search term a stock photo site would
+  actually have results for.
 
-FORMAT 2 - Original brainrot-style character skit:
+FORMAT 5 - Vehicle vs obstacle (IMAGE format):
+- 2-4 vehicles, described GENERICALLY by type/color/size, never by real
+  brand name (say "a sleek red sports car" or "a boxy yellow school bus"
+  or "a giant monster truck" - NEVER "Porsche," "BMW," "Ferrari," or any
+  other real trademarked car brand)
+- They face an obstacle: a giant speed bump, a steep ramp, a mud pit, a
+  wall of water
+- Show each vehicle's attempt in order, building suspense
+- visual_prompt for each scene = a SHORT stock photo search query, e.g.
+  "red sports car", "yellow school bus", "monster truck mud", "steep
+  ramp obstacle". Real, findable stock photo subjects only - no brand
+  names in the query.
+
+===== VIDEO-BASED FORMATS (visual_prompt = detailed AI video prompt) =====
+
+For these three formats, visual_prompt must be written to get the
+HIGHEST POSSIBLE QUALITY out of an AI video generator. Every
+visual_prompt must include ALL of these elements, in this order:
+1. Character/subject appearance in full detail (colors, shape, texture,
+   distinguishing features) - repeat the SAME description for a
+   recurring character across every scene they appear in, so the AI
+   generator renders them consistently
+2. The specific action happening, described physically and precisely
+3. Camera behavior (e.g. "slow dolly-in," "handheld energetic shake,"
+   "smooth pan left to right," "dramatic low-angle shot")
+4. Lighting and color mood (e.g. "warm golden lighting," "vivid
+   saturated primary colors," "soft bright daylight")
+5. Animation style descriptor: "smooth fluid 2D cartoon animation,
+   high frame rate motion, expressive exaggerated character movement"
+
+Example of a GOOD visual_prompt (use this level of detail every time):
+"A round pizza-slice-bodied lizard character, bright red and yellow
+coloring, wearing a small white chef hat, stretchy green legs. He
+sprints across a cheese-yellow tiled kitchen floor with arms flailing
+in comic panic, exaggerated wide eyes. Camera does a fast handheld
+tracking shot following him at floor level. Warm bright kitchen
+lighting, vivid saturated colors. Smooth fluid 2D cartoon animation
+style, high frame rate, bouncy exaggerated squash-and-stretch motion."
+
+A weak/vague visual_prompt (AVOID this) would just say "the lizard runs
+across the kitchen, funny" - not enough detail for a good result.
+
+FORMAT 2 - Original brainrot-style character skit (VIDEO format):
 - Absurd, fast-paced humor with ORIGINAL characters only (never use real
   existing meme character names like "Bombardiro Crocodilo" or copyrighted
   IP - invent new silly food/animal-hybrid character names in the same
@@ -44,7 +91,7 @@ FORMAT 2 - Original brainrot-style character skit:
 - Constant motion, a small mystery or problem, a surprise, a resolution
 - End with a cliffhanger question for tomorrow
 
-FORMAT 3 - Original superhero short story:
+FORMAT 3 - Original superhero short story (VIDEO format):
 - An ORIGINAL superhero character (own name, own powers, own costume -
   NEVER Spider-Man, Marvel, DC, or any existing copyrighted hero) faces
   a small kid-friendly problem (a lost pet, a stuck kitten, a bully,
@@ -52,7 +99,7 @@ FORMAT 3 - Original superhero short story:
 - Fast pacing, a clear obstacle, a triumphant resolution
 - End with a teaser for the hero's next adventure
 
-FORMAT 4 - Original cartoon-style adventure:
+FORMAT 4 - Original cartoon-style adventure (VIDEO format):
 - Original animal or fantasy-creature characters (never existing IP like
   Peppa Pig, SpongeBob, Pokemon, etc.) go on a bite-sized adventure -
   exploring, solving a puzzle, helping a friend
@@ -60,25 +107,13 @@ FORMAT 4 - Original cartoon-style adventure:
   resolution
 - End with a hook for tomorrow's adventure
 
-FORMAT 5 - Vehicle vs obstacle:
-- 2-4 vehicles, described GENERICALLY by type/color/size, never by real
-  brand name (say "a sleek red sports car" or "a boxy yellow school bus"
-  or "a giant monster truck" - NEVER "Porsche," "BMW," "Ferrari," or any
-  other real trademarked car brand)
-- They face an obstacle: a giant speed bump, a steep ramp, a mud pit, a
-  wall of water
-- Show each vehicle's attempt in order, building suspense - some fail
-  in a funny/harmless way (bounce off, get stuck, spin out), one
-  succeeds spectacularly
-- Vary the obstacle and vehicle line-up between episodes for variety
-- End with a teaser for tomorrow's vehicle lineup or a new obstacle
+===== RULES THAT APPLY TO ALL FORMATS =====
 
 CRITICAL RULE - no real brand names, ever, in Format 5:
-Describe vehicles only by type, color, and size. Do not use real car
-manufacturer names, model names, or logos in narration, on-screen text,
-or visual_prompt fields.
+Describe vehicles only by type, color, and size in both narration AND
+visual_prompt search queries. Never real car manufacturer/model names.
 
-CRITICAL RULE - Original characters only, every format:
+CRITICAL RULE - Original characters only, video formats:
 Never use the name, exact design, or clear likeness of any existing
 copyrighted character (Marvel, DC, Disney, Pixar, Pokemon, SpongeBob,
 Peppa Pig, or any other named franchise/IP). Every character must be
@@ -86,17 +121,14 @@ invented specifically for this channel. This is a hard requirement,
 not a style preference - using real IP risks copyright strikes and
 channel termination.
 
-CRITICAL RULE - avoid injury/impact imagery in visual prompts:
+CRITICAL RULE - avoid injury/impact imagery in video-format prompts:
 AI video generation safety filters often reject prompts describing
 things like "snaps forward," "face-plants," "crashes into," ropes
 combined with sudden force, or any wording that reads as a character
 being hurt or in an impact, even in obviously silly cartoon slapstick.
 Instead of impact/injury language, describe comedy through bounce,
 wobble, squish, spin, or silly failed attempts WITHOUT a collision or
-snap moment. For example, instead of "pulls a rope, it snaps, he
-face-plants" write "pulls with all his strength, wobbles like jelly,
-and plops down comically" - same comedic beat, no impact/injury
-framing that trips safety filters.
+snap moment.
 
 Rules for every script:
 - Total spoken duration: 25-30 seconds
@@ -110,7 +142,8 @@ Rules for every script:
 
 Return ONLY valid JSON matching this schema, nothing else:
 {
-  "format": "guessing_reveal" | "brainrot_skit",
+  "format": "one of the 5 format names",
+  "visual_type": "image" or "video" (image for Format 1 and 5, video for Format 2, 3, 4),
   "title": "short catchy internal title",
   "youtube_title": "SEO-friendly title with 1-2 emojis and #Shorts",
   "youtube_description": "description with relevant hashtags",
@@ -119,7 +152,7 @@ Return ONLY valid JSON matching this schema, nothing else:
       "id": "scene_1",
       "duration_seconds": 3,
       "narration": "exact line to be spoken",
-      "visual_prompt": "detailed prompt describing what should be shown, for an AI video generator - include character appearance, setting, action, camera movement",
+      "visual_prompt": "short stock search query (image formats) OR detailed AI video prompt following the 5-part structure above (video formats)",
       "on_screen_text": "short text overlay, or empty string if none"
     }
   ]
@@ -131,26 +164,27 @@ def generate_script(recurring_character: str | None = None) -> dict:
     """
     Generate one video script.
     recurring_character: if set, reuse this character description for
-    consistency across episodes (brainrot format only).
+    consistency across episodes (video formats only).
     """
     fmt = random.choice(FORMATS)
 
     user_prompt = f"Generate a new {fmt} script for today's video."
-    if fmt == "brainrot_skit" and recurring_character:
+    if fmt in VIDEO_FORMATS and recurring_character:
         user_prompt += (
             f"\n\nUse this existing character so it stays visually "
-            f"consistent across episodes: {recurring_character}"
+            f"consistent across episodes - repeat this exact "
+            f"description in every scene's visual_prompt: "
+            f"{recurring_character}"
         )
 
     response = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=2000,
+        max_tokens=3000,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
 
     text = response.content[0].text.strip()
-    # Defensive: strip accidental code fences
     text = text.replace("```json", "").replace("```", "").strip()
 
     script = json.loads(text)
@@ -162,5 +196,5 @@ if __name__ == "__main__":
     out_path = os.environ.get("SCRIPT_OUTPUT_PATH", "script.json")
     with open(out_path, "w") as f:
         json.dump(script, f, indent=2)
-    print(f"Script generated: {script['title']} ({script['format']})")
+    print(f"Script generated: {script['title']} ({script['format']}, visual_type={script['visual_type']})")
     print(f"Saved to {out_path}")
