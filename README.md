@@ -8,21 +8,27 @@ YouTube only — no TikTok cross-posting.
 Every day (via GitHub Actions cron), the pipeline runs four steps in order:
 
 1. **`generate_script.py`** — Claude writes a scene-by-scene script,
-   alternating between the two proven Kidify formats: guessing/reveal
-   games and original brainrot-style character skits.
-2. **`generate_clips.py`** — Each scene's visual description is sent to
-   Wan 2.6 (via fal.ai), which generates a real moving video clip (not
-   a static image) for that scene.
-3. **`assemble_video.py`** — JSON2Video stitches the clips together,
-   adds voiceover narration, burned-in captions, background music, and
-   renders the final vertical short.
+   rotating across five formats: guessing/reveal games, brainrot-style
+   character skits, original superhero stories, original cartoon
+   adventures, and vehicle-vs-obstacle. Two of these formats
+   (guessing/reveal, vehicle-vs-obstacle) are marked as "image" type;
+   the other three ("video" type) need custom AI-generated characters.
+2. **`generate_visuals.py`** — For "video" type scripts, sends each
+   scene to Wan 2.6 (via fal.ai) for a real moving AI-generated clip.
+   For "image" type scripts, searches Pexels (free) for a matching
+   stock photo instead - no AI generation cost for these formats.
+3. **`assemble_video.py`** — JSON2Video stitches everything together:
+   video clips play as-is; images get a slow pan/zoom (Ken Burns)
+   effect so they don't feel static. Adds voiceover narration and
+   burned-in captions, renders the final vertical short.
 4. **`upload_youtube.py`** — Uploads the finished video to the Kid-ify
    channel as a public Short, marked as made-for-kids.
 
 ## Required secrets (already set in this repo)
 
 - `ANTHROPIC_API_KEY`
-- `FAL_API_KEY`
+- `FAL_API_KEY` (used only for the 3 AI-video formats)
+- `PEXELS_API_KEY` (free - used only for the 2 stock-image formats)
 - `JSON2VIDEO_API_KEY`
 - `YOUTUBE_CLIENT_ID`
 - `YOUTUBE_CLIENT_SECRET`
@@ -69,6 +75,13 @@ are in UTC.
 
 ## Cost per video (approximate)
 
-- Wan 2.6 clips: ~$1.25–$2.50 depending on scene count/length
-- JSON2Video render: pennies
-- Claude script generation: pennies
+- **Image-format videos** (guessing/reveal, vehicle-vs-obstacle): only
+  Claude script generation + JSON2Video render, both pennies. No AI
+  video generation cost at all.
+- **Video-format videos** (brainrot, superhero, cartoon adventure):
+  Wan 2.6 clips ~$1.25–$2.50 depending on scene count/length, plus
+  pennies for script + render.
+
+Since formats rotate randomly across 5 options (2 free, 3 paid), you'll
+see roughly 40% of videos cost near-zero and 60% cost the AI-video rate
+- averaging out to noticeably less than if every video used AI clips.
