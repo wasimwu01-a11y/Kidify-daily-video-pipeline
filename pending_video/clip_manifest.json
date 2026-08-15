@@ -1,0 +1,50 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa67767/z6Oai5CGyVrzrdBtEPoSR_SbqhdFk9.mp4",
+    "narration": "Bumble the Cloud Bear was floating through the sky one night \u2014 when something small and glowing landed right on his nose!",
+    "on_screen_text": "\u2728 A glowing visitor!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa67768/xrUsXrtV7JEP6g_KKqn9f_KuuWU5Zs.mp4",
+    "narration": "It was a baby star \u2014 and she was lost! She blinked her little points and let out the tiniest, saddest twinkle.",
+    "on_screen_text": "\ud83c\udf1f A lost baby star!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa67778/aVx4EjSOjCfT3ydfDXxZc_Ii3bDq3q.mp4",
+    "narration": "Bumble looked way up high \u2014 the star's spot in the sky was empty! He puffed up his chest and said: I'll get you home, little one!",
+    "on_screen_text": "\ud83d\udcaa Bumble to the rescue!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa67788/yaTpdD5C0s7tTRum7SQhA_eIg3We57.mp4",
+    "narration": "Bumble bounced on a rainbow, zoomed through a ring of moon mist, and spun up, up, UP through a swirl of sparkles \u2014 almost there!",
+    "on_screen_text": "\ud83c\udf08 ALMOST THERE!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa677a8/F3IxLX--T1B3qVoKC5E7D_6kQYhMxv.mp4",
+    "narration": "Bumble gently placed the baby star back in her spot \u2014 and the whole sky lit up brighter than ever! The baby star giggled and waved.",
+    "on_screen_text": "\u2b50 Home at last!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa677bd/TbgYTxcKKzTV8r_XEAxel_BJSwEpZu.mp4",
+    "narration": "Bumble floated back home with the biggest, fluffiest smile. But wait \u2014 what's that rumbling sound coming from the rainbow? Find out tomorrow!",
+    "on_screen_text": "\ud83d\udc40 What's next?! Come back tomorrow!",
+    "duration_seconds": 4
+  }
+]

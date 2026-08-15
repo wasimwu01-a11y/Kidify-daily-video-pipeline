@@ -1,0 +1,51 @@
+{
+  "format": "cartoon_adventure",
+  "visual_type": "video",
+  "title": "Bumble and the Missing Star",
+  "youtube_title": "\ud83c\udf1f The Little Cloud Bear Finds a Fallen Star! #Shorts",
+  "youtube_description": "Bumble the Cloud Bear discovers a tiny star has fallen from the sky and goes on an adventure to bring it home! Will he make it in time? Watch to find out! \ud83d\udc3b\u2601\ufe0f\u2b50\n\n#KidsCartoon #Shorts #CartoonAdventure #KidsYouTube #Kidify #AnimatedShorts #FunForKids #CloudBear #StarAdventure",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 4,
+      "narration": "Bumble the Cloud Bear was floating through the sky one night \u2014 when something small and glowing landed right on his nose!",
+      "visual_prompt": "A chubby round bear character made entirely of soft white fluffy cloud texture, pale blue tummy patch, tiny rosy cheeks, big shiny dark eyes, floating gently in a deep twilight-blue sky dotted with soft stars. A tiny golden glowing star shape wobbles and lands on the tip of his round nose, making his eyes cross comically as he tries to look at it. Camera does a slow gentle push-in toward his face. Soft warm golden glow from the star mixing with cool purple twilight ambient light, vivid saturated pastel colors. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch motion.",
+      "on_screen_text": "\u2728 A glowing visitor!"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "It was a baby star \u2014 and she was lost! She blinked her little points and let out the tiniest, saddest twinkle.",
+      "visual_prompt": "A tiny five-pointed star character, soft warm golden yellow, with small round blinking eyes and a wobbly little mouth turned into a sad pout, sitting in the fluffy white cloud-textured paw of a chubby round cloud-textured white bear with a pale blue tummy patch and rosy cheeks. The tiny star flickers its glow dimly, small sparkles drifting down. Camera holds at a warm close-up medium shot, slightly tilted to feel intimate and tender. Soft warm golden and lavender lighting, vivid saturated pastel color palette. Smooth fluid 2D cartoon animation style, high frame rate, expressive exaggerated character movement with gentle wobble on the star.",
+      "on_screen_text": "\ud83c\udf1f A lost baby star!"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 5,
+      "narration": "Bumble looked way up high \u2014 the star's spot in the sky was empty! He puffed up his chest and said: I'll get you home, little one!",
+      "visual_prompt": "A chubby round bear character made of soft white fluffy cloud texture, pale blue tummy patch, tiny rosy cheeks, big shiny dark eyes, floating in a deep twilight sky. He tilts his head upward dramatically, spots a dark empty gap among the glittering stars above, then puffs out his round cloud chest proudly with a wide determined grin, one stubby arm raised in a heroic pose. The tiny golden glowing five-pointed star character with round blinking eyes peeks from his other paw. Camera sweeps from a wide establishing shot up to a low-angle heroic shot looking up at the bear against the starry sky. Cool deep blue and purple sky with warm gold star glow accents, vivid saturated colors. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch on the chest-puff moment.",
+      "on_screen_text": "\ud83d\udcaa Bumble to the rescue!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 6,
+      "narration": "Bumble bounced on a rainbow, zoomed through a ring of moon mist, and spun up, up, UP through a swirl of sparkles \u2014 almost there!",
+      "visual_prompt": "A chubby round bear character made of soft white fluffy cloud texture, pale blue tummy patch, tiny rosy cheeks, big shiny dark eyes, leaping joyfully off a wide curved rainbow bridge of vivid red, orange, yellow, green, and blue stripes. He then dives through a swirling ring of pearlescent white moon mist, and then spirals upward through a dense cascade of golden sparkles with his stubby arms spread wide and an enormous open-mouthed grin of excitement. The tiny golden star character rides tucked under his arm, eyes wide and mouth in an excited smile. Camera does a dynamic upward spiral tracking shot following Bumble rising through each obstacle. Vivid rainbow saturated colors transitioning to cool silver moonlit mist then warm golden sparkle burst. Smooth fluid 2D cartoon animation style, high frame rate, fast exaggerated motion with strong motion blur on the spin.",
+      "on_screen_text": "\ud83c\udf08 ALMOST THERE!"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "Bumble gently placed the baby star back in her spot \u2014 and the whole sky lit up brighter than ever! The baby star giggled and waved.",
+      "visual_prompt": "A chubby round bear character made of soft white fluffy cloud texture, pale blue tummy patch, tiny rosy cheeks, big shiny dark eyes, floating in a deep starry sky and carefully, gently pressing a tiny five-pointed golden glowing star character with round eyes and a big happy smile into a small dark gap in a constellation of surrounding stars. The moment she clicks into place, a huge radial burst of warm golden light pulses outward across the entire sky, making all surrounding stars shimmer brightly. The tiny star wiggles her points in a cheerful wave. Bumble squints happily from the warm glow, doing a small floating happy wiggle. Camera pulls back slowly in a wide establishing shot to show the full glowing sky. Warm brilliant golden and white light flooding the scene, rich deep blue sky backdrop, vivid saturated colors. Smooth fluid 2D cartoon animation style, high frame rate, expressive exaggerated squash-and-stretch on the light burst.",
+      "on_screen_text": "\u2b50 Home at last!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 4,
+      "narration": "Bumble floated back home with the biggest, fluffiest smile. But wait \u2014 what's that rumbling sound coming from the rainbow? Find out tomorrow!",
+      "visual_prompt": "A chubby round bear character made of soft white fluffy cloud texture, pale blue tummy patch, tiny rosy cheeks, big shiny dark eyes, drifting slowly and contentedly downward through a calm starlit sky, eyes half-closed in a peaceful smile. Suddenly far below, the vivid red, orange, yellow, green, and blue rainbow bridge begins to rumble and shake, small cartoonish vibration wobble lines radiating from it. Bumble opens one eye wide in surprised curiosity. Camera does a smooth slow pull-back to reveal both Bumble floating above and the shaking rainbow below him in the same wide frame. Cool calm blue and purple night sky lighting with warm golden star glow above and a mysterious flickering multicolor light from the rainbow below. Smooth fluid 2D cartoon animation style, high frame rate, exaggerated wide-eye expression with comic wobble on the rainbow.",
+      "on_screen_text": "\ud83d\udc40 What's next?! Come back tomorrow!"
+    }
+  ]
+}
