@@ -52,11 +52,12 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/generate_script.py
 
-      - name: Generate AI video clips (Wan 2.6 via fal.ai)
+      - name: Generate visuals (AI video or free stock images)
         id: generate_clips
         env:
           FAL_API_KEY: ${{ secrets.FAL_API_KEY }}
-        run: python scripts/generate_clips.py
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python scripts/generate_visuals.py
 
       - name: Save checkpoint (protects clips you already paid for)
         if: always()
