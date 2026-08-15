@@ -38,6 +38,13 @@ def upload_short(video_path: str, title: str, description: str):
         "status": {
             "privacyStatus": "public",
             "selfDeclaredMadeForKids": True,
+            # Discloses that this video contains AI-generated/altered
+            # content. YouTube's own guidance says this is specifically
+            # required for REALISTIC synthetic media (content that
+            # could be mistaken for real footage) - obviously stylized
+            # cartoon content like this technically may not require it,
+            # but setting it anyway is a safe, transparent default.
+            "containsSyntheticMedia": True,
         },
     }
 
