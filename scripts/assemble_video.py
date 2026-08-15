@@ -26,12 +26,16 @@ MAX_POLL_ATTEMPTS = 60
 def build_movie_json(manifest: list[dict], script: dict) -> dict:
     scenes = []
     for scene in manifest:
+        # Backward compatibility: manifests saved before the hybrid
+        # image/video system used "clip_url" and had no "media_type"
+        # (they were always video). Support both old and new formats.
+        media_url = scene.get("media_url") or scene.get("clip_url")
         media_type = scene.get("media_type", "video")
 
         if media_type == "image":
             visual_element = {
                 "type": "image",
-                "src": scene["media_url"],
+                "src": media_url,
                 "resize": "cover",
                 # Ken Burns style pan/zoom so a still photo doesn't
                 # feel static - JSON2Video zooms in slowly over the
@@ -41,7 +45,7 @@ def build_movie_json(manifest: list[dict], script: dict) -> dict:
         else:
             visual_element = {
                 "type": "video",
-                "src": scene["media_url"],
+                "src": media_url,
                 "resize": "cover",
             }
 
