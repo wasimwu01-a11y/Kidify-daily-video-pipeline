@@ -26,5 +26,21 @@
     "narration": "Then Glimmerfish had a brilliant idea! She called ALL her friends \u2014 the crab, the seahorse, and even a giant friendly jellyfish \u2014 and together they pushed\u2026 and up, up, UP the star floated!",
     "on_screen_text": "TEAMWORK! \ud83d\ude4c",
     "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa65f0b/bw5wrCFC3ueyh2olmsebS_EAU9fGNM.mp4",
+    "narration": "The star burst through the surface and shot back into the sky \u2014 sparkling brighter than ever! The whole ocean lit up with golden light!",
+    "on_screen_text": "\u2728 Back where it belongs!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa65f11/NR6Q6jolYTW8NofxBQh7F_YzbxNmVg.mp4",
+    "narration": "And from that night on, Glimmerfish's glow shone even brighter \u2014 because the star said thank you! Come back tomorrow\u2026 because something is falling from the sky again!",
+    "on_screen_text": "See you TOMORROW! \ud83c\udf1f",
+    "duration_seconds": 4
   }
 ]
