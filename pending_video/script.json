@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Box Hides the Diamond?",
+  "youtube_title": "\ud83d\udc8e Can You Find the Diamond? #Shorts",
+  "youtube_description": "One of these three boxes is hiding a sparkling diamond \u2014 but which one? Watch to find out! Come back tomorrow for Level 2! \ud83d\udc8e\ud83d\udce6\n\n#Shorts #KidsVideo #GuessingGame #Kidify #FunForKids #DiamondChallenge #BrainTeaser",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 2,
+      "narration": "A diamond is hiding in one of these boxes \u2014 but which one?!",
+      "visual_prompt": "three mystery boxes closeup",
+      "on_screen_text": "WHERE IS THE DIAMOND? \ud83d\udc8e"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "You've got the red box, the blue box, and the golden box. Pick one \u2014 fast!",
+      "visual_prompt": "red blue gold gift boxes",
+      "on_screen_text": "\ud83d\udd34 RED  \ud83d\udd35 BLUE  \ud83d\udfe1 GOLD"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 3,
+      "narration": "Three\u2026 two\u2026 one \u2014 no more guessing! Let's open them up!",
+      "visual_prompt": "countdown timer numbers closeup",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd13"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 5,
+      "narration": "The red box \u2014 let's see inside! Oh no\u2026 it's just a rubber duck. Not the diamond!",
+      "visual_prompt": "rubber duck toy yellow",
+      "on_screen_text": "\u274c NOPE! \ud83e\udd86"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "Okay okay, the blue box! Open it up and\u2026 wow, it's a single sock. Really?! Still not it!",
+      "visual_prompt": "single sock isolated white background",
+      "on_screen_text": "\u274c JUST A SOCK! \ud83e\udde6"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 6,
+      "narration": "That means\u2026 the GOLDEN box! Open it up and \u2014 WHOA! There it is! A massive, sparkling diamond! You found it!",
+      "visual_prompt": "sparkling diamond gemstone closeup",
+      "on_screen_text": "\u2705 THE DIAMOND! \ud83d\udc8e\u2728"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you guess right? Level 2 is coming tomorrow \u2014 and it's even trickier!",
+      "visual_prompt": "mystery question mark box gold",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd25"
+    }
+  ]
+}
