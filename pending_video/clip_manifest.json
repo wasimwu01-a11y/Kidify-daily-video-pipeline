@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa68af7/4Dvie7ANa40rn-QyD660h_EmYIwEuM.mp4",
+    "narration": "One morning, Puddle the Cloud Bunny woke up \u2014 and the whole sky was GRAY!",
+    "on_screen_text": "OH NO!",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa68afd/3jqTdWRLeOeH1uFpmFZph_gdyLUB71.mp4",
+    "narration": "The rainbow had vanished! Every single color was gone. Then Puddle spotted something \u2014 a trail of little color drops falling down below the clouds!",
+    "on_screen_text": "WHERE DID THE COLORS GO?",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa68b05/B5aJ3FyYfvqbsDzw713CN_22MZFHS2.mp4",
+    "narration": "Puddle jumped on her cloud and zoomed after them! She swooped through a twisty cloud tunnel \u2014 whoooosh \u2014 and popped out the other side!",
+    "on_screen_text": "WHOOOOSH!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa68b0b/z_WG8a_Lp6lxTsQ9MdVsF_HQxkfibX.mp4",
+    "narration": "There they were! All the color drops were stuck inside a giant glass jar \u2014 held by a giggling little cloud puffin named Bloop, who just wanted to keep them as shiny toys!",
+    "on_screen_text": "BLOOP THE CLOUD PUFFIN!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa68b26/Hc3OtfZMiaCuTwhRfNL9q_BiNtZJcl.mp4",
+    "narration": "Puddle didn't get mad. She showed Bloop what the sky looked like without any colors. Bloop's eyes went wide \u2014 and he handed the jar right over!",
+    "on_screen_text": "THAT WORKED!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa68b2c/-F5pCef0-qkIlveOxAfNB_fh6Qmpc6.mp4",
+    "narration": "Puddle opened the jar and tossed the colors high into the sky \u2014 and BOOM \u2014 the most beautiful rainbow ever exploded across the clouds! Bloop clapped his little wings with joy!",
+    "on_screen_text": "\ud83c\udf08 RAINBOW SAVED!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "video",
+    "media_url": "https://v3b.fal.media/files/b/0aa68b21/Rs_2vBHFjSyAs6dGbCfSJ_lrGzg7z9.mp4",
+    "narration": "Tomorrow \u2014 Puddle and her NEW friend Bloop find something even more mysterious hidden inside a cloud! What could it be?",
+    "on_screen_text": "WHAT'S INSIDE? \ud83d\udc40 TOMORROW!",
+    "duration_seconds": 3
+  }
+]

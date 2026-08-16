@@ -1,0 +1,58 @@
+{
+  "format": "cartoon_adventure",
+  "visual_type": "video",
+  "title": "Puddle the Cloud Bunny Saves the Rainbow",
+  "youtube_title": "\ud83c\udf08 The Tiny Cloud Bunny Who Saved the Rainbow! #Shorts",
+  "youtube_description": "Puddle the Cloud Bunny discovers the rainbow has gone missing and sets off on an amazing adventure to bring the colors back! Will she make it in time? Watch to find out! \ud83d\udc30\u2601\ufe0f\ud83c\udf08 #CartoonAdventure #KidsShorts #Kidify #CloudBunny #Rainbow #CuteCartoon #AnimatedShorts #KidsYouTube #FunForKids #CartoonsForKids",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One morning, Puddle the Cloud Bunny woke up \u2014 and the whole sky was GRAY!",
+      "visual_prompt": "A small fluffy bunny character made entirely of soft white cloud material, round puffball body, oversized floppy ears with pale blue inner lining, tiny sparkling sky-blue eyes, and little wispy cloud-tuft tail. She floats in midair on a fluffy cloud bed, stretches her ears wide open in shock as she stares at a completely gray featureless sky around her. Camera slowly dollies back to reveal the vast colorless sky. Soft cool gray lighting transitioning from warm sunrise tones to sad flat gray. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch motion.",
+      "on_screen_text": "OH NO!"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "The rainbow had vanished! Every single color was gone. Then Puddle spotted something \u2014 a trail of little color drops falling down below the clouds!",
+      "visual_prompt": "A small fluffy bunny character made entirely of soft white cloud material, round puffball body, oversized floppy ears with pale blue inner lining, tiny sparkling sky-blue eyes, and little wispy cloud-tuft tail. She peers over the edge of her cloud, eyes wide and curious, as tiny glowing drops of red, orange, yellow, green, blue, and purple fall slowly in a dotted trail downward into a fluffy cloud canyon below. Camera does a smooth slow tilt down following the trail of color drops. Cool gray ambient sky lighting with the color drops emitting their own vivid warm glow. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch motion.",
+      "on_screen_text": "WHERE DID THE COLORS GO?"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 5,
+      "narration": "Puddle jumped on her cloud and zoomed after them! She swooped through a twisty cloud tunnel \u2014 whoooosh \u2014 and popped out the other side!",
+      "visual_prompt": "A small fluffy bunny character made entirely of soft white cloud material, round puffball body, oversized floppy ears with pale blue inner lining, tiny sparkling sky-blue eyes, and little wispy cloud-tuft tail. She crouches low on a flat white cloud platform that rockets forward and then dips sharply into a swirling spiral tunnel made of puffy white clouds, her ears streaming back in the wind and cheeks puffed with speed, eyes squinting with excitement. Camera does a fast energetic tracking shot from behind, then spins as she spirals through the tunnel and bursts out the other side into open air. Vivid saturated lighting shifts from gray to a warm golden glow at the tunnel exit. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch motion.",
+      "on_screen_text": "WHOOOOSH!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 6,
+      "narration": "There they were! All the color drops were stuck inside a giant glass jar \u2014 held by a giggling little cloud puffin named Bloop, who just wanted to keep them as shiny toys!",
+      "visual_prompt": "A plump round bird character resembling a puffin, made of soft gray storm-cloud material with a bright orange beak and tiny white circular eyes, sitting cross-legged on a cloud shelf and clutching an enormous sparkling glass jar filled with swirling glowing color drops in red, orange, yellow, green, blue, and purple. The puffin giggles and rocks side to side happily, not realizing anything is wrong, belly wobbling. A small fluffy bunny character made entirely of soft white cloud material, round puffball body, oversized floppy ears with pale blue inner lining, tiny sparkling sky-blue eyes, and little wispy cloud-tuft tail lands nearby with a soft bounce, looking surprised but gentle. Camera does a wide establishing shot then slowly pushes in to a medium two-shot of both characters. Soft warm diffused lighting with the jar casting colorful glowing reflections everywhere. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch motion.",
+      "on_screen_text": "BLOOP THE CLOUD PUFFIN!"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "Puddle didn't get mad. She showed Bloop what the sky looked like without any colors. Bloop's eyes went wide \u2014 and he handed the jar right over!",
+      "visual_prompt": "A small fluffy bunny character made entirely of soft white cloud material, round puffball body, oversized floppy ears with pale blue inner lining, tiny sparkling sky-blue eyes, and little wispy cloud-tuft tail. She gently gestures with one ear upward toward the vast dull gray sky above. Beside her, a plump round puffin made of soft gray storm-cloud material with a bright orange beak and tiny white circular eyes stares upward, his round eyes growing enormous and filling with tiny wobbly tears, his beak dropping open in an exaggerated O shape. He slowly extends both wings to offer the glowing color-drop jar. Camera does a gentle slow pan from the gray sky down to the two characters in a warm medium shot. Lighting shifts from cold flat gray above to a warm hopeful glow around the jar. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch motion.",
+      "on_screen_text": "THAT WORKED!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "Puddle opened the jar and tossed the colors high into the sky \u2014 and BOOM \u2014 the most beautiful rainbow ever exploded across the clouds! Bloop clapped his little wings with joy!",
+      "visual_prompt": "A small fluffy bunny character made entirely of soft white cloud material, round puffball body, oversized floppy ears with pale blue inner lining, tiny sparkling sky-blue eyes, and little wispy cloud-tuft tail. She hurls a sparkling glass jar upward with both stubby cloud paws, sending an explosion of glowing color drops arcing across the wide sky and blooming into a massive vivid rainbow that stretches from one side of the frame to the other. Beside her, a plump round puffin made of soft gray storm-cloud material with a bright orange beak bounces up and down clapping his wings rapidly in delight, belly jiggling. Camera does a dramatic low-angle wide shot looking up as the colors explode outward, then cuts to the two characters cheering against the glowing rainbow backdrop. Lighting bursts from gray into explosively vivid saturated rainbow hues flooding the entire sky. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch motion.",
+      "on_screen_text": "\ud83c\udf08 RAINBOW SAVED!"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 3,
+      "narration": "Tomorrow \u2014 Puddle and her NEW friend Bloop find something even more mysterious hidden inside a cloud! What could it be?",
+      "visual_prompt": "A small fluffy bunny character made entirely of soft white cloud material, round puffball body, oversized floppy ears with pale blue inner lining, tiny sparkling sky-blue eyes, and little wispy cloud-tuft tail stands side by side with a plump round puffin made of soft gray storm-cloud material with a bright orange beak. Both characters peer into a dark mysterious hole that glows with a strange golden light inside a giant fluffy cloud, their eyes wide and shining with curiosity. Camera does a slow creeping dolly-in from behind the two characters toward the glowing mystery hole. Warm golden mysterious glow from inside the cloud contrasting with soft bright blue sky around it. Smooth fluid 2D cartoon animation style, high frame rate, bouncy exaggerated squash-and-stretch motion.",
+      "on_screen_text": "WHAT'S INSIDE? \ud83d\udc40 TOMORROW!"
+    }
+  ]
+}
