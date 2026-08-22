@@ -1,0 +1,72 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Can Cross the GIANT Mud Pit?! #Shorts",
+  "youtube_description": "A tiny blue compact car, a massive orange monster truck, and a chunky green off-road SUV all try to cross a GIANT mud pit \u2014 but only ONE makes it through! Can you guess which one wins? Watch to find out! \ud83c\udfc6\ud83d\udca8\n\n#Shorts #KidsVideo #Cars #MudPit #MonsterTruck #ForKids #Kidify #FunForKids #CarChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit road obstacle",
+      "on_screen_text": "WHO MAKES IT ACROSS? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue compact car!",
+      "visual_prompt": "small blue compact car front view",
+      "on_screen_text": "\ud83d\ude99 TINY BLUE CAR"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms toward the mud\u2026 and gets completely swallowed up! Stuck already!",
+      "visual_prompt": "small car stuck in deep mud",
+      "on_screen_text": "\u274c STUCK!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the chunky green off-road SUV!",
+      "visual_prompt": "green off road SUV side view",
+      "on_screen_text": "\ud83d\ude99 CHUNKY GREEN SUV"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It pushes in hard\u2026 wobbles\u2026 spins its wheels\u2026 and sinks right down to the doors! Oh no!",
+      "visual_prompt": "SUV wheels spinning stuck mud",
+      "on_screen_text": "\u274c SINKING!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the MASSIVE orange monster truck!",
+      "visual_prompt": "large orange monster truck big wheels",
+      "on_screen_text": "\ud83d\ude9b MEGA MONSTER TRUCK"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "It rolls up, those HUGE tires churn through the mud \u2014 and it blasts right out the other side!",
+      "visual_prompt": "monster truck crushing mud splashing",
+      "on_screen_text": "\u2705 IT MADE IT!"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck wins! Big wheels beat big mud \u2014 every time!",
+      "visual_prompt": "monster truck victory triumph",
+      "on_screen_text": "\ud83c\udfc6 WINNER!"
+    },
+    {
+      "id": "scene_9",
+      "duration_seconds": 3,
+      "narration": "Tomorrow \u2014 can ANY vehicle beat a wall of water? Come back and find out!",
+      "visual_prompt": "large wave water wall road",
+      "on_screen_text": "TOMORROW: WALL OF WATER \ud83d\udca6"
+    }
+  ]
+}
