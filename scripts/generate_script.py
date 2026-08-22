@@ -20,7 +20,11 @@ client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 IMAGE_FORMATS = ["guessing_reveal", "vehicle_vs_obstacle"]
 VIDEO_FORMATS = ["brainrot_skit", "superhero_original", "cartoon_adventure"]
-FORMATS = IMAGE_FORMATS + VIDEO_FORMATS
+
+# Only picking from IMAGE_FORMATS for now to keep this fully free
+# (no AI video generation cost). To bring back the AI-video formats
+# later, change this line back to: FORMATS = IMAGE_FORMATS + VIDEO_FORMATS
+FORMATS = IMAGE_FORMATS
 
 SYSTEM_PROMPT = """You write scripts for a kids' YouTube Shorts channel called Kidify.
 Five formats are used, rotating. Two use free stock photos with a
@@ -56,6 +60,12 @@ FORMAT 5 - Vehicle vs obstacle (IMAGE format):
 
 ===== VIDEO-BASED FORMATS (visual_prompt = detailed AI video prompt) =====
 
+The AI video generator used for these formats produces NATIVE synced
+audio - it generates the character's actual speaking voice with
+lip-sync, directly in the video. There is NO separate narrator voice
+added afterward. This means the character must be shown ACTUALLY
+SPEAKING the narration line on screen.
+
 For these three formats, visual_prompt must be written to get the
 HIGHEST POSSIBLE QUALITY out of an AI video generator. Every
 visual_prompt must include ALL of these elements, in this order:
@@ -64,21 +74,48 @@ visual_prompt must include ALL of these elements, in this order:
    recurring character across every scene they appear in, so the AI
    generator renders them consistently
 2. The specific action happening, described physically and precisely
-3. Camera behavior (e.g. "slow dolly-in," "handheld energetic shake,"
+3. DIALOGUE: the exact line this character says, in quotes, described
+   as spoken dialogue with a tone (e.g. 'says in an excited voice: "Oh
+   no, the sneaker is stuck!"'). This MUST be the same words as (or a
+   very close match to) that scene's "narration" field, since this is
+   the ONLY audio the viewer will hear for this scene - there is no
+   separate voiceover. Keep the dialogue SHORT enough to comfortably
+   fit within the scene's duration_seconds when spoken naturally
+   (roughly 2.5 spoken words per second - a 5 second scene fits about
+   10-12 words of dialogue, not more).
+4. Camera behavior (e.g. "slow dolly-in," "handheld energetic shake,"
    "smooth pan left to right," "dramatic low-angle shot")
-4. Lighting and color mood (e.g. "warm golden lighting," "vivid
+5. Lighting and color mood (e.g. "warm golden lighting," "vivid
    saturated primary colors," "soft bright daylight")
-5. Animation style descriptor: "smooth fluid 2D cartoon animation,
+6. Animation style descriptor: "smooth fluid 2D cartoon animation,
    high frame rate motion, expressive exaggerated character movement"
+7. Background audio mood: a short instruction for what background
+   music/ambience should feel like in THIS scene specifically, varied
+   to match the moment - e.g. "playful bouncy xylophone music,"
+   "tense suspenseful strings building tension," "triumphant cheerful
+   brass fanfare," "gentle whimsical music box melody." Vary this
+   across scenes within the same video (calm intro, tense middle,
+   triumphant ending, etc.) and vary the STYLE across different videos
+   too - don't default to the same generic "upbeat kids music" every
+   single time. Match the music to the story's emotional beat.
 
 Example of a GOOD visual_prompt (use this level of detail every time):
 "A round pizza-slice-bodied lizard character, bright red and yellow
 coloring, wearing a small white chef hat, stretchy green legs. He
-sprints across a cheese-yellow tiled kitchen floor with arms flailing
-in comic panic, exaggerated wide eyes. Camera does a fast handheld
-tracking shot following him at floor level. Warm bright kitchen
-lighting, vivid saturated colors. Smooth fluid 2D cartoon animation
-style, high frame rate, bouncy exaggerated squash-and-stretch motion."
+sprints across a cheese-yellow tiled kitchen floor, arms flailing in
+comic panic. He stops and says in a panicked voice: "Whoa! Something
+smells TERRIBLE in here!" with exaggerated wide eyes and expressive
+mouth movement matching his words. Camera does a fast handheld tracking
+shot following him at floor level. Warm bright kitchen lighting, vivid
+saturated colors. Smooth fluid 2D cartoon animation style, high frame
+rate, bouncy exaggerated squash-and-stretch motion."
+
+CRITICAL: because the "narration" field's words are now spoken directly
+BY the character in the video (not read by an external narrator), keep
+each scene's narration SHORT - short enough to say naturally within
+that scene's duration_seconds (about 2.5 words per second). Do not
+write a long narration sentence for a short scene; either shorten the
+line or lengthen the scene's duration_seconds to fit it.
 
 A weak/vague visual_prompt (AVOID this) would just say "the lizard runs
 across the kitchen, funny" - not enough detail for a good result.
@@ -139,6 +176,14 @@ Rules for every script:
 - No scary, violent, or inappropriate content
 - Break the script into SCENES. Each scene is either a talking beat, a
   reveal beat, or a countdown beat.
+- CRITICAL - duration must fit the narration: for IMAGE format scenes
+  (where an external narrator reads the "narration" text aloud), set
+  duration_seconds long enough for that exact text to be spoken in
+  full at a natural pace (roughly 2.5 words per second, plus 1 extra
+  second of buffer at the start/end). A short duration with a long
+  narration line will get cut off mid-sentence - never do this. If a
+  line is naturally long, either shorten it or lengthen the scene's
+  duration_seconds to match.
 
 Return ONLY valid JSON matching this schema, nothing else:
 {
