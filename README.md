@@ -7,16 +7,17 @@ YouTube only — no TikTok cross-posting.
 
 Every day (via GitHub Actions cron), the pipeline runs four steps in order:
 
-1. **`generate_script.py`** — Claude writes a scene-by-scene script,
-   rotating across five formats: guessing/reveal games, brainrot-style
-   character skits, original superhero stories, original cartoon
-   adventures, and vehicle-vs-obstacle. Two of these formats
-   (guessing/reveal, vehicle-vs-obstacle) are marked as "image" type;
-   the other three ("video" type) need custom AI-generated characters.
-2. **`generate_visuals.py`** — For "video" type scripts, sends each
-   scene to Wan 2.6 (via fal.ai) for a real moving AI-generated clip.
-   For "image" type scripts, searches Pexels (free) for a matching
-   stock photo instead - no AI generation cost for these formats.
+1. **`generate_script.py`** — Claude writes a scene-by-scene script.
+   **Currently only picking from the 2 free formats** (guessing/reveal,
+   vehicle-vs-obstacle) to avoid AI video generation costs. The 3
+   AI-video formats (brainrot, superhero, cartoon adventure) still
+   exist in the code and can be re-enabled anytime by editing the
+   `FORMATS` list at the top of `generate_script.py`.
+2. **`generate_visuals.py`** — Since only image-format scripts are
+   currently generated, this searches Pexels (free) for a matching
+   stock photo per scene - no AI generation cost. (The Wan 2.6/fal.ai
+   video-generation code path still exists for when video formats are
+   re-enabled.)
 3. **`assemble_video.py`** — JSON2Video stitches everything together:
    video clips play as-is; images get a slow pan/zoom (Ken Burns)
    effect so they don't feel static. Adds voiceover narration and
