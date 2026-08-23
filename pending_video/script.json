@@ -1,0 +1,72 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Monster Mud Pit Challenge",
+  "youtube_title": "\ud83d\ude97 Which Vehicle Survives the GIANT Mud Pit? #Shorts",
+  "youtube_description": "Three epic vehicles face the ultimate mud pit challenge! Can the tiny blue hatchback, the beefy orange pickup truck, or the massive green monster truck make it through? Watch to find out! \ud83d\ude99\ud83d\udca8\n\n#Shorts #KidsVideos #Kidify #CarChallenge #MonsterTruck #FunForKids #VehicleChallenge #MudPit",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "THE MUD PIT CHALLENGE \ud83c\udfc1"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue hatchback!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "CONTESTANT 1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms toward the mud... and sinks straight in. Goodbye, little guy!",
+      "visual_prompt": "small car stuck deep mud",
+      "on_screen_text": "ELIMINATED! \ud83d\ude2c"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the beefy orange pickup truck!",
+      "visual_prompt": "orange pickup truck offroad",
+      "on_screen_text": "CONTESTANT 2 \ud83d\udfe0"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It rumbles in, pushing hard... but the mud is just too deep. It stops halfway!",
+      "visual_prompt": "pickup truck stuck muddy road",
+      "on_screen_text": "SO CLOSE\u2026 \u274c"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last up \u2014 the MASSIVE green monster truck!",
+      "visual_prompt": "giant green monster truck",
+      "on_screen_text": "CONTESTANT 3 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 3,
+      "narration": "Three\u2026 two\u2026 one\u2026 GO!",
+      "visual_prompt": "monster truck revving engine starting line",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udea6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 5,
+      "narration": "It ROARS through the mud, splashing everywhere \u2014 and bursts out the other side!",
+      "visual_prompt": "monster truck splashing mud action",
+      "on_screen_text": "WINNER! \ud83c\udfc6\ud83c\udf89"
+    },
+    {
+      "id": "scene_9",
+      "duration_seconds": 4,
+      "narration": "The monster truck wins! Tomorrow \u2014 can it handle a wall of water? Find out!",
+      "visual_prompt": "monster truck victory trophy",
+      "on_screen_text": "TOMORROW: WATER WALL \ud83d\udca7"
+    }
+  ]
+}

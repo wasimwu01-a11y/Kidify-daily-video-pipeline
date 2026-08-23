@@ -1,0 +1,74 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38310064/pexels-photo-38310064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+    "on_screen_text": "THE MUD PIT CHALLENGE \ud83c\udfc1",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33229798/pexels-photo-33229798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue hatchback!",
+    "on_screen_text": "CONTESTANT 1 \ud83d\udd35",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It zooms toward the mud... and sinks straight in. Goodbye, little guy!",
+    "on_screen_text": "ELIMINATED! \ud83d\ude2c",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18864553/pexels-photo-18864553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the beefy orange pickup truck!",
+    "on_screen_text": "CONTESTANT 2 \ud83d\udfe0",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It rumbles in, pushing hard... but the mud is just too deep. It stops halfway!",
+    "on_screen_text": "SO CLOSE\u2026 \u274c",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350101/pexels-photo-37350101.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last up \u2014 the MASSIVE green monster truck!",
+    "on_screen_text": "CONTESTANT 3 \ud83d\udfe2",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350101/pexels-photo-37350101.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one\u2026 GO!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udea6",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/29176532/pexels-photo-29176532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It ROARS through the mud, splashing everywhere \u2014 and bursts out the other side!",
+    "on_screen_text": "WINNER! \ud83c\udfc6\ud83c\udf89",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_9",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34920789/pexels-photo-34920789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The monster truck wins! Tomorrow \u2014 can it handle a wall of water? Find out!",
+    "on_screen_text": "TOMORROW: WATER WALL \ud83d\udca7",
+    "duration_seconds": 4
+  }
+]
