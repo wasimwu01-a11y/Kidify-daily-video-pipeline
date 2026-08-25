@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/5725857/pexels-photo-5725857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these boxes is hiding a GIANT diamond!",
+    "on_screen_text": "\ud83d\udc8e WHICH BOX? \ud83d\udc8e",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/264985/pexels-photo-264985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the red box, the blue box, or the green box? Choose now!",
+    "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe2 GREEN",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/17139860/pexels-photo-17139860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one \u2014 let's open them!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83c\udf89",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7842457/pexels-photo-7842457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The RED box\u2026 is full of rubber ducks! Not the diamond!",
+    "on_screen_text": "\ud83e\udd86 NOPE!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/14037336/pexels-photo-14037336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The BLUE box\u2026 has a giant smelly sock inside! Ewww!",
+    "on_screen_text": "\ud83e\udde6 EWWW!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/19525067/pexels-photo-19525067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the GREEN box has the diamond \u2014 and WOW, look at that sparkle!",
+    "on_screen_text": "\ud83d\udc8e YOU FOUND IT!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/8101706/pexels-photo-8101706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you get it right? Level two is coming tomorrow \u2014 don't miss it!",
+    "on_screen_text": "\u2b50 LEVEL 2 TOMORROW!",
+    "duration_seconds": 4
+  }
+]

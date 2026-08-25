@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Box Hides the Diamond?",
+  "youtube_title": "\ud83d\udc8e Can You Find the Diamond? #Shorts",
+  "youtube_description": "One of these three boxes is hiding a GIANT diamond \u2014 but which one? Watch to find out! Comment below if you got it right! \ud83d\udc47\n\n#Shorts #KidsVideo #GuessingGame #DiamondChallenge #Kidify #FunForKids #BrainTeaser",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One of these boxes is hiding a GIANT diamond!",
+      "visual_prompt": "three closed gift boxes colorful",
+      "on_screen_text": "\ud83d\udc8e WHICH BOX? \ud83d\udc8e"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "Is it the red box, the blue box, or the green box? Choose now!",
+      "visual_prompt": "red blue green gift boxes row",
+      "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe2 GREEN"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "Three\u2026 two\u2026 one \u2014 let's open them!",
+      "visual_prompt": "countdown timer kids colorful",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83c\udf89"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "The RED box\u2026 is full of rubber ducks! Not the diamond!",
+      "visual_prompt": "open red gift box rubber ducks",
+      "on_screen_text": "\ud83e\udd86 NOPE!"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The BLUE box\u2026 has a giant smelly sock inside! Ewww!",
+      "visual_prompt": "open blue box smelly sock funny",
+      "on_screen_text": "\ud83e\udde6 EWWW!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "That means the GREEN box has the diamond \u2014 and WOW, look at that sparkle!",
+      "visual_prompt": "open green gift box sparkling diamond",
+      "on_screen_text": "\ud83d\udc8e YOU FOUND IT!"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you get it right? Level two is coming tomorrow \u2014 don't miss it!",
+      "visual_prompt": "excited kids celebrating treasure",
+      "on_screen_text": "\u2b50 LEVEL 2 TOMORROW!"
+    }
+  ]
+}
