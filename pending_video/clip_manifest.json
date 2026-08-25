@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294307/pexels-photo-6294307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these eggs is hiding a GIANT prize! Which one is it?",
+    "on_screen_text": "WHICH EGG? \ud83e\udd5a",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4226897/pexels-photo-4226897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "You've got three choices \u2014 the blue egg, the gold egg, or the pink egg!",
+    "on_screen_text": "BLUE \ud83d\udc99 | GOLD \ud83d\udc9b | PINK \ud83e\ude77",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Lock in your answer! Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd12",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/31926109/pexels-photo-31926109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Let's crack open the blue egg first\u2026 it's a rubber duck! Quack quack!",
+    "on_screen_text": "\u274c BLUE EGG = \ud83e\udd86 NOPE!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/35210015/pexels-photo-35210015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Now the pink egg\u2026 oh wow, it's a pile of socks! Nope, not the prize!",
+    "on_screen_text": "\u274c PINK EGG = \ud83e\udde6 SO CLOSE!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/15266204/pexels-photo-15266204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the GOLD egg has the prize! Open it up\u2026 it's a giant chocolate cake!",
+    "on_screen_text": "\u2705 GOLD EGG = \ud83c\udf6b\ud83c\udf82 WINNER!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/13871204/pexels-photo-13871204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you pick the gold egg? Nice job! Come back tomorrow for Level 2 \u2014 it gets trickier!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83c\udf1f",
+    "duration_seconds": 4
+  }
+]

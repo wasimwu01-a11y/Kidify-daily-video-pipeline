@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Egg Has the Prize?",
+  "youtube_title": "\ud83e\udd5a Which Egg Hides the PRIZE? #Shorts",
+  "youtube_description": "Can you guess which egg is hiding the secret prize? Pick your egg \u2014 blue, gold, or pink \u2014 and find out if you were RIGHT! \ud83e\udd5a\u2728 Come back tomorrow for Level 2!\n\n#Shorts #KidsVideo #GuessingGame #Kidify #FunForKids #EggChallenge #PrizeReveal",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One of these eggs is hiding a GIANT prize! Which one is it?",
+      "visual_prompt": "three colorful Easter eggs",
+      "on_screen_text": "WHICH EGG? \ud83e\udd5a"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "You've got three choices \u2014 the blue egg, the gold egg, or the pink egg!",
+      "visual_prompt": "blue gold pink Easter eggs row",
+      "on_screen_text": "BLUE \ud83d\udc99 | GOLD \ud83d\udc9b | PINK \ud83e\ude77"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 3,
+      "narration": "Lock in your answer! Three\u2026 two\u2026 one!",
+      "visual_prompt": "countdown numbers colorful background",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd12"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "Let's crack open the blue egg first\u2026 it's a rubber duck! Quack quack!",
+      "visual_prompt": "yellow rubber duck toy closeup",
+      "on_screen_text": "\u274c BLUE EGG = \ud83e\udd86 NOPE!"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "Now the pink egg\u2026 oh wow, it's a pile of socks! Nope, not the prize!",
+      "visual_prompt": "colorful socks pile funny",
+      "on_screen_text": "\u274c PINK EGG = \ud83e\udde6 SO CLOSE!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "That means the GOLD egg has the prize! Open it up\u2026 it's a giant chocolate cake!",
+      "visual_prompt": "chocolate birthday cake golden",
+      "on_screen_text": "\u2705 GOLD EGG = \ud83c\udf6b\ud83c\udf82 WINNER!"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you pick the gold egg? Nice job! Come back tomorrow for Level 2 \u2014 it gets trickier!",
+      "visual_prompt": "excited child thumbs up",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83c\udf1f"
+    }
+  ]
+}
