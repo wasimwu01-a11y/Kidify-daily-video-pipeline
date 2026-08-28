@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Egg Hides the Dragon?",
+  "youtube_title": "\ud83e\udd5a Which Egg Hides the Dragon? #Shorts",
+  "youtube_description": "Can YOU find the dragon egg? Watch to see which egg is hiding the secret! \ud83d\udc09\ud83e\udd5a Come back tomorrow for Level 2!\n\n#Shorts #KidsVideo #GuessingGame #Dragon #Kidify #FunForKids #EggReveal #BrainTeaser",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One of these eggs is hiding a DRAGON!",
+      "visual_prompt": "colorful Easter eggs nest",
+      "on_screen_text": "\ud83e\udd5a WHICH EGG? \ud83e\udd5a"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "Is it the blue egg, the red egg, or the golden egg?",
+      "visual_prompt": "blue red gold eggs display",
+      "on_screen_text": "BLUE? RED? GOLD?"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 3,
+      "narration": "Pick your egg! Three\u2026 two\u2026 one!",
+      "visual_prompt": "countdown timer colorful numbers",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "The blue egg cracks open and... it's a rubber duck! Quack quack!",
+      "visual_prompt": "cracked egg rubber duck",
+      "on_screen_text": "\u274c NOPE! QUACK!"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The red egg pops open and... it's a tiny pizza slice! Seriously?!",
+      "visual_prompt": "broken egg pizza slice",
+      "on_screen_text": "\u274c WRONG! \ud83c\udf55"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "The GOLDEN egg glows, shakes, and BOOM \u2014 out comes a baby dragon!",
+      "visual_prompt": "golden egg hatching glowing",
+      "on_screen_text": "\u2705 THE GOLDEN EGG! \ud83d\udc09"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you get it right? Level 2 is coming tomorrow \u2014 can you beat it?",
+      "visual_prompt": "trophy winner celebration kids",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83c\udfc6"
+    }
+  ]
+}
