@@ -1,0 +1,65 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Egg Hides the Dragon?",
+  "youtube_title": "\ud83e\udd5a Which Egg Is Hiding the Dragon? #Shorts",
+  "youtube_description": "Can you guess which egg has the dragon inside? Watch all three reveals and see if you were right! Like and subscribe for Level 2 tomorrow! \ud83d\udc09\n\n#Shorts #KidsVideo #GuessingGame #Dragon #Kidify #FunForKids #EggReveal #PuzzleForKids",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One of these eggs is hiding a DRAGON \u2014 but which one?",
+      "visual_prompt": "three colorful eggs glowing",
+      "on_screen_text": "WHICH EGG? \ud83e\udd5a\ud83e\udd5a\ud83e\udd5a"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "You've got three choices \u2014 the red egg, the blue egg, or the gold egg!",
+      "visual_prompt": "red blue gold Easter eggs",
+      "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe1 GOLD"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "Pick your egg RIGHT NOW \u2014 the countdown is starting!",
+      "visual_prompt": "colorful eggs on wooden table",
+      "on_screen_text": "CHOOSE NOW! \u2b07\ufe0f"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Three\u2026 two\u2026 one!",
+      "visual_prompt": "countdown numbers bright colorful",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd25"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The RED egg cracks open\u2026 and out pops a rubber chicken! Not a dragon!",
+      "visual_prompt": "rubber chicken toy funny",
+      "on_screen_text": "\u274c NOPE! \ud83d\udc14"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 4,
+      "narration": "The BLUE egg opens\u2026 and it's just a tiny frog! Still no dragon!",
+      "visual_prompt": "small green frog closeup",
+      "on_screen_text": "\u274c SO CLOSE! \ud83d\udc38"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "The GOLD egg glows, it shakes, it BURSTS \u2014 and there's the dragon!!",
+      "visual_prompt": "golden egg cracking open sparkle",
+      "on_screen_text": "\u2705 GOLD EGG WINS! \ud83d\udc09\ud83d\udd25"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "Did you get it right? Level 2 is coming tomorrow \u2014 don't miss it!",
+      "visual_prompt": "excited child thumbs up",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\ude80"
+    }
+  ]
+}
