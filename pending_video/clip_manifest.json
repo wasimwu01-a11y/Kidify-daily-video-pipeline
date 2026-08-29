@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/19725419/pexels-photo-19725419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "A dragon is hiding inside one of these eggs \u2014 but which one?",
+    "on_screen_text": "WHICH EGG? \ud83e\udd5a",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/12090168/pexels-photo-12090168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "You've got three choices: the purple egg, the golden egg, or the cracked egg!",
+    "on_screen_text": "PURPLE \ud83d\udc9c | GOLD \u2728 | CRACKED \ud83e\udd5a",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/20559272/pexels-photo-20559272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Pick your egg right now! The countdown is on \u2014 three, two, one!",
+    "on_screen_text": "3\ufe0f\u20e3... 2\ufe0f\u20e3... 1\ufe0f\u20e3...",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33305466/pexels-photo-33305466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The purple egg cracks open and\u2026 it's a rubber duck! Quack quack, not a dragon!",
+    "on_screen_text": "\u274c NOPE! \ud83e\udd86",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294318/pexels-photo-6294318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The cracked egg pops open and\u2026 it's a tiny little frog! Ribbit! So close!",
+    "on_screen_text": "\u274c SO CLOSE! \ud83d\udc38",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/32314327/pexels-photo-32314327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The golden egg glows, shakes, and BOOM \u2014 a baby dragon bursts out! The gold egg wins!",
+    "on_screen_text": "\u2705 THE GOLDEN EGG! \ud83d\udc09\ud83d\udd25",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/13871204/pexels-photo-13871204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you get it right? Come back tomorrow for Level 2 \u2014 it gets way harder!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd25",
+    "duration_seconds": 4
+  }
+]
