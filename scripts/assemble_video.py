@@ -9,9 +9,8 @@ AUDIO HANDLING:
   background music). NO separate narrator voice is added - that would
   overlap/clash with the clip's own audio.
 - "image" scenes: stock photos have no audio at all, so an external
-  narrator voice reads the narration text aloud, PLUS a background
-  music track (randomly picked from MUSIC_LIBRARY for variety across
-  videos) plays underneath at low volume.
+  narrator voice reads the narration text aloud. Background music is
+  currently DISABLED (see MUSIC_LIBRARY note below).
 """
 
 import os
@@ -31,23 +30,15 @@ HEADERS = {
 POLL_INTERVAL_SECONDS = 10
 MAX_POLL_ATTEMPTS = 60
 
-# Rotating background music library for IMAGE-format videos only (stock
-# photos have no native audio, video-format clips generate their own).
-# These must be real, publicly-hosted MP3 URLs - point them at files
-# committed to this repo (raw.githubusercontent.com/.../music/track.mp3)
-# or another public host. Add as many as you like for more variety;
-# one is randomly picked per video. Leave the list empty to skip music
-# entirely (safe default until real tracks are hosted).
 MUSIC_LIBRARY = [
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/apalonbeats-upbeat-upbeat-music-549422%20(1).mp3",
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/apalonbeats-upbeat-upbeat-music-549422.mp3",
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/atlasaudio-upbeat-and-inspiring-578932.mp3",
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/sub_clair-ambient-instrumental-579510.mp3",
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/sub_clair-dynamic-instrumental-579513.mp3",
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/the_mountain-pop-upbeat-upbeat-pop-576584.mp3",
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/the_mountain-upbeat-corporate-576594.mp3",
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/the_mountain-upbeat-upbeat-music-567445.mp3",
-    "https://github.com/wasimwu01-a11y/Kidify-daily-video-pipeline/raw/refs/heads/main/music/verclub_music-upbeat-550944.mp3",
+    # DISABLED as of Aug 2026 - a track sourced from Pixabay triggered
+    # a real Content ID claim ("Orange Juice SLWD" / Elite Alliance
+    # Music), blocking the video globally. "Free download" sites don't
+    # guarantee protection from third-party claims. Re-populate this
+    # list ONLY with tracks downloaded directly from YouTube's own
+    # Audio Library (studio.youtube.com > Audio Library) - those are
+    # explicitly guaranteed safe from Content ID claims, unlike
+    # generic royalty-free sites.
 ]
 
 
@@ -118,9 +109,8 @@ def build_movie_json(manifest: list[dict], script: dict) -> dict:
     }
 
     # Background music only for image-format videos (video-format clips
-    # already have their own native background music/audio baked in -
-    # adding another track would cause the same overlap problem we're
-    # fixing here).
+    # already have their own native background music/audio baked in).
+    # Currently disabled entirely - see MUSIC_LIBRARY comment above.
     if visual_type == "image" and MUSIC_LIBRARY:
         track = random.choice(MUSIC_LIBRARY)
         movie["elements"] = [
