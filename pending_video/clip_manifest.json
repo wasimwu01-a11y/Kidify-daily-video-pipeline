@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37014022/pexels-photo-37014022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three cars, one giant snow ramp \u2014 who makes it to the top?",
+    "on_screen_text": "WHO MAKES IT? \u2744\ufe0f",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33229798/pexels-photo-33229798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue hatchback! It's small but speedy!",
+    "on_screen_text": "\ud83d\udd35 TINY BLUE HATCHBACK",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/19600534/pexels-photo-19600534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It zooms toward the ramp\u2026 and just barely makes it halfway before sliding back down!",
+    "on_screen_text": "\ud83d\ude2c HALFWAY\u2026 THEN NOPE!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18864553/pexels-photo-18864553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the big orange pickup truck! It's got four-wheel drive and attitude!",
+    "on_screen_text": "\ud83d\udfe0 BIG ORANGE PICKUP",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/11373604/pexels-photo-11373604.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It growls up the ramp\u2026 makes it three-quarters of the way\u2026 then spins out in the slush! So close!",
+    "on_screen_text": "\ud83d\ude2e SO CLOSE!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350101/pexels-photo-37350101.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last up \u2014 the MASSIVE purple monster truck! Those tires are bigger than your whole house!",
+    "on_screen_text": "\ud83d\udc9c MEGA MONSTER TRUCK",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38492409/pexels-photo-38492409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It ROARS toward the snow ramp, bounces up every bump, and CRUSHES its way straight to the top!",
+    "on_screen_text": "\ud83c\udfc6 BOOM! ALL THE WAY UP!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350100/pexels-photo-37350100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The monster truck wins! Nothing stops those giant wheels! Come back tomorrow \u2014 muddy swamp edition!",
+    "on_screen_text": "\ud83e\udd47 WINNER! \ud83c\udf0a MUD PIT TOMORROW!",
+    "duration_seconds": 4
+  }
+]
