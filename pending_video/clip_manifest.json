@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/3912293/pexels-photo-3912293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "A puppy is hiding in one of these three boxes \u2014 but which one?",
+    "on_screen_text": "\ud83d\udc36 WHERE IS THE PUPPY?",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/35278942/pexels-photo-35278942.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the red box, the blue box, or the yellow box? Pick your answer now!",
+    "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe1 YELLOW",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/11768112/pexels-photo-11768112.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one\u2026 let's find out!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83c\udf89",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7842457/pexels-photo-7842457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "You open the red box and\u2026 it's a rubber duck! Quack quack, wrong box!",
+    "on_screen_text": "\u274c NOPE! \ud83e\udd86",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6612551/pexels-photo-6612551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "You try the blue box and\u2026 it's a giant pile of socks! Ewww, not today!",
+    "on_screen_text": "\u274c WRONG! \ud83e\udde6",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7749996/pexels-photo-7749996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the yellow box is\u2026 YES! There's the puppy! You found it!",
+    "on_screen_text": "\u2705 THE PUPPY! \ud83d\udc36\ud83c\udf89",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7862630/pexels-photo-7862630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you get it right? Level two is coming tomorrow \u2014 it's even trickier!",
+    "on_screen_text": "\ud83d\udd25 LEVEL 2 TOMORROW!",
+    "duration_seconds": 4
+  }
+]
