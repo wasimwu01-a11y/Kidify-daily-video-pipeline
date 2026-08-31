@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6990982/pexels-photo-6990982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One egg is hiding a HUGE prize! Which one is it?",
+    "on_screen_text": "WHICH EGG? \ud83e\udd5a",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38327664/pexels-photo-38327664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the blue egg, the yellow egg, or the red egg? Choose fast!",
+    "on_screen_text": "BLUE? YELLOW? RED?",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Lock in your answer! Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd12",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6846037/pexels-photo-6846037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue egg\u2026 opens up and it's full of stinky socks! Ewww!",
+    "on_screen_text": "\u274c NOPE! \ud83e\udde6 Stinky!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34691304/pexels-photo-34691304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The yellow egg\u2026 it's a rubber chicken! Not quite the prize!",
+    "on_screen_text": "\u274c SO CLOSE! \ud83d\udc14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6532362/pexels-photo-6532362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The RED egg is the winner! Open it up and\u2026 it's a golden trophy! Amazing!",
+    "on_screen_text": "\ud83c\udfc6 RED WINS! YOU GOT IT!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/3932342/pexels-photo-3932342.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you pick red? Level two is coming tomorrow \u2014 don't miss it!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83e\udd5a\ud83d\udd25",
+    "duration_seconds": 4
+  }
+]
