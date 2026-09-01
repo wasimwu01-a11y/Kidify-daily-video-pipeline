@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Box Hides the Puppy?",
+  "youtube_title": "\ud83d\udc36 Can You Find the Hidden Puppy? #Shorts",
+  "youtube_description": "Three boxes, one hidden puppy \u2014 can YOU guess which one? Watch to find out! \ud83d\udc3e Come back tomorrow for Level 2!\n\n#Shorts #KidsVideo #GuessingGame #Puppy #FunForKids #Kidify #BrainTeaser #CutePuppy",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "A puppy is hiding in one of these three boxes \u2014 but which one?",
+      "visual_prompt": "three colorful gift boxes",
+      "on_screen_text": "\ud83d\udc36 WHERE IS THE PUPPY?"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "Is it the red box, the blue box, or the yellow box? Take a guess!",
+      "visual_prompt": "red blue yellow gift boxes",
+      "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe1 YELLOW"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "The answer is coming \u2014 three, two, one!",
+      "visual_prompt": "colorful countdown numbers",
+      "on_screen_text": "3\ufe0f\u20e3\u2026 2\ufe0f\u20e3\u2026 1\ufe0f\u20e3\u2026"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "The red box \u2014 oh no, it's just a rubber chicken! Bawk bawk!",
+      "visual_prompt": "rubber chicken toy yellow",
+      "on_screen_text": "\u274c NOPE! \ud83d\udc14"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The blue box \u2014 whoops, it's a pile of smelly socks! Ewww!",
+      "visual_prompt": "pile colorful socks closeup",
+      "on_screen_text": "\u274c SO CLOSE! \ud83e\udde6"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "The yellow box \u2014 yes! There's the puppy! You found it! Good job!",
+      "visual_prompt": "cute puppy inside open box",
+      "on_screen_text": "\u2705 THE YELLOW BOX! \ud83d\udc36\ud83c\udf89"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you get it right? Come back tomorrow for Level 2 \u2014 it gets trickier!",
+      "visual_prompt": "question mark colorful background",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd25"
+    }
+  ]
+}
