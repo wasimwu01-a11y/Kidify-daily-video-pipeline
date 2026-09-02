@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Vehicles vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Can It Cross the GIANT MUD PIT? #Shorts",
+  "youtube_description": "A tiny blue hatchback, a beefy orange pickup truck, and a massive green monster truck all try to cross the world's muddiest mud pit! Who makes it through? Watch to find out! \ud83d\ude99\ud83d\udca8\n\n#Shorts #KidsVideos #Kidify #MonsterTruck #CarChallenge #MudPit #FunForKids #Vehicles",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One GIANT mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit wide aerial view",
+      "on_screen_text": "WHO CROSSES THE MUD PIT? \ud83c\udfc6"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue hatchback!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "CONTESTANT 1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms toward the mud... and sinks straight to the bumper! Game over, little guy!",
+      "visual_prompt": "small car stuck deep in mud",
+      "on_screen_text": "STUCK! \ud83d\ude2c"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the beefy orange pickup truck!",
+      "visual_prompt": "orange pickup truck off road",
+      "on_screen_text": "CONTESTANT 2 \ud83d\udfe0"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It powers in, churning mud everywhere... but the wheels just spin and spin. So close!",
+      "visual_prompt": "pickup truck wheels spinning in mud",
+      "on_screen_text": "SOOO CLOSE... \ud83d\ude05"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the MASSIVE green monster truck!",
+      "visual_prompt": "giant green monster truck big wheels",
+      "on_screen_text": "CONTESTANT 3 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "It ROARS in, those huge tires chewing through the mud like it's nothing \u2014 and it cruises right out the other side!",
+      "visual_prompt": "monster truck driving through mud splash",
+      "on_screen_text": "WINNER! \ud83c\udfc6\ud83c\udf89"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "Monster truck wins! Come back tomorrow \u2014 next up is a giant RAMP. Can anyone fly?",
+      "visual_prompt": "steep launch ramp outdoors",
+      "on_screen_text": "TOMORROW: THE GIANT RAMP! \ud83d\ude80"
+    }
+  ]
+}
