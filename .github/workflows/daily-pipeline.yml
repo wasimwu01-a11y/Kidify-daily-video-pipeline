@@ -18,12 +18,17 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+
+      - name: Install FFmpeg and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -80,11 +85,9 @@ jobs:
         if: always()
         run: python scripts/check_complete.py
 
-      - name: Assemble final video (JSON2Video)
+      - name: Assemble final video (FFmpeg - free)
         id: assemble
         if: always() && steps.check_complete.outputs.complete == 'true'
-        env:
-          JSON2VIDEO_API_KEY: ${{ secrets.JSON2VIDEO_API_KEY }}
         run: python scripts/assemble_video.py
 
       - name: Upload to YouTube
@@ -107,7 +110,7 @@ jobs:
 
       - name: Upload artifacts for debugging
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pipeline-output
           path: |
