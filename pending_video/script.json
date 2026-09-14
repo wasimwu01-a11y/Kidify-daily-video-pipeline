@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Monster Mud Pit Challenge",
+  "youtube_title": "\ud83d\ude97 Can It Cross the MEGA MUD PIT? #Shorts",
+  "youtube_description": "Three totally different vehicles face the MEGA MUD PIT! Who makes it through? Watch to find out! \ud83d\ude99\ud83d\udca8\n\n#Shorts #KidsVideos #Kidify #CarChallenge #MudPit #VehicleChallenge #FunForKids #CarvsObstacle",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One MEGA mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO MAKES IT? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the little blue compact car!",
+      "visual_prompt": "small blue compact car",
+      "on_screen_text": "CONTESTANT 1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms toward the mud... and sinks straight to the bumper! Not today, little guy!",
+      "visual_prompt": "small car stuck in deep mud",
+      "on_screen_text": "STUCK! \ud83d\ude2c"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the big orange dump truck rolls up!",
+      "visual_prompt": "large orange dump truck",
+      "on_screen_text": "CONTESTANT 2 \ud83d\udfe0"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It pushes in... and churns... and slows down... and stops! Even the dump truck is done!",
+      "visual_prompt": "heavy dump truck bogged down in mud",
+      "on_screen_text": "SO CLOSE... \ud83d\ude2e"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the giant green monster truck!",
+      "visual_prompt": "giant green monster truck big wheels",
+      "on_screen_text": "CONTESTANT 3 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "Those massive wheels CHURN through the mud \u2014 splash, squish, BOOM \u2014 it blasts out the other side!",
+      "visual_prompt": "monster truck driving through mud splashing",
+      "on_screen_text": "LET'S GOOO! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck WINS! Can it beat a WALL OF WATER tomorrow? Find out at Level 2!",
+      "visual_prompt": "monster truck victory muddy finish line",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udca7"
+    }
+  ]
+}
