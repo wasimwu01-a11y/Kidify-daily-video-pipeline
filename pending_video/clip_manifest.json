@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18278714/pexels-photo-18278714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three cars. One giant mud pit. Who makes it through?",
+    "on_screen_text": "WHO SURVIVES THE MUD? \ud83e\udd14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34712982/pexels-photo-34712982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue city car!",
+    "on_screen_text": "CAR #1 \ud83d\ude99",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It hits the mud and... oh no. Completely stuck. Not even close!",
+    "on_screen_text": "\u274c STUCK!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39496352/pexels-photo-39496352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the big orange pickup truck!",
+    "on_screen_text": "CAR #2 \ud83d\udefb",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18371959/pexels-photo-18371959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It powers through... halfway... but sinks right in the middle. So close!",
+    "on_screen_text": "\u274c ALMOST!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18189893/pexels-photo-18189893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last \u2014 the massive green monster truck!",
+    "on_screen_text": "CAR #3 \ud83d\ude9b",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/29176532/pexels-photo-29176532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It ROARS through the mud \u2014 splashing everywhere \u2014 and MAKES IT! Yeah!",
+    "on_screen_text": "\u2705 WINNER! \ud83c\udfc6",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/36801081/pexels-photo-36801081.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The monster truck wins! Come back tomorrow \u2014 giant speed bump showdown!",
+    "on_screen_text": "SPEED BUMP CHALLENGE TOMORROW! \ud83d\udd1c",
+    "duration_seconds": 4
+  }
+]
