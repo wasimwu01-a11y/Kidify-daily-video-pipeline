@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Survives the GIANT Mud Pit? #Shorts",
+  "youtube_description": "Three very different vehicles take on a massive mud pit \u2014 but only one makes it through! Can you guess which one wins? Watch to find out! \ud83c\udfc6\ud83d\udca8\n\n#Shorts #KidsVideos #CarChallenge #MudPit #Kidify #FunForKids #VehicleChallenge #GuessTheWinner",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+      "visual_prompt": "giant mud pit road obstacle",
+      "on_screen_text": "WHO SURVIVES? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "First up \u2014 a tiny pale blue bubble car, small as a bathtub!",
+      "visual_prompt": "tiny blue compact car",
+      "on_screen_text": "CONTESTANT 1 \ud83d\ude99"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "Second \u2014 a long, shiny silver luxury sedan, looking very fancy!",
+      "visual_prompt": "silver luxury sedan car",
+      "on_screen_text": "CONTESTANT 2 \u2728"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "And third \u2014 a massive orange monster truck with tires taller than a house!",
+      "visual_prompt": "orange monster truck big tires",
+      "on_screen_text": "CONTESTANT 3 \ud83d\udd25"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 3,
+      "narration": "The tiny blue bubble car goes first \u2014 it hits the mud and... sinks instantly!",
+      "visual_prompt": "small car stuck deep mud",
+      "on_screen_text": "\u274c SUNK!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 4,
+      "narration": "Next, the fancy silver sedan rolls up slowly \u2014 and gets completely swallowed by the mud! So much for staying clean!",
+      "visual_prompt": "car buried in mud puddle",
+      "on_screen_text": "\u274c BURIED!"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "Now the giant orange monster truck rumbles in \u2014 mud flies EVERYWHERE \u2014 and it blasts straight through like it's nothing!",
+      "visual_prompt": "monster truck crushing mud splashing",
+      "on_screen_text": "\u2705 WINNER! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck wins! Did you guess right? Tomorrow \u2014 they face a wall of water! Level two is coming!",
+      "visual_prompt": "monster truck victory celebration",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udca7"
+    }
+  ]
+}

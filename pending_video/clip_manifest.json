@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18278714/pexels-photo-18278714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+    "on_screen_text": "WHO SURVIVES? \ud83e\udd14",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34712982/pexels-photo-34712982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 a tiny pale blue bubble car, small as a bathtub!",
+    "on_screen_text": "CONTESTANT 1 \ud83d\ude99",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/15796476/pexels-photo-15796476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Second \u2014 a long, shiny silver luxury sedan, looking very fancy!",
+    "on_screen_text": "CONTESTANT 2 \u2728",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38530781/pexels-photo-38530781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "And third \u2014 a massive orange monster truck with tires taller than a house!",
+    "on_screen_text": "CONTESTANT 3 \ud83d\udd25",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The tiny blue bubble car goes first \u2014 it hits the mud and... sinks instantly!",
+    "on_screen_text": "\u274c SUNK!",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/36073767/pexels-photo-36073767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next, the fancy silver sedan rolls up slowly \u2014 and gets completely swallowed by the mud! So much for staying clean!",
+    "on_screen_text": "\u274c BURIED!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38492409/pexels-photo-38492409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Now the giant orange monster truck rumbles in \u2014 mud flies EVERYWHERE \u2014 and it blasts straight through like it's nothing!",
+    "on_screen_text": "\u2705 WINNER! \ud83c\udfc6",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350100/pexels-photo-37350100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The monster truck wins! Did you guess right? Tomorrow \u2014 they face a wall of water! Level two is coming!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udca7",
+    "duration_seconds": 4
+  }
+]
