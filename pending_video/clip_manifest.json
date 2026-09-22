@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/5725857/pexels-photo-5725857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these boxes is hiding a giant diamond!",
+    "on_screen_text": "WHICH BOX? \ud83d\udc8e",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6087540/pexels-photo-6087540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the red box, the blue box, or the green box?",
+    "on_screen_text": "\ud83d\udd34 RED  \ud83d\udd35 BLUE  \ud83d\udfe2 GREEN",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/8113753/pexels-photo-8113753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Think fast! Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\ufe0f\u20e3\u2026 2\ufe0f\u20e3\u2026 1\ufe0f\u20e3\u2026",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34691304/pexels-photo-34691304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The red box? Oh no \u2014 it's just a rubber chicken!",
+    "on_screen_text": "\u274c NOPE! \ud83d\udc14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/35210015/pexels-photo-35210015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue box? Eww \u2014 it's a pile of stinky socks!",
+    "on_screen_text": "\u274c SO STINKY! \ud83e\udde6",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4997548/pexels-photo-4997548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The GREEN box wins! Look at that sparkly diamond!",
+    "on_screen_text": "\u2705 GREEN WINS! \ud83d\udc8e",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39340512/pexels-photo-39340512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you get it right? Level two is coming tomorrow!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\ude80",
+    "duration_seconds": 4
+  }
+]
