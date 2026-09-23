@@ -1,0 +1,65 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Chest Hides the Dragon Egg?",
+  "youtube_title": "\ud83d\udc09 Which Chest Hides the Dragon Egg? #Shorts",
+  "youtube_description": "Can YOU find the dragon egg? Pick your chest and see if you're right! \ud83e\udd5a\ud83d\udd25 Come back tomorrow for Level 2!\n\n#Shorts #KidsVideo #GuessingGame #DragonEgg #Kidify #FunForKids #PuzzleForKids #BrainTeaser",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One of these chests is hiding a dragon egg \u2014 but which one?",
+      "visual_prompt": "treasure chest closed wooden",
+      "on_screen_text": "\ud83d\udc09 WHERE IS THE DRAGON EGG?"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "Is it the red chest, the blue chest, or the golden chest?",
+      "visual_prompt": "colorful treasure chests three",
+      "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe1 GOLD"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 2,
+      "narration": "Pick your chest \u2014 fast!",
+      "visual_prompt": "child pointing choosing excited",
+      "on_screen_text": "CHOOSE NOW! \u2b07\ufe0f"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Three\u2026 two\u2026 one!",
+      "visual_prompt": "countdown clock numbers colorful",
+      "on_screen_text": "3\ufe0f\u20e3\u2026 2\ufe0f\u20e3\u2026 1\ufe0f\u20e3\u2026"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The red chest\u2026 opens up and it's full of old smelly socks! Ewww!",
+      "visual_prompt": "open chest colorful socks pile",
+      "on_screen_text": "\u274c NOPE! Just socks... \ud83e\udde6"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 4,
+      "narration": "The blue chest\u2026 has a rubber duck inside. Quack quack!",
+      "visual_prompt": "yellow rubber duck toy bath",
+      "on_screen_text": "\u274c A rubber duck?! \ud83e\udd86"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "And the golden chest\u2026 ROARS open to reveal a giant glowing dragon egg! You found it!",
+      "visual_prompt": "golden glowing egg dragon fantasy",
+      "on_screen_text": "\u2705 THE DRAGON EGG! \ud83e\udd5a\ud83d\udc09"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "Did you pick gold? Nice work! Level 2 is coming tomorrow \u2014 don't miss it!",
+      "visual_prompt": "excited kids thumbs up celebration",
+      "on_screen_text": "\u2b50 LEVEL 2 TOMORROW! \u2b50"
+    }
+  ]
+}
