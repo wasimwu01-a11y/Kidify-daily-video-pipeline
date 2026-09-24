@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/5725857/pexels-photo-5725857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these boxes hides a REAL diamond! Which one is it?",
+    "on_screen_text": "Which box hides the DIAMOND? \ud83d\udc8e",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/29854462/pexels-photo-29854462.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the red box, the blue box, or the golden box? Pick one \u2014 fast!",
+    "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe1 GOLD",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd25",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34691304/pexels-photo-34691304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Opening the RED box and\u2026 it's a rubber chicken! Nope, not even close!",
+    "on_screen_text": "\u274c WRONG! \ud83d\udc14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7235605/pexels-photo-7235605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "What about the BLUE box? Oh no \u2014 it's just a soggy old sandwich! Gross!",
+    "on_screen_text": "\u274c WRONG! \ud83e\udd6a",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/8516783/pexels-photo-8516783.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the GOLDEN box has the diamond! Let's open it\u2026 YES! There it is! Sparkling and beautiful!",
+    "on_screen_text": "\u2705 THE DIAMOND! \ud83d\udc8e\u2728",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6125928/pexels-photo-6125928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you pick gold? You're a genius! Level two is coming tomorrow \u2014 don't miss it!",
+    "on_screen_text": "Level 2 TOMORROW! \ud83d\ude80",
+    "duration_seconds": 4
+  }
+]
