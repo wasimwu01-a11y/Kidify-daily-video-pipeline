@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Survives the GIANT Mud Pit? #Shorts",
+  "youtube_description": "A tiny blue race car, a boxy yellow school bus, and a massive green monster truck all face the ultimate challenge \u2014 a giant mud pit! Who makes it through? Watch to find out! \ud83c\udfc1\ud83d\udca8\n\n#Shorts #KidsVideo #CarChallenge #MudPit #MonsterTruck #Kidify #FunForKids #VehicleChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 4,
+      "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO SURVIVES THE MUD PIT? \ud83d\udfeb"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue race car!",
+      "visual_prompt": "small blue race car",
+      "on_screen_text": "\ud83d\udd35 TINY BLUE RACE CAR"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 5,
+      "narration": "It zooms toward the mud \u2014 and SINKS! Tires spinning, going nowhere fast!",
+      "visual_prompt": "small car stuck in mud wheels spinning",
+      "on_screen_text": "\u274c STUCK!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the big yellow school bus!",
+      "visual_prompt": "yellow school bus side view",
+      "on_screen_text": "\ud83d\udfe1 BIG YELLOW SCHOOL BUS"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 6,
+      "narration": "It rolls in slowly\u2026 gets halfway\u2026 and stops! Too heavy! The mud wins again!",
+      "visual_prompt": "school bus stuck in mud tilted",
+      "on_screen_text": "\u274c TOO HEAVY!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last up \u2014 the giant green monster truck!",
+      "visual_prompt": "large green monster truck big wheels",
+      "on_screen_text": "\ud83d\udfe2 GIANT MONSTER TRUCK"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 6,
+      "narration": "It hits the mud, those huge wheels churn \u2014 and it POWERS right through! Yeah!",
+      "visual_prompt": "monster truck crushing through mud splash",
+      "on_screen_text": "\u2705 MONSTER TRUCK WINS! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck destroys the mud pit! Come back tomorrow for an even bigger challenge!",
+      "visual_prompt": "monster truck victory muddy field",
+      "on_screen_text": "TOMORROW: EVEN BIGGER CHALLENGE! \ud83d\udc40"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38310064/pexels-photo-38310064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+    "on_screen_text": "WHO SURVIVES THE MUD PIT? \ud83d\udfeb",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/30977014/pexels-photo-30977014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue race car!",
+    "on_screen_text": "\ud83d\udd35 TINY BLUE RACE CAR",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/30788742/pexels-photo-30788742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It zooms toward the mud \u2014 and SINKS! Tires spinning, going nowhere fast!",
+    "on_screen_text": "\u274c STUCK!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/14189259/pexels-photo-14189259.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the big yellow school bus!",
+    "on_screen_text": "\ud83d\udfe1 BIG YELLOW SCHOOL BUS",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It rolls in slowly\u2026 gets halfway\u2026 and stops! Too heavy! The mud wins again!",
+    "on_screen_text": "\u274c TOO HEAVY!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350100/pexels-photo-37350100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last up \u2014 the giant green monster truck!",
+    "on_screen_text": "\ud83d\udfe2 GIANT MONSTER TRUCK",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38492409/pexels-photo-38492409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It hits the mud, those huge wheels churn \u2014 and it POWERS right through! Yeah!",
+    "on_screen_text": "\u2705 MONSTER TRUCK WINS! \ud83c\udfc6",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38530781/pexels-photo-38530781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The monster truck destroys the mud pit! Come back tomorrow for an even bigger challenge!",
+    "on_screen_text": "TOMORROW: EVEN BIGGER CHALLENGE! \ud83d\udc40",
+    "duration_seconds": 4
+  }
+]
