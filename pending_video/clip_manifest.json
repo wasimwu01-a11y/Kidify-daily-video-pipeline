@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37926830/pexels-photo-37926830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it across?",
+    "on_screen_text": "WHO SURVIVES THE MUD PIT? \ud83e\udd14",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33229798/pexels-photo-33229798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue hatchback! Tiny but brave!",
+    "on_screen_text": "CONTESTANT 1 \ud83d\udd35",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It revs up, hits the mud\u2026 and sinks straight in! Completely stuck!",
+    "on_screen_text": "STUCK! \ud83d\ude2c",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/32594312/pexels-photo-32594312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the big orange pickup truck! Looking confident!",
+    "on_screen_text": "CONTESTANT 2 \ud83d\udfe0",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18278713/pexels-photo-18278713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It powers through\u2026 halfway\u2026 then its wheels spin and spin and \u2014 nope, stuck too!",
+    "on_screen_text": "SO CLOSE! \ud83d\ude05",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18189893/pexels-photo-18189893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last chance \u2014 the GIANT green monster truck! Here it comes!",
+    "on_screen_text": "CONTESTANT 3 \ud83d\udc9a",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38492409/pexels-photo-38492409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It rolls right over the mud like it's nothing \u2014 mud flying everywhere \u2014 and it's across! WINNER!",
+    "on_screen_text": "\ud83c\udfc6 WINNER!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/30454871/pexels-photo-30454871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Tomorrow \u2014 these three face an even bigger challenge. Don't miss it!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd25",
+    "duration_seconds": 4
+  }
+]
