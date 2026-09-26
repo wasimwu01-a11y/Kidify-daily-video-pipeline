@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Egg Hides the Baby Dino?",
+  "youtube_title": "\ud83e\udd5a Which Egg Hides the Baby Dinosaur? #Shorts",
+  "youtube_description": "Can YOU guess which egg is hiding the baby dinosaur? Watch to find out! \ud83e\udd95\ud83e\udd5a Come back tomorrow for Level 2!\n\n#Shorts #KidsVideo #GuessingGame #Dinosaurs #FunForKids #Kidify #BrainTeaser #LearnWithFun",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "A baby dinosaur is hiding inside one of these eggs!",
+      "visual_prompt": "colorful dinosaur eggs nest",
+      "on_screen_text": "\ud83e\udd5a WHO'S INSIDE? \ud83e\udd5a"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "Is it the purple egg, the green egg, or the spotted egg?",
+      "visual_prompt": "three colorful Easter eggs",
+      "on_screen_text": "PURPLE \ud83d\udfe3  GREEN \ud83d\udfe2  SPOTTED \u26aa"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 3,
+      "narration": "Pick your egg! Three\u2026 two\u2026 one!",
+      "visual_prompt": "countdown numbers bold colorful",
+      "on_screen_text": "3\ufe0f\u20e3\u2026 2\ufe0f\u20e3\u2026 1\ufe0f\u20e3\u2026"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "The purple egg cracks open and\u2026 it's a rubber duck! Quack quack!",
+      "visual_prompt": "yellow rubber duck toy",
+      "on_screen_text": "\u274c NOPE! \ud83e\udd86 QUACK!"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The green egg pops open and\u2026 it's a silly frog! Ribbit!",
+      "visual_prompt": "green toy frog closeup",
+      "on_screen_text": "\u274c SO CLOSE! \ud83d\udc38 RIBBIT!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "The spotted egg cracks open and\u2026 ROAR! It's the baby dinosaur! You found it!",
+      "visual_prompt": "baby dinosaur toy hatching egg",
+      "on_screen_text": "\u2705 BABY DINO! \ud83e\udd95 ROAR!"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you get it right? Level two is coming tomorrow \u2014 don't miss it!",
+      "visual_prompt": "excited child thumbs up",
+      "on_screen_text": "\u2b06\ufe0f LEVEL 2 TOMORROW!"
+    }
+  ]
+}

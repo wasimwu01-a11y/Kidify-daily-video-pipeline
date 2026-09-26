@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4108638/pexels-photo-4108638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "A baby dinosaur is hiding inside one of these eggs!",
+    "on_screen_text": "\ud83e\udd5a WHO'S INSIDE? \ud83e\udd5a",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294307/pexels-photo-6294307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the purple egg, the green egg, or the spotted egg?",
+    "on_screen_text": "PURPLE \ud83d\udfe3  GREEN \ud83d\udfe2  SPOTTED \u26aa",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Pick your egg! Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\ufe0f\u20e3\u2026 2\ufe0f\u20e3\u2026 1\ufe0f\u20e3\u2026",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39722789/pexels-photo-39722789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The purple egg cracks open and\u2026 it's a rubber duck! Quack quack!",
+    "on_screen_text": "\u274c NOPE! \ud83e\udd86 QUACK!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/31545926/pexels-photo-31545926.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The green egg pops open and\u2026 it's a silly frog! Ribbit!",
+    "on_screen_text": "\u274c SO CLOSE! \ud83d\udc38 RIBBIT!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/8014468/pexels-photo-8014468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The spotted egg cracks open and\u2026 ROAR! It's the baby dinosaur! You found it!",
+    "on_screen_text": "\u2705 BABY DINO! \ud83e\udd95 ROAR!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39340512/pexels-photo-39340512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you get it right? Level two is coming tomorrow \u2014 don't miss it!",
+    "on_screen_text": "\u2b06\ufe0f LEVEL 2 TOMORROW!",
+    "duration_seconds": 4
+  }
+]
