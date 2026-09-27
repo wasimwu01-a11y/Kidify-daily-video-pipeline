@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Egg Hides the Dragon?",
+  "youtube_title": "\ud83e\udd5a Which Egg Is Hiding the Dragon? #Shorts",
+  "youtube_description": "Can YOU guess which egg has the dragon inside? Watch till the end for the big reveal! \ud83d\udc09\ud83d\udd25 Come back tomorrow for Level 2!\n\n#Shorts #KidsVideo #GuessingGame #Dragon #Eggs #Kidify #FunForKids #Puzzle #Reveal",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One of these eggs is hiding a DRAGON \u2014 but which one?!",
+      "visual_prompt": "three colorful Easter eggs nest",
+      "on_screen_text": "WHICH EGG? \ud83e\udd5a\ud83e\udd5a\ud83e\udd5a"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "We've got a sparkly blue egg, a spotty red egg, and a golden egg. Pick your favorite NOW!",
+      "visual_prompt": "blue glitter egg closeup",
+      "on_screen_text": "\ud83d\udd35 BLUE   \ud83d\udd34 RED   \ud83d\udfe1 GOLD"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "The answer is coming! Three\u2026 two\u2026 one\u2026",
+      "visual_prompt": "countdown numbers colorful bold",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd25"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "The blue egg cracks open and out pops\u2026 a rubber duck! Quack quack \u2014 no dragon here!",
+      "visual_prompt": "cracked egg rubber duck toy",
+      "on_screen_text": "\u274c NOPE! \ud83d\udc25"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The red egg cracks open and it's\u2026 a tiny frog! Cute, but still no dragon!",
+      "visual_prompt": "cracked egg small green frog",
+      "on_screen_text": "\u274c SO CLOSE! \ud83d\udc38"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "That means the GOLDEN egg is the one! It cracks open and out comes a baby dragon \u2014 ROAR!",
+      "visual_prompt": "golden egg cracking open glowing",
+      "on_screen_text": "\u2705 THE GOLDEN EGG! \ud83d\udc09\ud83d\udd25"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did YOU get it right? Level 2 is coming tomorrow \u2014 don't miss it!",
+      "visual_prompt": "excited child thumbs up",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\ude80"
+    }
+  ]
+}
