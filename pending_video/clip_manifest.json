@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18278714/pexels-photo-18278714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it across?",
+    "on_screen_text": "WHO MAKES IT? \ud83e\udd14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/9846145/pexels-photo-9846145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the sleek little red sports car!",
+    "on_screen_text": "CONTESTANT #1 \ud83d\ude97",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It zooms in fast \u2014 oh no! It sinks straight to the bottom! FAIL!",
+    "on_screen_text": "\u274c SUNK!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/14189259/pexels-photo-14189259.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the big boxy yellow school bus!",
+    "on_screen_text": "CONTESTANT #2 \ud83d\ude8c",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/30788742/pexels-photo-30788742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It rumbles forward, gets halfway\u2026 and gets totally stuck! The wheels just spin and spin!",
+    "on_screen_text": "\u274c STUCK!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18189893/pexels-photo-18189893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last chance \u2014 the GIANT green monster truck!",
+    "on_screen_text": "CONTESTANT #3 \ud83c\udfc6",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38530781/pexels-photo-38530781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It hits the mud \u2014 those massive tires chomp right through! It blasts out the other side! WINNER!",
+    "on_screen_text": "\u2705 WINNER!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/16966362/pexels-photo-16966362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Big tires win every time! Come back tomorrow for an even bigger challenge!",
+    "on_screen_text": "SEE YOU TOMORROW! \ud83d\udd25",
+    "duration_seconds": 4
+  }
+]
