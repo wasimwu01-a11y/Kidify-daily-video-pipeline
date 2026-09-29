@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294307/pexels-photo-6294307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these eggs is hiding an AMAZING prize \u2014 but which one?",
+    "on_screen_text": "WHICH EGG? \ud83e\udd5a",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294199/pexels-photo-6294199.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the blue egg, the gold egg, or the spotted egg? Pick your favorite!",
+    "on_screen_text": "BLUE \ud83d\udd35 | GOLD \u2b50 | SPOTTED \ud83d\udfe4",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/5716278/pexels-photo-5716278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The answer is coming in three\u2026 two\u2026 one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83c\udf89",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294455/pexels-photo-6294455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue egg? Oh no \u2014 it's just a sock! A smelly one!",
+    "on_screen_text": "\ud83e\udde6 NOPE!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39722789/pexels-photo-39722789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The spotted egg? You open it and\u2026 it's a rubber duck. Quack!",
+    "on_screen_text": "\ud83e\udd86 SO CLOSE!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4226897/pexels-photo-4226897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The GOLD egg is the winner \u2014 crack it open and\u2026 WOW, it's a giant pile of candy!",
+    "on_screen_text": "\ud83c\udfc6 WINNER! \ud83c\udf6c",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/13297917/pexels-photo-13297917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you pick the gold egg? Come back tomorrow for Level 2 \u2014 it's even trickier!",
+    "on_screen_text": "Level 2 TOMORROW! \ud83d\udd1c",
+    "duration_seconds": 4
+  }
+]
