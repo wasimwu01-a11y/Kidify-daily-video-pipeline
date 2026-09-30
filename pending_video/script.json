@@ -1,0 +1,72 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Three Vehicles vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Can It Cross the GIANT MUD PIT? #Shorts",
+  "youtube_description": "A tiny blue hatchback, a massive orange monster truck, and a sleek silver sports car face the ultimate challenge \u2014 a GIANT mud pit! Who makes it across? Watch to find out! \ud83d\ude99\ud83d\udca8\n\n#Shorts #KidsVideo #CarChallenge #MudPit #MonsterTruck #Kidify #FunForKids #VehicleChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO MAKES IT? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue hatchback!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "CONTESTANT 1 \ud83d\ude99"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 5,
+      "narration": "It zooms toward the mud pit \u2014 and sinks straight in! Bye bye, little car!",
+      "visual_prompt": "small car stuck in deep mud",
+      "on_screen_text": "OH NO! \ud83d\ude2c"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the sleek silver sports car. So fast, so shiny!",
+      "visual_prompt": "silver sports car low angle",
+      "on_screen_text": "CONTESTANT 2 \ud83c\udfce\ufe0f"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It hits the mud at full speed \u2014 and spins out completely! Not today, speedy!",
+      "visual_prompt": "sports car spinning in mud",
+      "on_screen_text": "SPIN OUT! \ud83d\ude02"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last up \u2014 the giant orange monster truck!",
+      "visual_prompt": "large orange monster truck",
+      "on_screen_text": "CONTESTANT 3 \ud83d\ude9b"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 6,
+      "narration": "It rumbles toward the pit, those massive wheels churn through the mud \u2014 and it CRUSHES right over it!",
+      "visual_prompt": "monster truck driving through deep mud",
+      "on_screen_text": "LET'S GOOO! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck wins! Nothing stops those giant wheels!",
+      "visual_prompt": "monster truck winner trophy",
+      "on_screen_text": "WINNER! \ud83e\udd47"
+    },
+    {
+      "id": "scene_9",
+      "duration_seconds": 4,
+      "narration": "Tomorrow \u2014 can anyone beat a giant wall of water? Come back and find out!",
+      "visual_prompt": "large wave water wall obstacle",
+      "on_screen_text": "TOMORROW: WALL OF WATER! \ud83d\udca7"
+    }
+  ]
+}
