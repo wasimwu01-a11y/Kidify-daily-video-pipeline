@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6990982/pexels-photo-6990982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these eggs is hiding golden treasure \u2014 but which one?!",
+    "on_screen_text": "WHICH EGG HIDES THE TREASURE?!",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/31883008/pexels-photo-31883008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the blue egg, the green egg, or the red egg? Pick your answer NOW!",
+    "on_screen_text": "\ud83d\udd35 BLUE   \ud83d\udfe2 GREEN   \ud83d\udd34 RED",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83e\udd29",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33305466/pexels-photo-33305466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue egg \u2014 ooh, you crack it open and find\u2026 a rubber chicken! Nope!",
+    "on_screen_text": "\u274c NOPE! \ud83d\udc14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/14037324/pexels-photo-14037324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The green egg \u2014 inside is\u2026 a smelly sock! Ewwww, not the treasure!",
+    "on_screen_text": "\u274c EWW! \ud83e\udde6",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7083894/pexels-photo-7083894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the RED egg wins! Open it up and \u2014 WHOA \u2014 golden coins everywhere!",
+    "on_screen_text": "\u2705 RED EGG WINS! \ud83c\udfc6\ud83e\ude99",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39340512/pexels-photo-39340512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you guess red? Amazing! Level 2 is coming tomorrow \u2014 don't miss it!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd1c",
+    "duration_seconds": 4
+  }
+]
