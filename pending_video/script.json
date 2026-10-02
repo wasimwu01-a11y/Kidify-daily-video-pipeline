@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Box Hides the Diamond?",
+  "youtube_title": "\ud83d\udc8e Which Box Hides the Diamond? #Shorts",
+  "youtube_description": "Can YOU find the hidden diamond? Pick your box and see if you're right! New challenge every day on Kidify! \ud83d\udc8e\ud83c\udf89\n\n#Shorts #KidsYouTube #GuessingGame #DiamondChallenge #Kidify #FunForKids #PuzzleTime",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One of these boxes is hiding a GIANT diamond!",
+      "visual_prompt": "three colorful gift boxes",
+      "on_screen_text": "Which box hides the DIAMOND? \ud83d\udc8e"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "Is it the red box, the blue box, or the green box? Choose NOW!",
+      "visual_prompt": "red blue green gift boxes closeup",
+      "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe2 GREEN"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "Three\u2026 two\u2026 one\u2026 let's find out!",
+      "visual_prompt": "countdown numbers bold colorful",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd25"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "We open the RED box and\u2026 it's a rubber chicken! Nope, not today!",
+      "visual_prompt": "rubber chicken toy",
+      "on_screen_text": "\u274c NOPE! \ud83d\udc14"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The BLUE box opens and\u2026 it's a smelly old sock! So close, but no!",
+      "visual_prompt": "old dirty sock isolated",
+      "on_screen_text": "\u274c YIKES! \ud83e\udde6"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "That means the GREEN box has the diamond! Open it up\u2026 YES! There it is!",
+      "visual_prompt": "large sparkling diamond gemstone",
+      "on_screen_text": "\u2705 GREEN WINS! \ud83d\udc8e"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you get it right? Level two is coming tomorrow \u2014 don't miss it!",
+      "visual_prompt": "excited child thumbs up",
+      "on_screen_text": "Level 2 tomorrow! \ud83d\ude80"
+    }
+  ]
+}
