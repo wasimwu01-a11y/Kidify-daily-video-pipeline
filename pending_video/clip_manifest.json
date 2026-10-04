@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37926830/pexels-photo-37926830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it through?!",
+    "on_screen_text": "WHO SURVIVES THE MUD? \ud83e\udd14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33229798/pexels-photo-33229798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue hatchback!",
+    "on_screen_text": "\ud83d\ude99 TINY BLUE HATCHBACK",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It rolls up to the mud... and sinks straight in! Stuck already!",
+    "on_screen_text": "\u274c STUCK!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18864553/pexels-photo-18864553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the beefy orange pickup truck!",
+    "on_screen_text": "\ud83d\udefb BEEFY ORANGE PICKUP",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18278713/pexels-photo-18278713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It charges into the mud \u2014 almost through \u2014 but the wheels spin out. So close!",
+    "on_screen_text": "\ud83d\ude2c SO CLOSE!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350100/pexels-photo-37350100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last up \u2014 the massive purple monster truck!",
+    "on_screen_text": "\ud83c\udfc6 MASSIVE PURPLE MONSTER TRUCK",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38492409/pexels-photo-38492409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It CRUSHES through the mud pit like it isn't even there! Monster truck wins!!",
+    "on_screen_text": "\u2705 WINNER!!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/21628135/pexels-photo-21628135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Tomorrow \u2014 same trucks, but this time it's a mega ramp! Will anything survive?",
+    "on_screen_text": "\ud83d\udd1c MEGA RAMP TOMORROW!",
+    "duration_seconds": 4
+  }
+]
