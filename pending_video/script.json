@@ -1,0 +1,72 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Mud Pit Mayhem",
+  "youtube_title": "\ud83d\ude97 Which Vehicle Survives the Mega Mud Pit?! #Shorts",
+  "youtube_description": "A sleek red sports car, a big blue pickup truck, and a massive green monster truck all take on the most extreme mud pit ever! Who makes it through? Watch to find out! \ud83c\udfc6\n\n#Shorts #KidsVideos #Kidify #Trucks #MonsterTruck #MudPit #VehicleChallenge #KidsYouTube #FunForKids",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it through?!",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO SURVIVES?! \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the sleek red sports car!",
+      "visual_prompt": "red sports car side view",
+      "on_screen_text": "VEHICLE 1 \ud83d\udd34"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms toward the mud... and gets completely swallowed up! Bye bye, sports car!",
+      "visual_prompt": "red sports car stuck in mud",
+      "on_screen_text": "\u274c STUCK!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the big blue pickup truck!",
+      "visual_prompt": "blue pickup truck side view",
+      "on_screen_text": "VEHICLE 2 \ud83d\udd35"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It rumbles in\u2026 makes it halfway\u2026 then sinks down with a giant SPLAT! So close!",
+      "visual_prompt": "pickup truck stuck deep mud",
+      "on_screen_text": "\u274c SO CLOSE!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the massive green monster truck!",
+      "visual_prompt": "green monster truck huge wheels",
+      "on_screen_text": "VEHICLE 3 \ud83d\udc9a"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "It ROARS forward, mud flying everywhere\u2026 and rolls right through like it's nothing!",
+      "visual_prompt": "monster truck crushing mud splashing",
+      "on_screen_text": "\ud83d\udc40 COME ON..."
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "THE MONSTER TRUCK WINS! Those giant wheels crush anything!",
+      "visual_prompt": "monster truck victory trophy",
+      "on_screen_text": "\ud83c\udfc6 WINNER!"
+    },
+    {
+      "id": "scene_9",
+      "duration_seconds": 3,
+      "narration": "Tomorrow \u2014 these trucks hit a MEGA ramp! Will anything survive?!",
+      "visual_prompt": "steep vehicle ramp launch",
+      "on_screen_text": "TOMORROW: THE MEGA RAMP! \ud83d\ude80"
+    }
+  ]
+}
