@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/19725419/pexels-photo-19725419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these eggs is hiding a dragon \u2014 but which one?!",
+    "on_screen_text": "WHICH EGG? \ud83e\udd5a\ud83e\udd5a\ud83e\udd5a",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4199073/pexels-photo-4199073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "We have the blue egg, the red egg, and the golden egg. Pick your favorite!",
+    "on_screen_text": "BLUE \ud83d\udd35 RED \ud83d\udd34 GOLD \u2b50",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Think you know? The countdown is on \u2014 three, two, one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd25",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33305466/pexels-photo-33305466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue egg cracks open and\u2026 it's a rubber duck! Quack quack, no dragon here!",
+    "on_screen_text": "\u274c NOPE! \ud83e\udd86",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6625300/pexels-photo-6625300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The red egg pops open and\u2026 it's a tiny fluffy bunny! So cute, but no dragon!",
+    "on_screen_text": "\u274c SO CLOSE! \ud83d\udc30",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/15384912/pexels-photo-15384912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The golden egg shakes and rumbles and\u2026 a baby dragon flies out! You got it!",
+    "on_screen_text": "\u2705 THE DRAGON! \ud83d\udc09\ud83d\udd25",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7005494/pexels-photo-7005494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Nice work! Level two is coming tomorrow \u2014 can you beat it? See you then!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \u2b50",
+    "duration_seconds": 4
+  }
+]
