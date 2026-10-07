@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/5725857/pexels-photo-5725857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "A dragon is hiding in one of these boxes \u2014 but which one?",
+    "on_screen_text": "WHERE IS THE DRAGON? \ud83d\udc09",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6087540/pexels-photo-6087540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the red box, the blue box, or the green box?",
+    "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe2 GREEN",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/17139860/pexels-photo-17139860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Pick your box! You have three seconds \u2014 three, two, one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83e\udee3",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34691304/pexels-photo-34691304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The red box \u2014 let's open it! Oh no, it's just a rubber chicken!",
+    "on_screen_text": "\ud83d\udd34 WRONG! \ud83d\udc14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/35210015/pexels-photo-35210015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue box \u2014 surely this one? Nope! It's a giant pile of socks!",
+    "on_screen_text": "\ud83d\udd35 WRONG! \ud83e\udde6",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6087540/pexels-photo-6087540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the green box is the winner \u2014 and there's the dragon! You found it!",
+    "on_screen_text": "\ud83d\udfe2 CORRECT! \ud83d\udc09\ud83c\udf89",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39340512/pexels-photo-39340512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Nice work! Come back tomorrow for Level 2 \u2014 it's way trickier!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd25",
+    "duration_seconds": 4
+  }
+]

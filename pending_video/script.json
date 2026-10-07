@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Box Hides the Dragon?",
+  "youtube_title": "\ud83d\udc09 Can You Find the Dragon? #Shorts",
+  "youtube_description": "One of these three boxes is hiding a dragon \u2014 but which one? Watch to find out! \ud83d\udc09\ud83d\udce6 Come back tomorrow for an even trickier challenge!\n\n#Shorts #KidsVideo #GuessingGame #Dragon #FunForKids #Kidify #PuzzleForKids #GuessTheAnswer",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "A dragon is hiding in one of these boxes \u2014 but which one?",
+      "visual_prompt": "three colorful gift boxes mystery",
+      "on_screen_text": "WHERE IS THE DRAGON? \ud83d\udc09"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "Is it the red box, the blue box, or the green box?",
+      "visual_prompt": "red blue green gift boxes",
+      "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe2 GREEN"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "Pick your box! You have three seconds \u2014 three, two, one!",
+      "visual_prompt": "countdown timer colorful",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83e\udee3"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "The red box \u2014 let's open it! Oh no, it's just a rubber chicken!",
+      "visual_prompt": "rubber chicken toy yellow",
+      "on_screen_text": "\ud83d\udd34 WRONG! \ud83d\udc14"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The blue box \u2014 surely this one? Nope! It's a giant pile of socks!",
+      "visual_prompt": "pile of colorful socks",
+      "on_screen_text": "\ud83d\udd35 WRONG! \ud83e\udde6"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "That means the green box is the winner \u2014 and there's the dragon! You found it!",
+      "visual_prompt": "green gift box open surprise",
+      "on_screen_text": "\ud83d\udfe2 CORRECT! \ud83d\udc09\ud83c\udf89"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Nice work! Come back tomorrow for Level 2 \u2014 it's way trickier!",
+      "visual_prompt": "excited child thumbs up",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd25"
+    }
+  ]
+}
