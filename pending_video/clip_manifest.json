@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38310064/pexels-photo-38310064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it across?",
+    "on_screen_text": "WHO MAKES IT ACROSS? \ud83e\udd14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33229798/pexels-photo-33229798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Challenger one \u2014 the tiny blue hatchback!",
+    "on_screen_text": "\ud83d\ude99 TINY BLUE HATCHBACK",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It zooms toward the mud\u2026 and sinks straight in. Totally stuck!",
+    "on_screen_text": "\u274c STUCK!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/32103194/pexels-photo-32103194.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Challenger two \u2014 the sleek silver sports car!",
+    "on_screen_text": "\ud83d\ude97 SLEEK SILVER SPORTS CAR",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18278713/pexels-photo-18278713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It goes super fast\u2026 but way too low to the ground. Splat! Buried in mud!",
+    "on_screen_text": "\u274c TOO LOW!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350100/pexels-photo-37350100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Challenger three \u2014 the giant orange monster truck!",
+    "on_screen_text": "\ud83d\ude9b GIANT MONSTER TRUCK",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38530781/pexels-photo-38530781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Those huge wheels chomp right through the mud. It rolls out the other side \u2014 no problem at all!",
+    "on_screen_text": "\u2705 MONSTER TRUCK WINS!",
+    "duration_seconds": 6
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34920792/pexels-photo-34920792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The monster truck wins! Tomorrow \u2014 can anyone beat a mega ramp? See you then!",
+    "on_screen_text": "\ud83c\udfc6 TOMORROW: MEGA RAMP CHALLENGE!",
+    "duration_seconds": 4
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Can These Cars Cross the GIANT Mud Pit? #Shorts",
+  "youtube_description": "A tiny blue hatchback, a massive orange monster truck, and a sleek silver sports car all try to cross a GIANT mud pit! Who makes it through? Watch to find out! \ud83c\udfc1\ud83d\udca8\n\n#Shorts #KidsVideos #Kidify #Cars #MudPit #FunnyKids #VehicleChallenge #MonsterTruck #KidsYouTube",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 4,
+      "narration": "Three vehicles. One giant mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO MAKES IT ACROSS? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "Challenger one \u2014 the tiny blue hatchback!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "\ud83d\ude99 TINY BLUE HATCHBACK"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 5,
+      "narration": "It zooms toward the mud\u2026 and sinks straight in. Totally stuck!",
+      "visual_prompt": "small car stuck in mud",
+      "on_screen_text": "\u274c STUCK!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Challenger two \u2014 the sleek silver sports car!",
+      "visual_prompt": "silver sports car low angle",
+      "on_screen_text": "\ud83d\ude97 SLEEK SILVER SPORTS CAR"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 6,
+      "narration": "It goes super fast\u2026 but way too low to the ground. Splat! Buried in mud!",
+      "visual_prompt": "sports car splashed in mud",
+      "on_screen_text": "\u274c TOO LOW!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Challenger three \u2014 the giant orange monster truck!",
+      "visual_prompt": "orange monster truck big wheels",
+      "on_screen_text": "\ud83d\ude9b GIANT MONSTER TRUCK"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 6,
+      "narration": "Those huge wheels chomp right through the mud. It rolls out the other side \u2014 no problem at all!",
+      "visual_prompt": "monster truck driving through mud",
+      "on_screen_text": "\u2705 MONSTER TRUCK WINS!"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck wins! Tomorrow \u2014 can anyone beat a mega ramp? See you then!",
+      "visual_prompt": "monster truck victory trophy",
+      "on_screen_text": "\ud83c\udfc6 TOMORROW: MEGA RAMP CHALLENGE!"
+    }
+  ]
+}
