@@ -1,0 +1,72 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Three Vehicles vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Can They Cross the Giant Mud Pit?! #Shorts",
+  "youtube_description": "A tiny blue hatchback, a boxy yellow school bus, and a massive green monster truck all face the ULTIMATE mud pit challenge! Who makes it through? Watch to find out! \ud83c\udfc6\n\n#Shorts #KidsVideos #Kidify #Cars #MudPit #MonsterTruck #FunForKids #VehicleChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it across?!",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO MAKES IT? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue hatchback!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "COMPETITOR 1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It revs up, hits the mud\u2026 and sinks straight in. Uh oh!",
+      "visual_prompt": "small car stuck in deep mud",
+      "on_screen_text": "STUCK! \ud83d\ude2c"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the big boxy yellow school bus!",
+      "visual_prompt": "yellow school bus road",
+      "on_screen_text": "COMPETITOR 2 \ud83d\udfe1"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It rumbles toward the mud, pushes through halfway\u2026 and gets totally stuck too!",
+      "visual_prompt": "yellow school bus stuck in mud",
+      "on_screen_text": "SO CLOSE\u2026 \ud83d\ude05"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last up \u2014 the giant green monster truck!",
+      "visual_prompt": "green monster truck big wheels",
+      "on_screen_text": "COMPETITOR 3 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 3,
+      "narration": "Three\u2026 two\u2026 one\u2026 GO!",
+      "visual_prompt": "monster truck revving engine dirt track",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 5,
+      "narration": "Those massive wheels chew right through the mud \u2014 mud flying everywhere \u2014 and it BLASTS out the other side!",
+      "visual_prompt": "monster truck mud splash flying dirt",
+      "on_screen_text": "IT MADE IT! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_9",
+      "duration_seconds": 4,
+      "narration": "Monster truck wins! Can anything stop it? Find out tomorrow \u2014 Level 2!",
+      "visual_prompt": "monster truck winner trophy celebration",
+      "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd25"
+    }
+  ]
+}
