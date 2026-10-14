@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294307/pexels-photo-6294307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these eggs is hiding a DRAGON! Which one is it?",
+    "on_screen_text": "\ud83e\udd5a WHICH EGG HIDES THE DRAGON? \ud83d\udc09",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4226897/pexels-photo-4226897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "You've got three choices \u2014 the red egg, the blue egg, or the golden egg!",
+    "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe1 GOLD",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4108609/pexels-photo-4108609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Pick your egg right now! The countdown is starting!",
+    "on_screen_text": "CHOOSE NOW! \u23f3",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/8113753/pexels-photo-8113753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\ufe0f\u20e3\u2026 2\ufe0f\u20e3\u2026 1\ufe0f\u20e3\u2026",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33305466/pexels-photo-33305466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The RED egg cracks open and out pops\u2026 a rubber duck! Quack quack!",
+    "on_screen_text": "\u274c NOPE! \ud83e\udd86 QUACK!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6625300/pexels-photo-6625300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The BLUE egg opens and it's\u2026 a tiny snowman! Brr, so cold!",
+    "on_screen_text": "\u274c WRONG! \u2603\ufe0f BRR!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4110238/pexels-photo-4110238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The GOLDEN egg glows, shakes, and BOOM \u2014 out flies a baby dragon! Roar!",
+    "on_screen_text": "\u2705 THE GOLDEN EGG! \ud83d\udc09\ud83d\udd25",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6250995/pexels-photo-6250995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you get it right? Level 2 is coming tomorrow \u2014 don't miss it!",
+    "on_screen_text": "\ud83c\udfc6 LEVEL 2 TOMORROW!",
+    "duration_seconds": 4
+  }
+]
