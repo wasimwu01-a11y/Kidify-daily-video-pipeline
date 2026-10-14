@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37926830/pexels-photo-37926830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles, ONE giant mud pit. Who makes it through?",
+    "on_screen_text": "WHO SURVIVES THE MUD? \ud83e\udd14",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/30666518/pexels-photo-30666518.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue race car! It's super fast and super low!",
+    "on_screen_text": "TINY BLUE RACE CAR \ud83c\udfce\ufe0f",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It zooms toward the mud pit\u2026 and SINKS straight to the bottom! Uh oh!",
+    "on_screen_text": "STUCK! \ud83d\ude2c",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/14156803/pexels-photo-14156803.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next up \u2014 the big orange pickup truck! It's got big wheels and real power!",
+    "on_screen_text": "BIG ORANGE PICKUP \ud83d\udefb",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It charges at the mud\u2026 makes it halfway\u2026 and gets totally stuck too! No way!",
+    "on_screen_text": "SO CLOSE\u2026 \ud83d\ude31",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18189893/pexels-photo-18189893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last chance \u2014 the MASSIVE green monster truck! Look at those giant tires!",
+    "on_screen_text": "MONSTER TRUCK TIME! \ud83d\udcaa",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38492409/pexels-photo-38492409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It roars toward the mud pit, rolls right over it, and blasts mud everywhere! WINNER!",
+    "on_screen_text": "WINNER! \ud83c\udfc6",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38530781/pexels-photo-38530781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The monster truck wins! Come back tomorrow for an even BIGGER challenge!",
+    "on_screen_text": "TOMORROW: EVEN BIGGER! \ud83d\udd25",
+    "duration_seconds": 3
+  }
+]
