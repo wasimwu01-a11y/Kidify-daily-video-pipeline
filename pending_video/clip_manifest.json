@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294307/pexels-photo-6294307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these eggs is hiding a DRAGON \u2014 but which one?!",
+    "on_screen_text": "WHICH EGG? \ud83e\udd5a",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/4199073/pexels-photo-4199073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "You've got three choices \u2014 the red egg, the blue egg, or the golden egg!",
+    "on_screen_text": "\ud83d\udd34 RED  \ud83d\udd35 BLUE  \ud83d\udfe1 GOLD",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936681/pexels-photo-37936681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Pick your egg! Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\ufe0f\u20e3\u2026 2\ufe0f\u20e3\u2026 1\ufe0f\u20e3\u2026",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/32211226/pexels-photo-32211226.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The RED egg cracks open and \u2014 it's just a rubber chicken. Nope!",
+    "on_screen_text": "\u274c NOPE! \ud83d\udc14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/15301600/pexels-photo-15301600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The BLUE egg opens and \u2014 woah, it's a tiny hamster. So cute, but not a dragon!",
+    "on_screen_text": "\u274c NOT QUITE! \ud83d\udc39",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34617860/pexels-photo-34617860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The GOLDEN egg cracks and \u2014 ROOOAAR! It's a baby dragon! The golden egg wins!",
+    "on_screen_text": "\ud83c\udfc6 THE GOLDEN EGG! \ud83d\udc09\ud83d\udd25",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/3905696/pexels-photo-3905696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you get it right? Level two is coming tomorrow \u2014 don't miss it!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\udd1c",
+    "duration_seconds": 4
+  }
+]
