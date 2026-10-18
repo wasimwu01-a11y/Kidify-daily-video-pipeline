@@ -1,0 +1,79 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Makes It Through the GIANT Mud Pit? #Shorts",
+  "youtube_description": "Three epic vehicles face off against the most massive mud pit ever! Who makes it to the other side? Watch to find out! \ud83c\udfc6\n\n#Shorts #KidsVideos #Cars #MudPit #Kidify #FunForKids #Vehicles #Challenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+      "visual_prompt": "giant mud pit aerial view",
+      "on_screen_text": "WHO MAKES IT? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue sports car! Zoom zoom!",
+      "visual_prompt": "small blue sports car racing",
+      "on_screen_text": "CONTESTANT #1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It hits the mud... and sinks straight in! Completely stuck!",
+      "visual_prompt": "small car stuck in deep mud",
+      "on_screen_text": "STUCK! \ud83d\ude31"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the big orange dump truck. This one looks tough!",
+      "visual_prompt": "large orange dump truck",
+      "on_screen_text": "CONTESTANT #2 \ud83d\udfe0"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "It pushes in... wobbles... and gets swallowed by the mud too!",
+      "visual_prompt": "dump truck stuck deep mud pit",
+      "on_screen_text": "OH NO! \ud83d\ude2c"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the massive green monster truck! Can it do it?",
+      "visual_prompt": "giant green monster truck",
+      "on_screen_text": "CONTESTANT #3 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 3,
+      "narration": "Three... two... one... GO!",
+      "visual_prompt": "monster truck mud racing action",
+      "on_screen_text": "3... 2... 1... \ud83d\udea6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "It BLASTS through \u2014 mud flying everywhere \u2014 and lands on the other side!",
+      "visual_prompt": "monster truck flying through mud splash",
+      "on_screen_text": "IT MADE IT! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_9",
+      "duration_seconds": 3,
+      "narration": "The monster truck wins! Nothing stops those giant wheels!",
+      "visual_prompt": "monster truck winner muddy field",
+      "on_screen_text": "WINNER! \ud83c\udf89"
+    },
+    {
+      "id": "scene_10",
+      "duration_seconds": 3,
+      "narration": "Tomorrow \u2014 three vehicles hit a massive jump ramp. Don't miss it!",
+      "visual_prompt": "steep vehicle ramp outdoor",
+      "on_screen_text": "TOMORROW: THE RAMP \u27a1\ufe0f"
+    }
+  ]
+}
