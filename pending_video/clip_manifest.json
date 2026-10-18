@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294307/pexels-photo-6294307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these eggs is hiding a golden treasure inside!",
+    "on_screen_text": "WHICH EGG? \ud83e\udd5a",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6909901/pexels-photo-6909901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the blue egg, the green egg, or the red egg? Take a guess!",
+    "on_screen_text": "BLUE? GREEN? RED?",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three... two... one!",
+    "on_screen_text": "3... 2... 1... \ud83d\udd25",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39722789/pexels-photo-39722789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue egg... just a silly rubber duck inside! Nope!",
+    "on_screen_text": "\u274c NOPE! \ud83d\udc25",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/36895535/pexels-photo-36895535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The green egg... oh wow, it's just a bunch of stinky broccoli! Not the one!",
+    "on_screen_text": "\u274c SO CLOSE! \ud83e\udd66",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/5805712/pexels-photo-5805712.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The RED egg is the winner! It's a shiny golden coin treasure! You got it!",
+    "on_screen_text": "\u2705 WINNER! \ud83c\udfc6\ud83e\ude99",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/13871204/pexels-photo-13871204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Amazing! Come back tomorrow for Level 2 \u2014 it gets even trickier!",
+    "on_screen_text": "LEVEL 2 TOMORROW! \ud83d\ude80",
+    "duration_seconds": 4
+  }
+]
