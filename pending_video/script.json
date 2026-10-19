@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Three Vehicles vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Can They Cross the GIANT MUD PIT? #Shorts",
+  "youtube_description": "A tiny blue hatchback, a big orange pickup truck, and a massive black monster truck all try to cross the world's muddiest mud pit! Who makes it? Watch to find out! \ud83d\ude99\ud83d\udca8\n\n#Shorts #KidsVideos #Kidify #Trucks #MonsterTruck #FunForKids #Cars #MudPit #Challenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One GIANT mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit road obstacle",
+      "on_screen_text": "WHO MAKES IT? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 a tiny blue hatchback. So small, so brave!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "CONTESTANT #1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It rolls in... and sinks straight to the doors! Oh no, little buddy!",
+      "visual_prompt": "small car stuck deep mud",
+      "on_screen_text": "STUCK! \ud83d\ude2c"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 a big orange pickup truck. Now we're talking!",
+      "visual_prompt": "large orange pickup truck",
+      "on_screen_text": "CONTESTANT #2 \ud83d\udfe0"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It revs up, charges in... and gets halfway! But those back wheels are spinning and spinning!",
+      "visual_prompt": "pickup truck spinning wheels mud",
+      "on_screen_text": "SO CLOSE... \ud83d\ude2e"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 a MASSIVE black monster truck with huge chunky tires!",
+      "visual_prompt": "black monster truck big tires",
+      "on_screen_text": "CONTESTANT #3 \ud83d\udda4"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "It ROARS in, mud flies everywhere, and it rolls right out the other side! EASY!",
+      "visual_prompt": "monster truck mud flying splash",
+      "on_screen_text": "WINNER! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "Monster truck wins the mud pit! Come back tomorrow \u2014 we've got a MEGA ramp challenge!",
+      "visual_prompt": "monster truck winner trophy",
+      "on_screen_text": "MEGA RAMP TOMORROW! \ud83d\ude80"
+    }
+  ]
+}
