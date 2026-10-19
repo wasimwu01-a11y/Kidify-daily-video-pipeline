@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Can Cross the GIANT MUD PIT? #Shorts",
+  "youtube_description": "A tiny blue hatchback, a big orange pickup truck, and a massive green monster truck all try to cross a giant mud pit \u2014 but only ONE makes it through! \ud83c\udfc6 Watch to find out who wins!\n\n#Shorts #KidsVideos #Kidify #Cars #MudPit #MonsterTruck #ForKids #FunForKids #CarChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three cars. One giant mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit aerial view",
+      "on_screen_text": "WHO CROSSES THE MUD PIT? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue hatchback!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "CONTESTANT #1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms toward the mud... and sinks straight in! Bye bye, little car!",
+      "visual_prompt": "small car stuck in deep mud",
+      "on_screen_text": "STUCK! \ud83d\ude2c"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the big orange pickup truck!",
+      "visual_prompt": "large orange pickup truck",
+      "on_screen_text": "CONTESTANT #2 \ud83d\udfe0"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It powers through... gets halfway... then spins out and stops. So close!",
+      "visual_prompt": "pickup truck spinning wheels in mud",
+      "on_screen_text": "SO CLOSE! \ud83d\ude31"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the giant green monster truck!",
+      "visual_prompt": "giant green monster truck",
+      "on_screen_text": "CONTESTANT #3 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "It hits the mud, it bounces, it splashes \u2014 and it ROLLS right through! YEAH!",
+      "visual_prompt": "monster truck crushing mud splashing",
+      "on_screen_text": "WINNER! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck wins! Can anything stop it? Find out tomorrow!",
+      "visual_prompt": "monster truck triumphant trophy",
+      "on_screen_text": "TUNE IN TOMORROW! \ud83d\udc40"
+    }
+  ]
+}
