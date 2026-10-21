@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/5725857/pexels-photo-5725857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these boxes is hiding a GIANT diamond!",
+    "on_screen_text": "\ud83d\udc8e FIND THE DIAMOND!",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6087540/pexels-photo-6087540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the RED box, the BLUE box, or the GREEN box? Pick one NOW!",
+    "on_screen_text": "\ud83d\udd34 RED  \ud83d\udd35 BLUE  \ud83d\udfe2 GREEN",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/11768112/pexels-photo-11768112.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\ude80",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/34691304/pexels-photo-34691304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "We open the RED box and it's\u2026 a rubber duck! Quack quack!",
+    "on_screen_text": "\ud83e\udd86 QUACK QUACK!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7790150/pexels-photo-7790150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The BLUE box has\u2026 a smelly old sock! Ew, no thanks!",
+    "on_screen_text": "\ud83e\udde6 EWW!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/8516783/pexels-photo-8516783.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the GREEN box has the diamond! Let's open it\u2026 WOAH, there it is!",
+    "on_screen_text": "\ud83d\udc8e GREEN WINS!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/13871204/pexels-photo-13871204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did YOU pick green? Nice work! Come back tomorrow for Level 2 \u2014 it's even trickier!",
+    "on_screen_text": "\ud83d\udd25 LEVEL 2 TOMORROW!",
+    "duration_seconds": 4
+  }
+]
