@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/5725857/pexels-photo-5725857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these boxes is hiding a giant diamond!",
+    "on_screen_text": "WHERE IS THE DIAMOND? \ud83d\udc8e",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6087540/pexels-photo-6087540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the red box, the blue box, or the green box? Pick one fast!",
+    "on_screen_text": "\ud83d\udfe5 RED   \ud83d\udfe6 BLUE   \ud83d\udfe9 GREEN",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/11768112/pexels-photo-11768112.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd25",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33305466/pexels-photo-33305466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "We open the red box and it's\u2026 a rubber chicken! Not even close!",
+    "on_screen_text": "\ud83d\udfe5 NOPE! \ud83d\udc14",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7790150/pexels-photo-7790150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue box has\u2026 a smelly old sock! Ewww, try again!",
+    "on_screen_text": "\ud83d\udfe6 SO CLOSE\u2026 NOT! \ud83e\udde6",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/8516783/pexels-photo-8516783.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the green box has the diamond! Open it up\u2026 YES! There it is \u2014 sparkling and beautiful!",
+    "on_screen_text": "\ud83d\udfe9 WINNER! \ud83d\udc8e\u2728",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6250865/pexels-photo-6250865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you pick green? You're a genius! Level two tomorrow \u2014 don't miss it!",
+    "on_screen_text": "Level 2 TOMORROW! \ud83d\ude80",
+    "duration_seconds": 4
+  }
+]
