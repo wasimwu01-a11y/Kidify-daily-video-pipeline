@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37926830/pexels-photo-37926830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it through?!",
+    "on_screen_text": "WHO MAKES IT?! \ud83e\udd14",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33229798/pexels-photo-33229798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue hatchback!",
+    "on_screen_text": "CONTESTANT #1 \ud83d\ude99",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It rolls up, hits the mud... and sinks straight to the bumper! No chance!",
+    "on_screen_text": "\u274c STUCK!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38944866/pexels-photo-38944866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the big chunky green tractor!",
+    "on_screen_text": "CONTESTANT #2 \ud83d\ude9c",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/29167768/pexels-photo-29167768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Its giant wheels churn through... it's making it... almost there... oh no, it wobbles and stops! So close!",
+    "on_screen_text": "\ud83d\ude2c SO CLOSE...",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37350100/pexels-photo-37350100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last up \u2014 the massive orange monster truck!",
+    "on_screen_text": "CONTESTANT #3 \ud83c\udfc6",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/29176532/pexels-photo-29176532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It ROARS forward, mud flying everywhere, and just BLASTS right through to the other side!",
+    "on_screen_text": "\u2705 WINNER!!",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38530781/pexels-photo-38530781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The monster truck wins! Can anything stop it? Find out tomorrow!",
+    "on_screen_text": "TOMORROW: THE MEGA RAMP! \ud83d\ude80",
+    "duration_seconds": 4
+  }
+]
