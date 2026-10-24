@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Egg Has the Prize?",
+  "youtube_title": "\ud83e\udd5a Can You Guess Which Egg Hides the Prize? #Shorts",
+  "youtube_description": "Three mystery eggs \u2014 only ONE holds the golden prize! Can you guess which one before the reveal? Comment your answer below! \ud83d\udc47\n\n#Shorts #KidsVideo #GuessingGame #MysteryEgg #Kidify #FunForKids #BrainTeaser",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One egg hides a golden prize \u2014 but which one is it?",
+      "visual_prompt": "three colorful Easter eggs row",
+      "on_screen_text": "WHICH EGG? \ud83e\udd5a"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "Is it the red egg, the blue egg, or the green egg? Pick your answer NOW!",
+      "visual_prompt": "red blue green Easter eggs closeup",
+      "on_screen_text": "\ud83d\udd34 RED   \ud83d\udd35 BLUE   \ud83d\udfe2 GREEN"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 3,
+      "narration": "Three... two... one!",
+      "visual_prompt": "countdown timer colorful background",
+      "on_screen_text": "3\ufe0f\u20e3... 2\ufe0f\u20e3... 1\ufe0f\u20e3..."
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "The red egg... opens up and it's full of... dirty old socks! Ewww!",
+      "visual_prompt": "open red Easter egg dirty socks inside",
+      "on_screen_text": "\ud83d\udd34 RED EGG = \ud83e\udde6 NOPE!"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The blue egg... cracks open and it's... a rubber chicken! Not quite!",
+      "visual_prompt": "blue Easter egg rubber chicken toy",
+      "on_screen_text": "\ud83d\udd35 BLUE EGG = \ud83d\udc14 NOPE!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "That means the GREEN egg holds the golden prize! Open it up \u2014 yes! Gold coins everywhere!",
+      "visual_prompt": "green Easter egg gold coins spilling",
+      "on_screen_text": "\ud83d\udfe2 GREEN EGG = \ud83c\udfc6 WINNER!"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you guess right? Level two is coming tomorrow \u2014 it's even trickier!",
+      "visual_prompt": "golden trophy kids celebration confetti",
+      "on_screen_text": "Level 2 tomorrow! \ud83d\udd25"
+    }
+  ]
+}
