@@ -1,0 +1,66 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37926830/pexels-photo-37926830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+    "on_screen_text": "WHO SURVIVES? \ud83e\udd14",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/30977014/pexels-photo-30977014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "First up \u2014 the tiny blue race car!",
+    "on_screen_text": "COMPETITOR #1 \ud83d\udd35",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/27555417/pexels-photo-27555417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It zooms toward the mud pit... and SPLAT! It's swallowed whole! Bye bye, little car!",
+    "on_screen_text": "ELIMINATED! \ud83d\udc80",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/14189259/pexels-photo-14189259.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Next \u2014 the big yellow school bus!",
+    "on_screen_text": "COMPETITOR #2 \ud83d\udfe1",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/30788742/pexels-photo-30788742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It rumbles forward, pushing through the mud... but the wheels just spin and spin. It's stuck too!",
+    "on_screen_text": "SO CLOSE... \ud83d\ude2c",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/18189893/pexels-photo-18189893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Last chance \u2014 the massive green monster truck!",
+    "on_screen_text": "COMPETITOR #3 \ud83d\udfe2",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38492409/pexels-photo-38492409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "It ROARS, those giant tires chomp through the mud, and it blasts out the other side! Monster truck WINS!",
+    "on_screen_text": "WINNER! \ud83c\udfc6",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_8",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37014022/pexels-photo-37014022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Tomorrow \u2014 same trucks, but this time it's a mega ramp! Can they fly? See you then!",
+    "on_screen_text": "MEGA RAMP TOMORROW! \ud83d\ude80",
+    "duration_seconds": 4
+  }
+]
