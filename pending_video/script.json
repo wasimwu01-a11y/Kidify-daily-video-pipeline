@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Can Cross the Giant Mud Pit? #Shorts",
+  "youtube_description": "A tiny blue hatchback, a beefy orange pickup truck, and a massive green monster truck all try to cross a GIANT mud pit! Who makes it out the other side? Watch to find out! \ud83c\udfc6\n\n#Shorts #KidsVideos #Kidify #CarChallenge #MonsterTruck #FunForKids #VehicleChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO MAKES IT ACROSS? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue hatchback! It's small but speedy!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "\ud83d\udd35 TINY BLUE HATCHBACK"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms toward the mud\u2026 and immediately gets stuck! Completely swallowed up!",
+      "visual_prompt": "small car stuck in deep mud",
+      "on_screen_text": "\u274c STUCK!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the big orange pickup truck! This one looks tough!",
+      "visual_prompt": "orange pickup truck off road",
+      "on_screen_text": "\ud83d\udfe0 BIG ORANGE PICKUP"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It pushes in\u2026 makes it halfway\u2026 but those back wheels just spin and spin!",
+      "visual_prompt": "pickup truck wheels spinning in mud",
+      "on_screen_text": "\u274c SO CLOSE!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the MASSIVE green monster truck! Those wheels are huge!",
+      "visual_prompt": "giant green monster truck big wheels",
+      "on_screen_text": "\ud83d\udfe2 MASSIVE MONSTER TRUCK"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "It rolls in \u2014 mud flies everywhere \u2014 and it STOMPS right through to the other side!",
+      "visual_prompt": "monster truck crushing through mud splash",
+      "on_screen_text": "\u2705 WINNER! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck wins! Can anything stop it? Find out tomorrow \u2014 giant ramp challenge!",
+      "visual_prompt": "monster truck victory trophy",
+      "on_screen_text": "TOMORROW: GIANT RAMP! \ud83d\ude80"
+    }
+  ]
+}
