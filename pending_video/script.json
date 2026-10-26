@@ -1,0 +1,58 @@
+{
+  "format": "guessing_reveal",
+  "visual_type": "image",
+  "title": "Which Egg Hides the Dragon?",
+  "youtube_title": "\ud83e\udd5a Which Egg Hides the Dragon? #Shorts",
+  "youtube_description": "Can you guess which egg is hiding the baby dragon? Pick your door \u2014 I mean egg \u2014 and find out! \ud83d\udc09\ud83d\udd25 Watch every day for a new guessing challenge!\n\n#Shorts #KidsVideo #GuessingGame #Dragon #FunForKids #Kidify #BrainTeaser #EggReveal",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "One of these eggs is hiding a baby dragon \u2014 but which one?",
+      "visual_prompt": "three colorful Easter eggs",
+      "on_screen_text": "WHICH EGG? \ud83e\udd5a"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 4,
+      "narration": "You've got a purple egg, a golden egg, and a speckled blue egg. Pick your favorite!",
+      "visual_prompt": "purple gold blue speckled eggs",
+      "on_screen_text": "\ud83d\udfe3 PURPLE  \ud83d\udfe1 GOLD  \ud83d\udd35 BLUE"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 3,
+      "narration": "Okay, let's find out! Three\u2026 two\u2026 one!",
+      "visual_prompt": "countdown numbers colorful background",
+      "on_screen_text": "3\u2026 2\u2026 1\u2026 \ud83d\udd25"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 4,
+      "narration": "The purple egg cracks open \u2014 and out pops\u2026 a rubber duck! Quack!",
+      "visual_prompt": "cracked egg rubber duck toy",
+      "on_screen_text": "\ud83d\udfe3 PURPLE EGG = \ud83e\udd86 QUACK!"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 4,
+      "narration": "The speckled blue egg opens and it's\u2026 a tiny little frog! Ribbit!",
+      "visual_prompt": "cracked egg small green frog",
+      "on_screen_text": "\ud83d\udd35 BLUE EGG = \ud83d\udc38 RIBBIT!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 5,
+      "narration": "That means the golden egg has the dragon! It cracks open and \u2014 ROAR! There it is!",
+      "visual_prompt": "golden egg cracking dragon toy",
+      "on_screen_text": "\ud83d\udfe1 GOLD EGG = \ud83d\udc09 DRAGON!"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 4,
+      "narration": "Did you pick the golden egg? Nice! Come back tomorrow for Level 2!",
+      "visual_prompt": "golden trophy winner celebration",
+      "on_screen_text": "LEVEL 2 TOMORROW! \u2b06\ufe0f"
+    }
+  ]
+}
