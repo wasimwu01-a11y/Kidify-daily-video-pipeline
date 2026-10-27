@@ -1,0 +1,65 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Survives the GIANT Mud Pit? #Shorts",
+  "youtube_description": "A tiny blue race car, a beefy orange pickup truck, and a massive green monster truck all try to cross the giant mud pit \u2014 but only ONE makes it through! Watch to find out who wins! \ud83c\udfc6\n\n#Shorts #KidsVideo #CarChallenge #MonsterTruck #MudPit #Kidify #FunForKids #VehicleChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO SURVIVES THE MUD PIT? \ud83c\udfc6"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue race car, super fast and super low!",
+      "visual_prompt": "small blue race car low profile",
+      "on_screen_text": "CHALLENGER 1: TINY BLUE RACE CAR \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms toward the mud\u2026 and SINKS straight to the bottom! Bye bye, little racer!",
+      "visual_prompt": "car stuck in deep mud",
+      "on_screen_text": "\u274c STUCK IN THE MUD!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the big orange pickup truck, tough and rugged!",
+      "visual_prompt": "orange pickup truck offroad",
+      "on_screen_text": "CHALLENGER 2: BIG ORANGE PICKUP \ud83d\udfe0"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It pushes in\u2026 makes it halfway\u2026 then gets totally swallowed by the mud! So close!",
+      "visual_prompt": "pickup truck stuck deep mud wheels spinning",
+      "on_screen_text": "\u274c ALMOST\u2026 BUT NOPE!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last up \u2014 the giant green monster truck! Those wheels are HUGE!",
+      "visual_prompt": "giant green monster truck big wheels",
+      "on_screen_text": "CHALLENGER 3: GIANT GREEN MONSTER TRUCK \ud83d\udfe2"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "It rolls right through the mud like it's nothing \u2014 and blasts out the other side! MONSTER TRUCK WINS!",
+      "visual_prompt": "monster truck driving through mud splash",
+      "on_screen_text": "\u2705 MONSTER TRUCK WINS! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "Tomorrow \u2014 same trucks, but this time it's a giant ramp! Can they fly? See you then!",
+      "visual_prompt": "steep ramp launch stunt",
+      "on_screen_text": "\ud83d\ude80 GIANT RAMP TOMORROW!"
+    }
+  ]
+}
