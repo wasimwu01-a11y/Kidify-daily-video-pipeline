@@ -1,0 +1,72 @@
+{
+  "format": "vehicle_vs_obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Makes It Through the Mud Pit? #Shorts",
+  "youtube_description": "A tiny blue race car, a massive orange monster truck, and a chunky green off-road buggy all try to blast through a GIANT mud pit! Who makes it? Watch to find out! \ud83c\udfc1\ud83d\udca8\n\n#Shorts #KidsVideos #CarChallenge #MudPit #Kidify #FunForKids #VehicleChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One giant mud pit. Who makes it through?",
+      "visual_prompt": "giant mud pit aerial view",
+      "on_screen_text": "WHO MAKES IT? \ud83c\udfc1"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue race car!",
+      "visual_prompt": "small blue race car front view",
+      "on_screen_text": "CONTESTANT 1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms in super fast... and gets totally swallowed by the mud!",
+      "visual_prompt": "car stuck deep mud wheels spinning",
+      "on_screen_text": "\u274c STUCK!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the chunky green off-road buggy!",
+      "visual_prompt": "green off road buggy dirt track",
+      "on_screen_text": "CONTESTANT 2 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It bounces in, wiggles left, wiggles right... and stops halfway. So close!",
+      "visual_prompt": "off road buggy stuck mud halfway",
+      "on_screen_text": "\u274c SO CLOSE!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the giant orange monster truck!",
+      "visual_prompt": "large orange monster truck big wheels",
+      "on_screen_text": "CONTESTANT 3 \ud83d\udfe0"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 3,
+      "narration": "Three... two... one... GO!",
+      "visual_prompt": "monster truck starting line mud race",
+      "on_screen_text": "3... 2... 1... \ud83d\udd25"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 5,
+      "narration": "Those massive wheels chew right through the mud \u2014 it MAKES IT! The orange monster truck wins!",
+      "visual_prompt": "monster truck driving through mud splash",
+      "on_screen_text": "\u2705 WINNER! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_9",
+      "duration_seconds": 3,
+      "narration": "Tomorrow \u2014 these same trucks hit a mega ramp. Who flies the farthest?",
+      "visual_prompt": "large ramp outdoor stunt course",
+      "on_screen_text": "TOMORROW: MEGA RAMP! \ud83d\ude80"
+    }
+  ]
+}
