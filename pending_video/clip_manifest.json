@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/3912293/pexels-photo-3912293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "A puppy is hiding in one of these boxes! Which one is it?",
+    "on_screen_text": "\ud83d\udc36 WHERE IS THE PUPPY? \ud83d\udc36",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6087540/pexels-photo-6087540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the RED box, the BLUE box, or the GREEN box?",
+    "on_screen_text": "RED? BLUE? GREEN?",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Pick your box right now! Three... two... one!",
+    "on_screen_text": "3\ufe0f\u20e3... 2\ufe0f\u20e3... 1\ufe0f\u20e3...",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/39722789/pexels-photo-39722789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The RED box \u2014 let's open it! Oh no, it's just a rubber duck!",
+    "on_screen_text": "\u274c NOPE! Just a duck!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/14754664/pexels-photo-14754664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The BLUE box \u2014 maybe this one? Nope! It's a smelly old sock!",
+    "on_screen_text": "\u274c EW! Just a sock!",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/7749996/pexels-photo-7749996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The GREEN box \u2014 the puppy HAS to be in here! Open it up... YES! There it is!",
+    "on_screen_text": "\u2705 THE PUPPY! \ud83d\udc36\ud83c\udf89",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/13871204/pexels-photo-13871204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you pick GREEN? Nice job! Come back tomorrow for Level 2!",
+    "on_screen_text": "Level 2 tomorrow! \ud83d\udd25",
+    "duration_seconds": 4
+  }
+]
