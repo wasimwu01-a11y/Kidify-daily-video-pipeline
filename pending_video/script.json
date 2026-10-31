@@ -1,0 +1,65 @@
+{
+  "format": "Vehicle vs obstacle",
+  "visual_type": "image",
+  "title": "Cars vs Giant Mud Pit",
+  "youtube_title": "\ud83d\ude97 Which Car Can Cross the GIANT MUD PIT? #Shorts",
+  "youtube_description": "A tiny blue hatchback, a boxy yellow school bus, and a massive green monster truck all try to cross the world's grossest mud pit! Who makes it through? Watch to find out! \ud83c\udfc6\ud83d\udca8\n\n#Shorts #KidsVideos #CarChallenge #MonsterTruck #MudPit #Kidify #FunForKids #VehicleChallenge",
+  "scenes": [
+    {
+      "id": "scene_1",
+      "duration_seconds": 3,
+      "narration": "Three vehicles. One GIANT mud pit. Who makes it across?",
+      "visual_prompt": "giant mud pit obstacle course",
+      "on_screen_text": "WHO CROSSES THE MUD PIT? \ud83e\udd14"
+    },
+    {
+      "id": "scene_2",
+      "duration_seconds": 3,
+      "narration": "First up \u2014 the tiny blue hatchback!",
+      "visual_prompt": "small blue hatchback car",
+      "on_screen_text": "CONTESTANT 1 \ud83d\udd35"
+    },
+    {
+      "id": "scene_3",
+      "duration_seconds": 4,
+      "narration": "It zooms in\u2026 and sinks straight to the bottom. Bye bye, little guy!",
+      "visual_prompt": "small car stuck in deep mud",
+      "on_screen_text": "\u274c STUCK!"
+    },
+    {
+      "id": "scene_4",
+      "duration_seconds": 3,
+      "narration": "Next \u2014 the boxy yellow school bus!",
+      "visual_prompt": "yellow school bus side view",
+      "on_screen_text": "CONTESTANT 2 \ud83d\udfe1"
+    },
+    {
+      "id": "scene_5",
+      "duration_seconds": 5,
+      "narration": "It pushes in\u2026 gets halfway\u2026 then slowly slides sideways into the mud. So close!",
+      "visual_prompt": "school bus tilted in mud",
+      "on_screen_text": "\u274c SO CLOSE!"
+    },
+    {
+      "id": "scene_6",
+      "duration_seconds": 3,
+      "narration": "Last chance \u2014 the MASSIVE green monster truck!",
+      "visual_prompt": "giant green monster truck",
+      "on_screen_text": "CONTESTANT 3 \ud83d\udfe2"
+    },
+    {
+      "id": "scene_7",
+      "duration_seconds": 5,
+      "narration": "It ROARS in, mud flies everywhere, and it rolls right out the other side! YES!",
+      "visual_prompt": "monster truck splashing through mud",
+      "on_screen_text": "\u2705 WINNER! \ud83c\udfc6"
+    },
+    {
+      "id": "scene_8",
+      "duration_seconds": 4,
+      "narration": "The monster truck wins! Tomorrow \u2014 can they handle a WALL OF WATER? See you then!",
+      "visual_prompt": "monster truck victory trophy",
+      "on_screen_text": "TOMORROW: WALL OF WATER \ud83d\udca7"
+    }
+  ]
+}
