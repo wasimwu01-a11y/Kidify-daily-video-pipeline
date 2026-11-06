@@ -1,0 +1,58 @@
+[
+  {
+    "scene_id": "scene_1",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/38277136/pexels-photo-38277136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "One of these eggs is hiding a DRAGON \u2014 but which one?",
+    "on_screen_text": "\ud83d\udc09 WHICH EGG HIDES THE DRAGON?",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_2",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/6294307/pexels-photo-6294307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Is it the blue egg, the gold egg, or the spotted egg? You have three seconds to decide!",
+    "on_screen_text": "\ud83d\udd35 BLUE   \ud83d\udfe1 GOLD   \ud83d\udfe4 SPOTTED",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_3",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/37936680/pexels-photo-37936680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Three\u2026 two\u2026 one!",
+    "on_screen_text": "3\ufe0f\u20e3\u2026 2\ufe0f\u20e3\u2026 1\ufe0f\u20e3!",
+    "duration_seconds": 3
+  },
+  {
+    "scene_id": "scene_4",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/33305466/pexels-photo-33305466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The blue egg? You crack it open and\u2026 it's a rubber duck! Quack quack!",
+    "on_screen_text": "\u274c NOPE! Just a rubber duck! \ud83e\udd86",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_5",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/10417727/pexels-photo-10417727.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "The gold egg? Ooh, so shiny\u2026 but inside is just a pile of glitter. So much glitter!",
+    "on_screen_text": "\u274c WRONG! Just glitter! \u2728",
+    "duration_seconds": 4
+  },
+  {
+    "scene_id": "scene_6",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/26845761/pexels-photo-26845761.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "That means the SPOTTED egg has the dragon! It's hatching right now \u2014 look at those little wings!",
+    "on_screen_text": "\u2705 THE SPOTTED EGG! \ud83d\udc09\ud83d\udd25",
+    "duration_seconds": 5
+  },
+  {
+    "scene_id": "scene_7",
+    "media_type": "image",
+    "media_url": "https://images.pexels.com/photos/9071740/pexels-photo-9071740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "narration": "Did you get it right? Tomorrow we go to Level Two \u2014 can you beat an even trickier challenge?",
+    "on_screen_text": "\u2b06\ufe0f LEVEL 2 TOMORROW!",
+    "duration_seconds": 4
+  }
+]
