@@ -1,0 +1,98 @@
+name: Daily Clips (Bichou + Tokyo Girl)
+
+on:
+  schedule:
+    - cron: "23 10 * * *"   # 10:23 UTC daily
+  workflow_dispatch:
+    inputs:
+      vod_url:
+        description: "Optional: a specific Bichou Kick VOD link to clip (kick.com/bichouu/videos/...)"
+        required: false
+        default: ""
+      run_bichou:
+        description: "Make Bichou clips"
+        type: boolean
+        default: true
+      run_tokyo_girl:
+        description: "Make the Tokyo Girl edit"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write  # to save state/clips_state.json
+
+concurrency:
+  group: daily-clips
+  cancel-in-progress: false
+
+jobs:
+  clips:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install FFmpeg and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+
+      - name: Install dependencies
+        run: pip install -r requirements-clips.txt
+
+      - name: Cache Whisper model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-small-v1
+
+      - name: Set run date
+        run: echo "RUN_DATE=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
+
+      - name: Bichou clips (Kick -> YouTube private + email)
+        if: github.event_name == 'schedule' || inputs.run_bichou
+        continue-on-error: true
+        env:
+          VOD_URL: ${{ inputs.vod_url }}
+        run: python scripts/clips/bichou.py
+
+      - name: Tokyo Girl TikTok edit (email)
+        if: always() && (github.event_name == 'schedule' || inputs.run_tokyo_girl)
+        continue-on-error: true
+        run: python scripts/clips/tokyo_girl.py
+
+      - name: Save state
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain state/)" ]; then
+            git config user.name "clips-bot"
+            git config user.email "actions@github.com"
+            git add state/
+            git commit -m "Clips state: $RUN_DATE"
+            git push
+          fi
+
+      - name: Keep the videos for 7 days (backup if an email attachment was too big)
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: clips-${{ env.RUN_DATE }}
+          path: clips_output/*.mp4
+          retention-days: 7
+          if-no-files-found: ignore
