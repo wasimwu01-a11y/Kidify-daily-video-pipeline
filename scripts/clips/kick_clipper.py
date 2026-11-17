@@ -29,10 +29,11 @@ sys.path.insert(0, os.path.dirname(__file__))
 from common import (  # noqa: E402
     OUTPUT_DIR, load_state, save_state, ask_claude_json, remove_currency_symbols,
     strip_emoji, write_ass, ffmpeg_filter_path, run, youtube_upload_private,
-    send_email, EMAIL_SAFE_BYTES,
+    send_email, EMAIL_SAFE_BYTES, next_publish_time,
 )
 from campaigns import CAMPAIGNS  # noqa: E402
 
+PUBLISH_TIME_UK = os.environ.get("PUBLISH_TIME_UK", "18:00") or "18:00"
 WHISPER_MODEL = os.environ.get("WHISPER_MODEL", "small")
 MAX_ANALYSE_SECONDS = int(os.environ.get("MAX_ANALYSE_SECONDS", str(4 * 3600)))
 N_CANDIDATES = 12
@@ -270,7 +271,7 @@ def render_clip(src_url: str, clip: dict, out_path: str):
 
 # ---------------- email ----------------
 
-def next_steps(cfg: dict, attached: bool) -> str:
+def next_steps(cfg: dict, attached: bool, go_live: str | None = None, video_id: str | None = None) -> str:
     attach_note = "" if attached else " (too big to attach: download it from the Actions run artifacts)"
     if cfg["needs_approval"]:
         return f"""NEXT STEPS
@@ -279,6 +280,13 @@ def next_steps(cfg: dict, attached: bool) -> str:
 3. Within 30 minutes, submit the YouTube Shorts link in Content Rewards.
 If the draft is rejected: delete the private video in YouTube Studio.
 Reminder: the campaign link must stay in the channel description."""
+    if go_live and video_id:
+        return f"""THIS CLIP POSTS ITSELF: it goes PUBLIC automatically on {go_live}.
+WITHIN 30 MINUTES OF THAT, submit this link in Content Rewards -> {cfg['name']} campaign:
+https://youtube.com/shorts/{video_id}
+
+Don't want it posted? Before then, open the YouTube Studio link above and delete it.
+Payout starts once it passes the campaign's minimum views and is approved."""
     return f"""NEXT STEPS (only when you have 30 minutes free)
 1. Watch it{attach_note}. If you're happy: open the YouTube Studio link above -> Visibility -> Public.
 2. Straight away (within 30 minutes), submit the YouTube Shorts link in Content Rewards -> {cfg['name']} campaign.
@@ -326,24 +334,28 @@ def main(campaign: str):
 
         title = (clip["youtube_title"] or clip["hook"] or cfg["name"]) + cfg["title_suffix"]
         description = f"{clip['youtube_title']}\n\n{cfg['description']}"
-        video_id = None
+        video_id, go_live, publish_at = None, None, None
+        if cfg.get("auto_publish"):
+            publish_at, go_live = next_publish_time(PUBLISH_TIME_UK)
         try:
             video_id = youtube_upload_private(out, title, description, cfg["tags"],
-                                              language=cfg["language"])
-            print(f"Uploaded privately: {video_id}")
+                                              language=cfg["language"], publish_at=publish_at)
+            print(f"Uploaded: {video_id}" + (f" (goes public {go_live})" if go_live else " (private)"))
         except Exception as e:
             print(f"YouTube upload failed: {e}")
 
         attached = os.path.getsize(out) < EMAIL_SAFE_BYTES
         yt_lines = (
-            f"YouTube (PRIVATE for now): https://studio.youtube.com/video/{video_id}/edit\n"
+            f"YouTube Studio: https://studio.youtube.com/video/{video_id}/edit\n"
             f"Link to submit once public: https://youtube.com/shorts/{video_id}\n"
             if video_id else "YouTube upload FAILED - check the Actions log. Post it manually.\n")
         body = (f"{cfg['name']} clip {i}/{len(clips)}: {clip['hook']}\n"
                 f"Source: {vod['url']} at {clip['start'] / 60:.1f} min "
                 f"({clip['end'] - clip['start']:.0f}s)\nWhy: {clip['reason']}\n\n"
-                f"{yt_lines}\n{next_steps(cfg, attached)}\n")
-        send_email(f"{tag} Clip {i}/{len(clips)} ready - {clip['hook']}", body,
+                f"{yt_lines}\n{next_steps(cfg, attached, go_live if video_id else None, video_id)}\n")
+        subject = (f"{tag} Goes live {go_live} - submit it then" if go_live and video_id
+                   else f"{tag} Clip {i}/{len(clips)} ready - {clip['hook']}")
+        send_email(subject, body,
                    [out] if attached else [])
 
 

@@ -140,8 +140,10 @@ def run(cmd: list[str], **kw):
 # ---------- YouTube ----------
 
 def youtube_upload_private(video_path: str, title: str, description: str,
-                           tags: list[str], language: str = "fr") -> str:
-    """Uploads as PRIVATE (campaign needs draft approval before posting). Returns video id."""
+                           tags: list[str], language: str = "fr",
+                           publish_at: str | None = None) -> str:
+    """Uploads as PRIVATE. With publish_at (RFC 3339, UTC), YouTube makes it
+    public by itself at that time. Returns the video id."""
     from google.oauth2.credentials import Credentials
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
@@ -169,6 +171,8 @@ def youtube_upload_private(video_path: str, title: str, description: str,
             "selfDeclaredMadeForKids": False,
         },
     }
+    if publish_at:
+        body["status"]["publishAt"] = publish_at
     media = MediaFileUpload(video_path, chunksize=-1, resumable=True, mimetype="video/mp4")
     response = youtube.videos().insert(part="snippet,status", body=body, media_body=media).execute()
     return response["id"]
@@ -197,3 +201,17 @@ def send_email(subject: str, body: str, attachments: list[str] | None = None):
 
 
 EMAIL_SAFE_BYTES = 18 * 1024 * 1024  # Gmail's 25MB limit, minus base64 overhead
+
+
+def next_publish_time(uk_time: str) -> tuple[str, str]:
+    """Next occurrence of HH:MM UK time -> (RFC 3339 UTC for YouTube, readable UK label)."""
+    from datetime import datetime, timedelta, timezone
+    from zoneinfo import ZoneInfo
+    uk = ZoneInfo("Europe/London")
+    hh, mm = (int(x) for x in uk_time.split(":"))
+    now = datetime.now(uk)
+    target = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
+    if target < now + timedelta(minutes=20):
+        target += timedelta(days=1)
+    utc = target.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    return utc, target.strftime("%a %d %b at %H:%M") + " UK time"

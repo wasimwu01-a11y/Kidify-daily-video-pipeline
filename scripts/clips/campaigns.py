@@ -43,6 +43,7 @@ CAMPAIGNS = {
         "min_clip": 20.0,
         "max_clip": 55.0,
         "needs_approval": False,     # post, then submit within 30 min; paid after 5,000 views
+        "auto_publish": True,        # YouTube makes it public by itself at PUBLISH_TIME_UK
         "no_currency_symbols": False,
         "skip_title": r"casino|slot|gambl|roobet|stake\b",
         "prefer_title": r"",
