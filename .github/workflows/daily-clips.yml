@@ -1,4 +1,4 @@
-name: Daily Clips (Bichou + Tokyo Girl)
+name: Daily Clips (Bichou + TJR + Tokyo Girl)
 
 on:
   schedule:
@@ -6,11 +6,15 @@ on:
   workflow_dispatch:
     inputs:
       vod_url:
-        description: "Optional: a specific Bichou Kick VOD link to clip (kick.com/bichouu/videos/...)"
+        description: "Optional: a specific Kick VOD link to clip (kick.com/bichouu/videos/... or kick.com/tjr/videos/...)"
         required: false
         default: ""
       run_bichou:
-        description: "Make Bichou clips"
+        description: "Make Bichou clips (paused in campaigns.py)"
+        type: boolean
+        default: false
+      run_tjr:
+        description: "Make TJR clips"
         type: boolean
         default: true
       run_tokyo_girl:
@@ -70,7 +74,14 @@ jobs:
         continue-on-error: true
         env:
           VOD_URL: ${{ inputs.vod_url }}
-        run: python scripts/clips/bichou.py
+        run: python scripts/clips/kick_clipper.py bichou
+
+      - name: TJR clips (Kick -> YouTube private + email)
+        if: always() && (github.event_name == 'schedule' || inputs.run_tjr)
+        continue-on-error: true
+        env:
+          VOD_URL: ${{ inputs.vod_url }}
+        run: python scripts/clips/kick_clipper.py tjr
 
       - name: Tokyo Girl TikTok edit (email)
         if: always() && (github.event_name == 'schedule' || inputs.run_tokyo_girl)
