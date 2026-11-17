@@ -1,0 +1,351 @@
+"""
+Kick stream clipper for Content Rewards campaigns (Bichou, TJR, ...).
+Campaign settings live in campaigns.py. Run:  python kick_clipper.py <campaign>
+
+Daily flow per campaign:
+  1. Pick the streamer's newest Kick VOD not clipped yet (prefers titles that
+     match the campaign's themes, skips casino-looking titles).
+  2. Decode its audio from the lowest-quality stream, score each second by
+     loudness spikes vs. the surrounding 5 minutes, keep the best ~12 moments.
+  3. Transcribe those moments with faster-whisper (free, CPU).
+  4. Claude picks the best clips under the campaign rules and returns
+     corrected, timed subtitles.
+  5. FFmpeg renders 1080x1920: blurred background + full stream frame in the
+     middle, hook title on top, subtitles below.
+  6. Uploads each clip to YouTube as PRIVATE and emails it with next steps
+     (you make it public when you're ready to submit within 30 minutes).
+"""
+
+import os
+import re
+import sys
+import json
+import subprocess
+from urllib.parse import urljoin
+
+import numpy as np
+
+sys.path.insert(0, os.path.dirname(__file__))
+from common import (  # noqa: E402
+    OUTPUT_DIR, load_state, save_state, ask_claude_json, remove_currency_symbols,
+    strip_emoji, write_ass, ffmpeg_filter_path, run, youtube_upload_private,
+    send_email, EMAIL_SAFE_BYTES,
+)
+from campaigns import CAMPAIGNS  # noqa: E402
+
+WHISPER_MODEL = os.environ.get("WHISPER_MODEL", "small")
+MAX_ANALYSE_SECONDS = int(os.environ.get("MAX_ANALYSE_SECONDS", str(4 * 3600)))
+N_CANDIDATES = 12
+WINDOW_BEFORE, WINDOW_AFTER = 50, 30
+SR = 16000
+UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/130.0 Safari/537.36")
+
+
+# ---------------- Kick ----------------
+
+def kick_get(url: str):
+    """Kick's API sits behind Cloudflare; curl_cffi impersonates a real browser."""
+    from curl_cffi import requests as creq
+    r = creq.get(url, impersonate="chrome", timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+
+def list_vods(channel: str) -> list[dict]:
+    data = kick_get(f"https://kick.com/api/v2/channels/{channel}/videos")
+    if isinstance(data, dict):
+        data = data.get("data") or data.get("videos") or []
+    vods = []
+    for item in data:
+        video = item.get("video") or {}
+        uuid = video.get("uuid") or item.get("uuid") or str(item.get("id"))
+        vods.append({
+            "uuid": uuid,
+            "title": item.get("session_title") or video.get("title") or "",
+            "duration_s": (item.get("duration") or 0) / 1000,
+            "source": item.get("source") or video.get("source"),
+            "url": f"https://kick.com/{channel}/videos/{uuid}",
+        })
+    return vods
+
+
+def vod_from_url(url: str) -> dict:
+    """Manual override: a kick.com/<channel>/videos/<uuid> link."""
+    uuid = url.rstrip("/").split("/")[-1]
+    data = kick_get(f"https://kick.com/api/v1/video/{uuid}")
+    return {"uuid": uuid, "title": (data.get("livestream") or {}).get("session_title", ""),
+            "duration_s": 0, "source": data["source"], "url": url}
+
+
+def pick_vod(cfg: dict, state: dict) -> dict | None:
+    manual = os.environ.get("VOD_URL", "").strip()
+    if manual and f"kick.com/{cfg['kick_channel']}/" in manual:
+        return vod_from_url(manual)
+    done = set(state.get("processed_vods", []))
+    skip = re.compile(cfg["skip_title"], re.I) if cfg["skip_title"] else None
+    prefer = re.compile(cfg["prefer_title"], re.I) if cfg["prefer_title"] else None
+    fresh = []
+    for vod in list_vods(cfg["kick_channel"])[:15]:  # newest first
+        if vod["uuid"] in done or not vod["source"]:
+            continue
+        if skip and skip.search(vod["title"]):
+            print(f"Skipping VOD (title filter): {vod['title']}")
+            continue
+        if vod["duration_s"] and vod["duration_s"] < 15 * 60:
+            continue
+        fresh.append(vod)
+    if prefer:
+        for vod in fresh:
+            if prefer.search(vod["title"]):
+                return vod
+    return fresh[0] if fresh else None
+
+
+def variant_urls(master_url: str) -> tuple[str, str]:
+    """(lowest-quality URL for audio analysis, best <=1080p URL for clips)."""
+    import requests
+    text = requests.get(master_url, headers={"User-Agent": UA}, timeout=30).text
+    if "#EXT-X-STREAM-INF" not in text:
+        return master_url, master_url
+    variants = []
+    lines = text.splitlines()
+    for i, line in enumerate(lines):
+        if line.startswith("#EXT-X-STREAM-INF"):
+            m = re.search(r"RESOLUTION=(\d+)x(\d+)", line)
+            variants.append((int(m.group(2)) if m else 0, urljoin(master_url, lines[i + 1].strip())))
+    variants.sort()
+    best = [v for v in variants if v[0] <= 1080] or variants
+    return variants[0][1], best[-1][1]
+
+
+# ---------------- moment finding ----------------
+
+def http_opts(url: str) -> list[str]:
+    return ["-user_agent", UA] if url.startswith("http") else []
+
+
+def load_audio(url: str) -> np.ndarray:
+    print("Decoding VOD audio for analysis (this is the slow part)...")
+    proc = subprocess.run(
+        ["ffmpeg", "-nostdin", "-loglevel", "error", *http_opts(url),
+         "-t", str(MAX_ANALYSE_SECONDS), "-i", url,
+         "-vn", "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"],
+        capture_output=True, check=True,
+    )
+    audio = np.frombuffer(proc.stdout, dtype=np.int16).astype(np.float32) / 32768.0
+    print(f"Audio decoded: {len(audio) / SR / 60:.1f} minutes")
+    return audio
+
+
+def find_peaks(audio: np.ndarray) -> list[int]:
+    secs = len(audio) // SR
+    frames = audio[: secs * SR].reshape(secs, SR)
+    rms_db = 20 * np.log10(np.sqrt((frames ** 2).mean(axis=1)) + 1e-9)
+    smooth = np.convolve(rms_db, np.ones(3) / 3, mode="same")
+    half = 150
+    baseline = np.array([np.median(smooth[max(0, i - half): i + half]) for i in range(0, secs, 10)])
+    baseline = np.repeat(baseline, 10)[:secs]
+    score = smooth - baseline
+    score[:120] = -99
+    score[-60:] = -99
+    peaks = []
+    for idx in np.argsort(score)[::-1]:
+        if len(peaks) >= N_CANDIDATES or score[idx] < -50:
+            break
+        if all(abs(int(idx) - p) > 120 for p in peaks):
+            peaks.append(int(idx))
+    return sorted(peaks)
+
+
+def transcribe_windows(audio: np.ndarray, peaks: list[int], language: str) -> list[dict]:
+    from faster_whisper import WhisperModel
+    model = WhisperModel(WHISPER_MODEL, device="cpu", compute_type="int8")
+    total = len(audio) / SR
+    candidates = []
+    for n, p in enumerate(peaks):
+        start = max(0, p - WINDOW_BEFORE)
+        end = min(total, p + WINDOW_AFTER)
+        chunk = audio[int(start * SR): int(end * SR)]
+        segments, _ = model.transcribe(chunk, language=language, vad_filter=True, beam_size=5)
+        segs = [{"start": round(start + s.start, 2), "end": round(start + s.end, 2),
+                 "text": s.text.strip()} for s in segments if s.text.strip()]
+        print(f"Candidate {n}: {start:.0f}-{end:.0f}s, {len(segs)} segments")
+        candidates.append({"candidate": n, "window_start": round(start, 2),
+                           "window_end": round(end, 2), "segments": segs})
+    return candidates
+
+
+# ---------------- Claude selection ----------------
+
+def build_system(cfg: dict) -> str:
+    return f"""{cfg['rules']}
+
+You receive candidate moments from a Kick stream with automatic Whisper
+transcripts (timestamps in absolute seconds). Choose up to {cfg['clips_per_day']}
+clips that will get the most views as short-form videos.
+
+Technical rules:
+- Each clip is {cfg['min_clip']:.0f}-{cfg['max_clip']:.0f} seconds long and stays inside its
+  candidate's window. Start just before the action, end on the payoff/reaction.
+- Subtitles: keep Whisper's timestamps but split into short lines
+  (max 2 lines, ~38 characters per line). Same language as the stream.
+- No emoji anywhere.
+- If no moment is good enough or within the rules, return an empty list.
+
+Answer ONLY with JSON:
+{{"clips": [{{
+  "candidate": 0,
+  "start": 1234.5,
+  "end": 1275.0,
+  "hook": "on-screen title, max 40 characters",
+  "youtube_title": "YouTube title, max 80 characters",
+  "reason": "why this moment will work",
+  "subtitles": [{{"start": 1234.6, "end": 1237.1, "text": "..."}}]
+}}]}}"""
+
+
+def choose_clips(cfg: dict, candidates: list[dict], vod_title: str) -> list[dict]:
+    usable = [c for c in candidates if len(c["segments"]) >= 3]
+    if not usable:
+        return []
+    clean = (lambda t: strip_emoji(remove_currency_symbols(t))) if cfg["no_currency_symbols"] \
+        else (lambda t: strip_emoji(t))
+    result = ask_claude_json(build_system(cfg),
+                             f"Stream title: {vod_title}\n\nCandidates:\n"
+                             + json.dumps(usable, ensure_ascii=False), max_tokens=8000)
+    clips = result.get("clips", []) if isinstance(result, dict) else result
+    by_id = {c["candidate"]: c for c in candidates}
+    valid = []
+    for clip in clips[:cfg["clips_per_day"]]:
+        cand = by_id.get(clip.get("candidate"))
+        if cand is None:
+            continue
+        start = max(float(clip["start"]), cand["window_start"])
+        end = min(float(clip["end"]), cand["window_end"])
+        if end - start < cfg["min_clip"]:
+            end = min(cand["window_end"], start + cfg["min_clip"])
+            start = max(cand["window_start"], end - cfg["min_clip"])
+        if end - start < cfg["min_clip"] - 1.5:
+            print(f"Dropping candidate {cand['candidate']}: too short ({end - start:.1f}s)")
+            continue
+        end = min(end, start + cfg["max_clip"])
+        subs = []
+        for s in clip.get("subtitles", []):
+            text = clean(str(s.get("text", "")))
+            rs, re_ = float(s["start"]) - start, float(s["end"]) - start
+            if text and re_ > 0 and rs < end - start:
+                subs.append({"start": max(rs, 0), "end": min(re_, end - start), "text": text})
+        if not subs:
+            print(f"Dropping candidate {cand['candidate']}: no subtitles")
+            continue
+        valid.append({"start": start, "end": end, "subs": subs,
+                      "hook": clean(clip.get("hook", ""))[:45],
+                      "youtube_title": clean(clip.get("youtube_title", ""))[:80],
+                      "reason": clip.get("reason", "")})
+    return valid
+
+
+# ---------------- render ----------------
+
+def render_clip(src_url: str, clip: dict, out_path: str):
+    duration = clip["end"] - clip["start"]
+    ass_path = out_path.replace(".mp4", ".ass")
+    write_ass(ass_path, clip["hook"], clip["subs"], duration, sub_y=1310, title_y=430)
+    vf = (
+        "[0:v]split[a][b];"
+        "[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
+        "boxblur=20:2,eq=brightness=-0.12[bg];"
+        "[b]scale=1080:-2[fg];"
+        f"[bg][fg]overlay=(W-w)/2:(H-h)/2,ass='{ffmpeg_filter_path(ass_path)}',fps=30[v]"
+    )
+    run(["ffmpeg", "-y", "-nostdin", *http_opts(src_url),
+         "-ss", f"{clip['start']:.2f}", "-i", src_url, "-t", f"{duration:.2f}",
+         "-filter_complex", vf, "-map", "[v]", "-map", "0:a?",
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "23",
+         "-maxrate", "2800k", "-bufsize", "5600k", "-pix_fmt", "yuv420p",
+         "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
+         "-movflags", "+faststart", out_path])
+
+
+# ---------------- email ----------------
+
+def next_steps(cfg: dict, attached: bool) -> str:
+    attach_note = "" if attached else " (too big to attach: download it from the Actions run artifacts)"
+    if cfg["needs_approval"]:
+        return f"""NEXT STEPS
+1. Content Rewards -> {cfg['name']} campaign -> submit this video as a DRAFT{attach_note}.
+2. When the draft is APPROVED: open the YouTube Studio link above -> Visibility -> Public.
+3. Within 30 minutes, submit the YouTube Shorts link in Content Rewards.
+If the draft is rejected: delete the private video in YouTube Studio.
+Reminder: the campaign link must stay in the channel description."""
+    return f"""NEXT STEPS (only when you have 30 minutes free)
+1. Watch it{attach_note}. If you're happy: open the YouTube Studio link above -> Visibility -> Public.
+2. Straight away (within 30 minutes), submit the YouTube Shorts link in Content Rewards -> {cfg['name']} campaign.
+3. Payout starts once it passes the campaign's minimum views and is approved.
+Don't want it? Delete the private video in YouTube Studio."""
+
+
+# ---------------- main ----------------
+
+def main(campaign: str):
+    cfg = CAMPAIGNS[campaign]
+    tag = f"[{cfg['name']}]"
+    if not cfg.get("enabled", True):
+        print(f"{tag} campaign is paused in campaigns.py - nothing to do.")
+        return
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    state = load_state()
+    vod = pick_vod(cfg, state)
+    if not vod:
+        send_email(f"{tag} No new Kick VOD today",
+                   f"No new usable {cfg['name']} VOD on kick.com/{cfg['kick_channel']} since the last run.")
+        return
+    print(f"{tag} Clipping VOD: {vod['title']} ({vod['url']})")
+    low_url, best_url = variant_urls(vod["source"])
+
+    audio = load_audio(low_url)
+    peaks = find_peaks(audio)
+    candidates = transcribe_windows(audio, peaks, cfg["language"])
+    del audio
+    clips = choose_clips(cfg, candidates, vod["title"])
+
+    state.setdefault("processed_vods", []).append(vod["uuid"])
+    state["processed_vods"] = state["processed_vods"][-300:]
+    save_state(state)
+
+    if not clips:
+        send_email(f"{tag} No usable clips today",
+                   f"Claude found no rule-safe moments in: {vod['title']}\n{vod['url']}")
+        return
+
+    for i, clip in enumerate(clips, 1):
+        out = os.path.join(OUTPUT_DIR, f"{campaign}_{vod['uuid'][:8]}_{i}.mp4")
+        print(f"Rendering clip {i}: {clip['start']:.0f}-{clip['end']:.0f}s - {clip['hook']}")
+        render_clip(best_url, clip, out)
+
+        title = (clip["youtube_title"] or clip["hook"] or cfg["name"]) + cfg["title_suffix"]
+        description = f"{clip['youtube_title']}\n\n{cfg['description']}"
+        video_id = None
+        try:
+            video_id = youtube_upload_private(out, title, description, cfg["tags"],
+                                              language=cfg["language"])
+            print(f"Uploaded privately: {video_id}")
+        except Exception as e:
+            print(f"YouTube upload failed: {e}")
+
+        attached = os.path.getsize(out) < EMAIL_SAFE_BYTES
+        yt_lines = (
+            f"YouTube (PRIVATE for now): https://studio.youtube.com/video/{video_id}/edit\n"
+            f"Link to submit once public: https://youtube.com/shorts/{video_id}\n"
+            if video_id else "YouTube upload FAILED - check the Actions log. Post it manually.\n")
+        body = (f"{cfg['name']} clip {i}/{len(clips)}: {clip['hook']}\n"
+                f"Source: {vod['url']} at {clip['start'] / 60:.1f} min "
+                f"({clip['end'] - clip['start']:.0f}s)\nWhy: {clip['reason']}\n\n"
+                f"{yt_lines}\n{next_steps(cfg, attached)}\n")
+        send_email(f"{tag} Clip {i}/{len(clips)} ready - {clip['hook']}", body,
+                   [out] if attached else [])
+
+
+if __name__ == "__main__":
+    main(sys.argv[1] if len(sys.argv) > 1 else "bichou")
