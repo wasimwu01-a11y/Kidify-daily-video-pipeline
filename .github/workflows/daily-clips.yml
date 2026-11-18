@@ -9,6 +9,10 @@ on:
         description: "Optional: a specific Kick VOD link to clip (kick.com/bichouu/videos/... or kick.com/tjr/videos/...)"
         required: false
         default: ""
+      refresh_research:
+        description: "Redo the trend research now (normally every 3 days)"
+        type: boolean
+        default: false
       run_bichou:
         description: "Make Bichou clips (paused in campaigns.py)"
         type: boolean
@@ -42,7 +46,7 @@ jobs:
       GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
       GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
       EMAIL_TO: ${{ secrets.EMAIL_TO }}
-      PUBLISH_TIME_UK: ${{ vars.PUBLISH_TIME_UK }}   # optional repo variable, e.g. 18:00 (default)
+      PUBLISH_TIME_UK: ${{ vars.PUBLISH_TIME_UK }}   # optional repo variable, e.g. 23:00 (default)
 
     steps:
       - name: Checkout repo
@@ -75,6 +79,13 @@ jobs:
 
       - name: Set run date
         run: echo "RUN_DATE=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
+
+      - name: Research what's getting views (top clips + trending Shorts)
+        continue-on-error: true
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          FORCE_RESEARCH: ${{ inputs.refresh_research }}
+        run: python scripts/clips/research.py   # all active campaigns
 
       - name: Bichou clips (Kick -> YouTube private + email)
         if: github.event_name == 'schedule' || inputs.run_bichou
