@@ -1,10 +1,47 @@
 {
   "processed_vods": [
     "8d4a0e1e-b13e-4940-9894-c32075795b71",
-    "bf076e44-4967-448d-8532-8ebbfd532eb1"
+    "bf076e44-4967-448d-8532-8ebbfd532eb1",
+    "35cdaed3-078a-4697-a8a3-b36897849cec"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
-    "Me calling in sick the day GTA 6 drops / Boss: are you okay? / Me driving a speedboat through Vice City: yeah"
+    "Me calling in sick the day GTA 6 drops / Boss: are you okay? / Me driving a speedboat through Vice City: yeah",
+    "You: let's do one more job then we're done / Lucia: / You, already planning the next heist:"
+  ],
+  "posted": [
+    {
+      "campaign": "tjr",
+      "video_id": "SXrrZBeHCqM",
+      "date": "2026-11-18",
+      "hook": "13 wins all time.",
+      "title": "TJR hits a milestone live and the chat goes crazy #TJR #Shorts",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 20
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-18",
+      "hook": "You: let's do one more job then we're done",
+      "title": "Every couple has that one person who keeps saying 'last one' \n\n#GTA6 #JasonAndLucia #GTA6Meme #PartnersInCrime #GTA6Hype",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Photos: Jason and Lucia",
+        "Clip: Lucia Caminos Video Clip",
+        "Clip: Jason Duval Video Clip"
+      ]
+    }
   ]
 }
