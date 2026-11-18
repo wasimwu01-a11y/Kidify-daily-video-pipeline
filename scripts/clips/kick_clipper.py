@@ -30,12 +30,11 @@ sys.path.insert(0, os.path.dirname(__file__))
 from common import (  # noqa: E402
     OUTPUT_DIR, load_state, save_state, ask_claude_json, remove_currency_symbols,
     strip_emoji, write_ass, ffmpeg_filter_path, run, youtube_upload_private,
-    send_email, EMAIL_SAFE_BYTES, next_publish_time,
-    load_playbook, playbook_prompt, log_posted,
+    send_email, EMAIL_SAFE_BYTES, load_playbook, playbook_prompt, log_posted,
+    approve_block, new_token, short_id,
 )
-from campaigns import CAMPAIGNS  # noqa: E402
+from campaigns import all_campaigns  # noqa: E402
 
-PUBLISH_TIME_UK = os.environ.get("PUBLISH_TIME_UK", "23:00") or "23:00"
 WHISPER_MODEL = os.environ.get("WHISPER_MODEL", "small")
 MAX_ANALYSE_SECONDS = int(os.environ.get("MAX_ANALYSE_SECONDS", str(4 * 3600)))
 N_CANDIDATES = 12
@@ -319,44 +318,33 @@ def render_clip(src_url: str, clip: dict, out_path: str, style: dict | None = No
 
 # ---------------- email ----------------
 
-def next_steps(cfg: dict, attached: bool, go_live: str | None = None, video_id: str | None = None) -> str:
+def draft_steps(cfg: dict, attached: bool) -> str:
     attach_note = "" if attached else " (too big to attach: download it from the Actions run artifacts)"
-    if cfg["needs_approval"]:
-        return f"""NEXT STEPS
+    return f"""NEXT STEPS (this campaign needs draft approval)
 1. Content Rewards -> {cfg['name']} campaign -> submit this video as a DRAFT{attach_note}.
 2. When the draft is APPROVED: open the YouTube Studio link above -> Visibility -> Public.
 3. Within 30 minutes, submit the YouTube Shorts link in Content Rewards.
-If the draft is rejected: delete the private video in YouTube Studio.
-Reminder: the campaign link must stay in the channel description."""
-    if go_live and video_id:
-        return f"""THIS CLIP POSTS ITSELF: it goes PUBLIC automatically on {go_live}.
-WITHIN 30 MINUTES OF THAT, submit this link in Content Rewards -> {cfg['name']} campaign:
-https://youtube.com/shorts/{video_id}
-
-Don't want it posted? Before then, open the YouTube Studio link above and delete it.
-Payout starts once it passes the campaign's minimum views and is approved."""
-    return f"""NEXT STEPS (only when you have 30 minutes free)
-1. Watch it{attach_note}. If you're happy: open the YouTube Studio link above -> Visibility -> Public.
-2. Straight away (within 30 minutes), submit the YouTube Shorts link in Content Rewards -> {cfg['name']} campaign.
-3. Payout starts once it passes the campaign's minimum views and is approved.
-Don't want it? Delete the private video in YouTube Studio."""
+If the draft is rejected: delete the private video in YouTube Studio."""
 
 
 # ---------------- main ----------------
 
-def main(campaign: str):
-    cfg = CAMPAIGNS[campaign]
+def main(campaign: str, state: dict | None = None, quiet_no_vod: bool = False) -> bool:
+    """Makes today's clip(s) for one campaign. Returns True if a clip was made."""
+    state = state if state is not None else load_state()
+    cfg = all_campaigns(state)[campaign]
     tag = f"[{cfg['name']}]"
     if not cfg.get("enabled", True):
-        print(f"{tag} campaign is paused in campaigns.py - nothing to do.")
-        return
+        print(f"{tag} campaign is paused/retired - nothing to do.")
+        return False
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    state = load_state()
     vod = pick_vod(cfg, state)
     if not vod:
-        send_email(f"{tag} No new Kick VOD today",
-                   f"No new usable {cfg['name']} VOD on kick.com/{cfg['kick_channel']} since the last run.")
-        return
+        print(f"{tag} no new VOD")
+        if not quiet_no_vod:
+            send_email(f"{tag} No new Kick VOD today",
+                       f"No new usable {cfg['name']} VOD on kick.com/{cfg['kick_channel']} since the last run.")
+        return False
     print(f"{tag} Clipping VOD: {vod['title']} ({vod['url']})")
     low_url, best_url = variant_urls(vod["source"])
 
@@ -376,7 +364,12 @@ def main(campaign: str):
     if not clips:
         send_email(f"{tag} No usable clips today",
                    f"Claude found no rule-safe moments in: {vod['title']}\n{vod['url']}")
-        return
+        return False
+
+    tiktok_note = ""
+    if "tiktok" in cfg.get("platforms", []) and os.environ.get("TIKTOK_SLOT_FREE") == "1":
+        tiktok_note = ("\nTIKTOK: today's TikTok slot is free, so after it's live on YouTube you can also "
+                       "post this same video on TikTok (caption below) and submit that link too.\n")
 
     for i, clip in enumerate(clips, 1):
         out = os.path.join(OUTPUT_DIR, f"{campaign}_{vod['uuid'][:8]}_{i}.mp4")
@@ -385,42 +378,59 @@ def main(campaign: str):
         render_clip(best_url, clip, out, style)
 
         title = (clip["youtube_title"] or clip["hook"] or cfg["name"]) + cfg["title_suffix"]
-        # required campaign hashtags (in the description template) + trending ones from the playbook
         extra = [h for h in pb.get("hashtags", []) if h.lower() not in cfg["description"].lower()
                  and h.lower() not in title.lower()][:4]
         description = f"{clip['youtube_title']}\n\n{cfg['description']}" + (
             " " + " ".join(extra) if extra else "")
-        video_id, go_live, publish_at = None, None, None
-        # every campaign that doesn't need draft approval posts itself at PUBLISH_TIME_UK
-        if cfg.get("auto_publish", not cfg["needs_approval"]):
-            publish_at, go_live = next_publish_time(PUBLISH_TIME_UK)
-        try:
-            video_id = youtube_upload_private(out, title, description, cfg["tags"],
-                                              language=cfg["language"], publish_at=publish_at)
-            print(f"Uploaded: {video_id}" + (f" (goes public {go_live})" if go_live else " (private)"))
-        except Exception as e:
-            print(f"YouTube upload failed: {e}")
-        if video_id:
-            log_posted(state, {"campaign": campaign, "video_id": video_id,
-                               "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-                               "hook": clip["hook"], "title": title, "style": style,
-                               "length_s": round(clip["end"] - clip["start"])})
-            save_state(state)
-
         attached = os.path.getsize(out) < EMAIL_SAFE_BYTES
-        yt_lines = (
-            f"YouTube Studio: https://studio.youtube.com/video/{video_id}/edit\n"
-            f"Link to submit once public: https://youtube.com/shorts/{video_id}\n"
-            if video_id else "YouTube upload FAILED - check the Actions log. Post it manually.\n")
-        body = (f"{cfg['name']} clip {i}/{len(clips)}: {clip['hook']}\n"
+        info = (f"{cfg['name']} clip: {clip['hook']}\n"
                 f"Source: {vod['url']} at {clip['start'] / 60:.1f} min "
-                f"({clip['end'] - clip['start']:.0f}s)\nWhy: {clip['reason']}\n\n"
-                f"{yt_lines}\n{next_steps(cfg, attached, go_live if video_id else None, video_id)}\n")
-        subject = (f"{tag} Goes live {go_live} - submit it then" if go_live and video_id
-                   else f"{tag} Clip {i}/{len(clips)} ready - {clip['hook']}")
-        send_email(subject, body,
-                   [out] if attached else [])
+                f"({clip['end'] - clip['start']:.0f}s)\nWhy: {clip['reason']}\n"
+                f"YouTube title: {title}\n")
+
+        if cfg["needs_approval"]:
+            # campaign approves drafts first -> private upload now, you publish after approval
+            video_id = None
+            try:
+                video_id = youtube_upload_private(out, title, description, cfg["tags"],
+                                                  language=cfg["language"])
+            except Exception as e:
+                print(f"YouTube upload failed: {e}")
+            if video_id:
+                log_posted(state, {"campaign": campaign, "video_id": video_id,
+                                   "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                                   "hook": clip["hook"], "title": title, "style": style,
+                                   "length_s": round(clip["end"] - clip["start"])})
+                save_state(state)
+            yt = (f"YouTube (PRIVATE): https://studio.youtube.com/video/{video_id}/edit\n"
+                  f"Link to submit once public: https://youtube.com/shorts/{video_id}\n"
+                  if video_id else "YouTube upload FAILED - check the Actions log.\n")
+            send_email(f"{tag} Clip ready for draft approval - {clip['hook']}",
+                       f"{info}\n{yt}\n{draft_steps(cfg, attached)}\n", [out] if attached else [])
+            continue
+
+        # no draft approval -> nothing is posted until YOU approve (30-minute window starts then)
+        pid, token = short_id(), new_token()
+        state.setdefault("pending", {})[pid] = {
+            "token": token, "campaign": campaign, "file": os.path.basename(out),
+            "run_id": os.environ.get("GITHUB_RUN_ID", ""), "title": title,
+            "description": description, "tags": cfg["tags"], "language": cfg["language"],
+            "hook": clip["hook"], "style": style, "length_s": round(clip["end"] - clip["start"]),
+            "created": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        }
+        save_state(state)
+        body = f"""{info}{tiktok_note}
+NOTHING HAS BEEN POSTED YET.
+When you have 30 minutes free, approve it: it goes live on YouTube within ~2 minutes
+and you get a "LIVE NOW" email with the link to submit in Content Rewards.
+
+{approve_block("publish", pid, token, "APPROVE & POST NOW")}
+
+Don't like it? Just ignore this email - it is never posted. The approval expires after 6 days.
+"""
+        send_email(f"{tag} Approve to post: {clip['hook']}", body, [out] if attached else [])
+    return True
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "bichou")
+    main(sys.argv[1] if len(sys.argv) > 1 else "tjr")

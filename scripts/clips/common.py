@@ -197,7 +197,7 @@ def run(cmd: list[str], **kw):
 
 def youtube_upload_private(video_path: str, title: str, description: str,
                            tags: list[str], language: str = "fr",
-                           publish_at: str | None = None) -> str:
+                           publish_at: str | None = None, privacy: str = "private") -> str:
     """Uploads as PRIVATE. With publish_at (RFC 3339, UTC), YouTube makes it
     public by itself at that time. Returns the video id."""
     from google.oauth2.credentials import Credentials
@@ -223,7 +223,7 @@ def youtube_upload_private(video_path: str, title: str, description: str,
             "defaultAudioLanguage": language,
         },
         "status": {
-            "privacyStatus": "private",
+            "privacyStatus": privacy,
             "selfDeclaredMadeForKids": False,
         },
     }
@@ -271,3 +271,31 @@ def next_publish_time(uk_time: str) -> tuple[str, str]:
         target += timedelta(days=1)
     utc = target.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     return utc, target.strftime("%a %d %b at %H:%M") + " UK time"
+
+
+# ---------- approvals (one-click links handled by approvals.yml) ----------
+
+APPROVE_URL = os.environ.get("APPROVE_URL", "").strip()   # the Google Apps Script web-app URL
+REPO = os.environ.get("GITHUB_REPOSITORY", "wasimwu01-a11y/Kidify-daily-video-pipeline")
+
+
+def new_token() -> str:
+    import secrets
+    return secrets.token_urlsafe(12)
+
+
+def short_id() -> str:
+    import secrets
+    return secrets.token_hex(3)
+
+
+def approve_block(action: str, item_id: str, token: str, button_text: str) -> str:
+    """Email text with the one-click link (if set up) and the GitHub fallback."""
+    lines = []
+    if APPROVE_URL:
+        lines.append(f"{button_text}:\n{APPROVE_URL}?action={action}&id={item_id}&t={token}")
+    lines.append(
+        f"{'Or, without the link' if APPROVE_URL else 'To do it'}: GitHub -> Actions -> Approvals -> "
+        f"Run workflow -> action: {action}, id: {item_id}\n"
+        f"https://github.com/{REPO}/actions/workflows/approvals.yml")
+    return "\n\n".join(lines)

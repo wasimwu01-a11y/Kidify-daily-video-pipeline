@@ -194,6 +194,9 @@ def make_segment(choice: str, photos: dict, videos: dict, used: set, out: str):
 # ---------------- main ----------------
 
 def main():
+    if "tokyo_girl" in load_state().get("retired", []):
+        print("Tokyo Girl campaign is retired (budget used up) - skipping.")
+        return
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     photos, videos = catalogue()
     if not photos and not videos:

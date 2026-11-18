@@ -35,7 +35,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from common import (  # noqa: E402
     load_state, ask_claude_json_blocks, load_playbook, playbook_path, run,
 )
-from campaigns import CAMPAIGNS, RESEARCH  # noqa: E402
+from campaigns import all_campaigns, research_targets  # noqa: E402
 
 EVERY_DAYS = float(os.environ.get("RESEARCH_EVERY_DAYS", "3"))
 FORCE = os.environ.get("FORCE_RESEARCH", "").lower() in ("1", "true", "yes")
@@ -269,8 +269,8 @@ subtitle show at once (2-3 = fast punchy captions, 6-8 = full sentences)."""
 
 
 def research(name: str, state: dict) -> dict | None:
-    cfg = RESEARCH[name]
-    rules = CAMPAIGNS.get(name, {}).get("rules") or cfg.get("rules", "")
+    cfg = research_targets(state)[name]
+    rules = all_campaigns(state).get(name, {}).get("rules") or cfg.get("rules", "")
     language = cfg.get("language")
     content: list[dict] = []
     summary_rows = []
@@ -336,13 +336,13 @@ def research(name: str, state: dict) -> dict | None:
         return None
 
     pb = ask_claude_json_blocks(SYSTEM, content, max_tokens=3000)
-    return sanitise(pb, name)
+    return sanitise(pb, name, state)
 
 
-def sanitise(pb: dict, name: str) -> dict:
+def sanitise(pb: dict, name: str, state: dict | None = None) -> dict:
     """Clamp everything to values the editors understand."""
     style = pb.get("style") or {}
-    camp = CAMPAIGNS.get(name, {})
+    camp = all_campaigns(state or {}).get(name, {})
     lo = camp.get("min_clip", 8)
     hi = camp.get("max_clip", 60)
     tl = pb.get("target_length") or [lo, hi]
@@ -386,13 +386,14 @@ def is_stale(name: str) -> bool:
     return age >= timedelta(days=EVERY_DAYS)
 
 
-def main(names: list[str]):
+def main(names: list[str] | None = None):
     state = load_state()
-    for name in names:
-        if name not in RESEARCH:
+    targets, camps = research_targets(state), all_campaigns(state)
+    for name in names or list(targets):
+        if name not in targets:
             print(f"Unknown research target: {name}")
             continue
-        if name in CAMPAIGNS and not CAMPAIGNS[name].get("enabled", True):
+        if name in state.get("retired", []) or (name in camps and not camps[name].get("enabled", True)):
             print(f"[{name}] paused - skipping research")
             continue
         if not is_stale(name):
@@ -411,10 +412,5 @@ def main(names: list[str]):
             print(f"[{name}] new playbook:\n{json.dumps(pb, indent=2, ensure_ascii=False)}")
 
 
-def all_targets() -> list[str]:
-    """Every campaign the agent makes videos for (paused ones are skipped in main)."""
-    return list(RESEARCH)
-
-
 if __name__ == "__main__":
-    main(sys.argv[1:] or all_targets())
+    main(sys.argv[1:] or None)

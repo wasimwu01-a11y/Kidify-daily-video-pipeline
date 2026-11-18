@@ -12,6 +12,9 @@ CAMPAIGNS = {
     "bichou": {
         "name": "Bichou",
         "enabled": False,            # PAUSED: campaign ended. Set True to resume.
+        "content_rewards_id": "ceff4682-947e-40c9-b7df-81a806c89943",
+        "platforms": ["instagram", "tiktok", "youtube", "x"],
+        "rate": 1.00,
         "kick_channel": "bichouu",
         "language": "fr",
         "clips_per_day": 1,
@@ -40,6 +43,9 @@ CAMPAIGNS = {
     "tjr": {
         "name": "TJR",
         "enabled": True,
+        "content_rewards_id": "33c3d5a9-84a9-40c8-b6e4-9904e4816339",
+        "platforms": ["instagram", "tiktok", "youtube"],
+        "rate": 0.75,
         "kick_channel": "tjr",
         "language": "en",
         "clips_per_day": 1,
@@ -95,3 +101,45 @@ RESEARCH = {
         "notes": "French streamer clips (campaign paused).",
     },
 }
+
+
+# ---------------- Campaigns added by the scout (scout.py) ----------------
+# Activated campaigns live in state/clips_state.json -> "active_campaigns", so
+# the agent can add/retire them without anyone editing this file.
+
+DYNAMIC_DEFAULTS = {
+    "enabled": True,
+    "clips_per_day": 1,
+    "min_clip": 20.0,
+    "max_clip": 55.0,
+    "needs_approval": False,
+    "no_currency_symbols": False,
+    "skip_title": r"casino|slot|gambl|roobet|stake\b",
+    "prefer_title": r"",
+    "title_suffix": " #Shorts",
+    "tags": [],
+    "language": "en",
+}
+
+
+def all_campaigns(state: dict) -> dict:
+    """Built-in campaigns above + scout-activated ones, with retired ones switched off."""
+    out = {k: dict(v) for k, v in CAMPAIGNS.items()}
+    for k, v in (state.get("active_campaigns") or {}).items():
+        out[k] = {**DYNAMIC_DEFAULTS, **v}
+    for k in state.get("retired", []):
+        if k in out:
+            out[k]["enabled"] = False
+    return out
+
+
+def research_targets(state: dict) -> dict:
+    targets = {k: dict(v) for k, v in RESEARCH.items()}
+    for k, v in (state.get("active_campaigns") or {}).items():
+        targets.setdefault(k, {
+            "content_rewards_id": v["content_rewards_id"],
+            "youtube_query": v.get("youtube_query") or v["name"],
+            "language": v.get("language", "en"),
+            "notes": v.get("notes", ""),
+        })
+    return targets
