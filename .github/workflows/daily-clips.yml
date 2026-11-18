@@ -1,33 +1,37 @@
-name: Daily Clips (Bichou + TJR + Tokyo Girl)
+name: Daily Clips
 
 on:
   schedule:
     - cron: "23 10 * * *"   # 10:23 UTC daily
   workflow_dispatch:
     inputs:
-      vod_url:
-        description: "Optional: a specific Kick VOD link to clip (kick.com/bichouu/videos/... or kick.com/tjr/videos/...)"
+      run_youtube:
+        description: "Make today's YouTube clip (best active campaign)"
+        type: boolean
+        default: true
+      campaign:
+        description: "Optional: force one campaign (e.g. tjr)"
         required: false
         default: ""
+      vod_url:
+        description: "Optional: a specific Kick VOD link to clip"
+        required: false
+        default: ""
+      run_tokyo_girl:
+        description: "Make the Tokyo Girl TikTok edit"
+        type: boolean
+        default: true
+      run_scout:
+        description: "Look for new campaigns / retire finished ones"
+        type: boolean
+        default: true
       refresh_research:
         description: "Redo the trend research now (normally every 3 days)"
         type: boolean
         default: false
-      run_bichou:
-        description: "Make Bichou clips (paused in campaigns.py)"
-        type: boolean
-        default: false
-      run_tjr:
-        description: "Make TJR clips"
-        type: boolean
-        default: true
-      run_tokyo_girl:
-        description: "Make the Tokyo Girl edit"
-        type: boolean
-        default: true
 
 permissions:
-  contents: write  # to save state/clips_state.json
+  contents: write
 
 concurrency:
   group: daily-clips
@@ -43,10 +47,11 @@ jobs:
       YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
       YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
       YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
       GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
       EMAIL_TO: ${{ secrets.EMAIL_TO }}
-      PUBLISH_TIME_UK: ${{ vars.PUBLISH_TIME_UK }}   # optional repo variable, e.g. 23:00 (default)
+      APPROVE_URL: ${{ vars.APPROVE_URL }}   # the Google Apps Script link (optional)
 
     steps:
       - name: Checkout repo
@@ -80,26 +85,24 @@ jobs:
       - name: Set run date
         run: echo "RUN_DATE=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
 
+      - name: Scout campaigns (new ones to join, retire finished ones)
+        if: github.event_name == 'schedule' || inputs.run_scout
+        continue-on-error: true
+        run: python scripts/clips/scout.py
+
       - name: Research what's getting views (top clips + trending Shorts)
         continue-on-error: true
         env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           FORCE_RESEARCH: ${{ inputs.refresh_research }}
-        run: python scripts/clips/research.py   # all active campaigns
+        run: python scripts/clips/research.py
 
-      - name: Bichou clips (Kick -> YouTube private + email)
-        if: github.event_name == 'schedule' || inputs.run_bichou
+      - name: Today's YouTube clip (waits for your approval before posting)
+        if: always() && (github.event_name == 'schedule' || inputs.run_youtube)
         continue-on-error: true
         env:
           VOD_URL: ${{ inputs.vod_url }}
-        run: python scripts/clips/kick_clipper.py bichou
-
-      - name: TJR clips (Kick -> YouTube private + email)
-        if: always() && (github.event_name == 'schedule' || inputs.run_tjr)
-        continue-on-error: true
-        env:
-          VOD_URL: ${{ inputs.vod_url }}
-        run: python scripts/clips/kick_clipper.py tjr
+          FORCE_CAMPAIGN: ${{ inputs.campaign }}
+        run: python scripts/clips/daily.py
 
       - name: Tokyo Girl TikTok edit (email)
         if: always() && (github.event_name == 'schedule' || inputs.run_tokyo_girl)
@@ -114,14 +117,14 @@ jobs:
             git config user.email "actions@github.com"
             git add state/
             git commit -m "Clips state: $RUN_DATE"
-            git push
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
           fi
 
-      - name: Keep the videos for 7 days (backup if an email attachment was too big)
+      - name: Keep the videos for 7 days (approvals post from here)
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: clips-${{ env.RUN_DATE }}
+          name: clips
           path: clips_output/*.mp4
           retention-days: 7
           if-no-files-found: ignore
