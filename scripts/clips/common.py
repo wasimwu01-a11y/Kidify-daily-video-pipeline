@@ -52,6 +52,62 @@ def ask_claude_json(system: str, user: str, max_tokens: int = 4000) -> dict | li
     return json.loads(text[start:end])
 
 
+def ask_claude_json_blocks(system: str, content: list[dict], max_tokens: int = 4000) -> dict | list:
+    """Like ask_claude_json, but content is a list of Anthropic content blocks (text + images)."""
+    import anthropic
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    resp = client.messages.create(model=CLAUDE_MODEL, max_tokens=max_tokens, system=system,
+                                  messages=[{"role": "user", "content": content}])
+    text = resp.content[0].text.strip().replace("```json", "").replace("```", "").strip()
+    start = min([i for i in (text.find("{"), text.find("[")) if i != -1], default=0)
+    end = max(text.rfind("}"), text.rfind("]")) + 1
+    return json.loads(text[start:end])
+
+
+# ---------- playbooks (written by research.py, read by the editors) ----------
+
+PLAYBOOK_DIR = os.environ.get("PLAYBOOK_DIR", "state")
+
+
+def playbook_path(campaign: str) -> str:
+    return os.path.join(PLAYBOOK_DIR, f"playbook_{campaign}.json")
+
+
+def load_playbook(campaign: str) -> dict:
+    try:
+        with open(playbook_path(campaign)) as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def playbook_prompt(pb: dict) -> str:
+    """Turns a playbook into prompt text for the editor."""
+    if not pb:
+        return ""
+    lines = ["", "WHAT IS WORKING RIGHT NOW (learned from this campaign's top clips and",
+             f"trending Shorts, updated {pb.get('updated', '?')}). Follow these patterns,",
+             "but never copy another creator's text word for word. Campaign rules above",
+             "always win over trends.",
+             f"- Summary: {pb.get('summary', '')}"]
+    for key, label in [("moments_to_pick", "Moments that perform"),
+                       ("hook_examples", "Hook style examples"),
+                       ("avoid", "Avoid")]:
+        if pb.get(key):
+            lines.append(f"- {label}: " + " | ".join(pb[key][:6]))
+    for key, label in [("title_formula", "Title formula"), ("caption_formula", "Caption formula"),
+                       ("experiment", "This cycle's experiment (try it on one clip)")]:
+        if pb.get(key):
+            lines.append(f"- {label}: {pb[key]}")
+    return "\n".join(lines)
+
+
+def log_posted(state: dict, entry: dict):
+    """Remembers what we posted (and how) so research.py can learn from our own results."""
+    state.setdefault("posted", []).append(entry)
+    state["posted"] = state["posted"][-200:]
+
+
 # ---------- text cleaning ----------
 
 CURRENCY_WORDS = {"€": " euros", "$": " dollars", "£": " livres", "¥": " yens"}
@@ -89,7 +145,7 @@ def _ass_escape(text: str) -> str:
 
 
 def write_ass(path: str, title: str | None, subs: list[dict], duration: float,
-              sub_y: int = 1450, title_y: int = 260):
+              sub_y: int = 1450, title_y: int = 260, sub_size: int = 68, title_size: int = 74):
     """
     subs: [{"start": s, "end": s, "text": "..."}] relative to the clip.
     Styles: big white-on-black-outline captions; yellow title at the top.
@@ -103,8 +159,8 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Sub,{FONT_NAME},68,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,6,2,8,70,70,{sub_y},1
-Style: Title,{FONT_NAME},74,&H0000E5FF,&H0000E5FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,7,2,8,60,60,{title_y},1
+Style: Sub,{FONT_NAME},{sub_size},&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,6,2,8,70,70,{sub_y},1
+Style: Title,{FONT_NAME},{title_size},&H0000E5FF,&H0000E5FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,7,2,8,60,60,{title_y},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

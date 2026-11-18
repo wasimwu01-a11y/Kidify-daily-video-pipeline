@@ -21,6 +21,7 @@ import re
 import sys
 import json
 import subprocess
+from datetime import datetime, timezone
 from urllib.parse import urljoin
 
 import numpy as np
@@ -30,10 +31,11 @@ from common import (  # noqa: E402
     OUTPUT_DIR, load_state, save_state, ask_claude_json, remove_currency_symbols,
     strip_emoji, write_ass, ffmpeg_filter_path, run, youtube_upload_private,
     send_email, EMAIL_SAFE_BYTES, next_publish_time,
+    load_playbook, playbook_prompt, log_posted,
 )
 from campaigns import CAMPAIGNS  # noqa: E402
 
-PUBLISH_TIME_UK = os.environ.get("PUBLISH_TIME_UK", "18:00") or "18:00"
+PUBLISH_TIME_UK = os.environ.get("PUBLISH_TIME_UK", "23:00") or "23:00"
 WHISPER_MODEL = os.environ.get("WHISPER_MODEL", "small")
 MAX_ANALYSE_SECONDS = int(os.environ.get("MAX_ANALYSE_SECONDS", str(4 * 3600)))
 N_CANDIDATES = 12
@@ -179,15 +181,26 @@ def transcribe_windows(audio: np.ndarray, peaks: list[int], language: str) -> li
 
 # ---------------- Claude selection ----------------
 
-def build_system(cfg: dict) -> str:
+def target_length(cfg: dict, pb: dict) -> tuple[float, float]:
+    """Playbook's preferred length, clamped to the campaign's hard limits."""
+    lo, hi = cfg["min_clip"], cfg["max_clip"]
+    t = pb.get("target_length") or [lo, hi]
+    tmin = max(lo, min(float(t[0]), hi))
+    return tmin, max(tmin, min(float(t[1]), hi))
+
+
+def build_system(cfg: dict, pb: dict | None = None) -> str:
+    pb = pb or {}
+    tmin, tmax = target_length(cfg, pb)
     return f"""{cfg['rules']}
+{playbook_prompt(pb)}
 
 You receive candidate moments from a Kick stream with automatic Whisper
 transcripts (timestamps in absolute seconds). Choose up to {cfg['clips_per_day']}
 clips that will get the most views as short-form videos.
 
 Technical rules:
-- Each clip is {cfg['min_clip']:.0f}-{cfg['max_clip']:.0f} seconds long and stays inside its
+- Each clip is {tmin:.0f}-{tmax:.0f} seconds long and stays inside its
   candidate's window. Start just before the action, end on the payoff/reaction.
 - Subtitles: keep Whisper's timestamps but split into short lines
   (max 2 lines, ~38 characters per line). Same language as the stream.
@@ -206,13 +219,13 @@ Answer ONLY with JSON:
 }}]}}"""
 
 
-def choose_clips(cfg: dict, candidates: list[dict], vod_title: str) -> list[dict]:
+def choose_clips(cfg: dict, candidates: list[dict], vod_title: str, pb: dict | None = None) -> list[dict]:
     usable = [c for c in candidates if len(c["segments"]) >= 3]
     if not usable:
         return []
     clean = (lambda t: strip_emoji(remove_currency_symbols(t))) if cfg["no_currency_symbols"] \
         else (lambda t: strip_emoji(t))
-    result = ask_claude_json(build_system(cfg),
+    result = ask_claude_json(build_system(cfg, pb),
                              f"Stream title: {vod_title}\n\nCandidates:\n"
                              + json.dumps(usable, ensure_ascii=False), max_tokens=8000)
     clips = result.get("clips", []) if isinstance(result, dict) else result
@@ -249,15 +262,50 @@ def choose_clips(cfg: dict, candidates: list[dict], vod_title: str) -> list[dict
 
 # ---------------- render ----------------
 
-def render_clip(src_url: str, clip: dict, out_path: str):
+DEFAULT_STYLE = {"hook_text": "sentence", "subtitle_case": "sentence", "subtitle_size": "normal",
+                 "words_per_caption": 8, "framing": "blur_fill"}
+
+
+def chunk_subs(subs: list[dict], words_per_caption: int) -> list[dict]:
+    """Splits subtitle lines into chunks of N words, timing split by word count."""
+    out = []
+    for s in subs:
+        words = s["text"].split()
+        if len(words) <= words_per_caption:
+            out.append(s)
+            continue
+        groups = [words[i:i + words_per_caption] for i in range(0, len(words), words_per_caption)]
+        span, t = s["end"] - s["start"], s["start"]
+        for g in groups:
+            d = span * len(g) / len(words)
+            out.append({"start": t, "end": t + d, "text": " ".join(g)})
+            t += d
+    return out
+
+
+def render_clip(src_url: str, clip: dict, out_path: str, style: dict | None = None):
+    st = {**DEFAULT_STYLE, **(style or {})}
     duration = clip["end"] - clip["start"]
     ass_path = out_path.replace(".mp4", ".ass")
-    write_ass(ass_path, clip["hook"], clip["subs"], duration, sub_y=1310, title_y=430)
+    subs = chunk_subs(clip["subs"], st["words_per_caption"])
+    if st["subtitle_case"] == "upper":
+        subs = [{**s, "text": s["text"].upper()} for s in subs]
+    hook = None if st["hook_text"] == "none" else clip["hook"]
+    if hook and st["hook_text"] == "upper":
+        hook = hook.upper()
+    big = st["framing"] == "big_center"
+    # blur_fill: 1080x608 frame centred (y 656-1264); big_center: 1512x851 cropped to 1080 wide
+    fg_h = 851 if big else 608
+    top_of_video = (1920 - fg_h) // 2
+    write_ass(ass_path, hook, subs, duration,
+              sub_y=top_of_video + fg_h + 40, title_y=max(top_of_video - 230, 180),
+              sub_size=84 if st["subtitle_size"] == "large" else 68)
+    fg = "[b]scale=1512:-2,crop=1080:ih[fg];" if big else "[b]scale=1080:-2[fg];"
     vf = (
         "[0:v]split[a][b];"
         "[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
         "boxblur=20:2,eq=brightness=-0.12[bg];"
-        "[b]scale=1080:-2[fg];"
+        + fg +
         f"[bg][fg]overlay=(W-w)/2:(H-h)/2,ass='{ffmpeg_filter_path(ass_path)}',fps=30[v]"
     )
     run(["ffmpeg", "-y", "-nostdin", *http_opts(src_url),
@@ -316,7 +364,10 @@ def main(campaign: str):
     peaks = find_peaks(audio)
     candidates = transcribe_windows(audio, peaks, cfg["language"])
     del audio
-    clips = choose_clips(cfg, candidates, vod["title"])
+    pb = load_playbook(campaign)
+    if pb:
+        print(f"{tag} Using playbook from {pb.get('updated')}: {pb.get('summary', '')[:200]}")
+    clips = choose_clips(cfg, candidates, vod["title"], pb)
 
     state.setdefault("processed_vods", []).append(vod["uuid"])
     state["processed_vods"] = state["processed_vods"][-300:]
@@ -330,12 +381,18 @@ def main(campaign: str):
     for i, clip in enumerate(clips, 1):
         out = os.path.join(OUTPUT_DIR, f"{campaign}_{vod['uuid'][:8]}_{i}.mp4")
         print(f"Rendering clip {i}: {clip['start']:.0f}-{clip['end']:.0f}s - {clip['hook']}")
-        render_clip(best_url, clip, out)
+        style = {**DEFAULT_STYLE, **pb.get("style", {})}
+        render_clip(best_url, clip, out, style)
 
         title = (clip["youtube_title"] or clip["hook"] or cfg["name"]) + cfg["title_suffix"]
-        description = f"{clip['youtube_title']}\n\n{cfg['description']}"
+        # required campaign hashtags (in the description template) + trending ones from the playbook
+        extra = [h for h in pb.get("hashtags", []) if h.lower() not in cfg["description"].lower()
+                 and h.lower() not in title.lower()][:4]
+        description = f"{clip['youtube_title']}\n\n{cfg['description']}" + (
+            " " + " ".join(extra) if extra else "")
         video_id, go_live, publish_at = None, None, None
-        if cfg.get("auto_publish"):
+        # every campaign that doesn't need draft approval posts itself at PUBLISH_TIME_UK
+        if cfg.get("auto_publish", not cfg["needs_approval"]):
             publish_at, go_live = next_publish_time(PUBLISH_TIME_UK)
         try:
             video_id = youtube_upload_private(out, title, description, cfg["tags"],
@@ -343,6 +400,12 @@ def main(campaign: str):
             print(f"Uploaded: {video_id}" + (f" (goes public {go_live})" if go_live else " (private)"))
         except Exception as e:
             print(f"YouTube upload failed: {e}")
+        if video_id:
+            log_posted(state, {"campaign": campaign, "video_id": video_id,
+                               "date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                               "hook": clip["hook"], "title": title, "style": style,
+                               "length_s": round(clip["end"] - clip["start"])})
+            save_state(state)
 
         attached = os.path.getsize(out) < EMAIL_SAFE_BYTES
         yt_lines = (

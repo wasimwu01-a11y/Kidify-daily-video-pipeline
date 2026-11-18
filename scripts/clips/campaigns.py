@@ -1,7 +1,10 @@
 """
 One entry per Kick-based clipping campaign. kick_clipper.py reads these.
 To add a campaign: copy a block, change the Kick channel, rules and hashtags,
-and add a step for it in .github/workflows/daily-clips.yml.
+add a step for it in .github/workflows/daily-clips.yml, and add its
+Content Rewards id to RESEARCH below. Every active campaign then gets the
+same behaviour automatically: trend research + playbook every 3 days, and
+(if it needs no draft approval) auto-posting at PUBLISH_TIME_UK.
 """
 
 CAMPAIGNS = {
@@ -61,5 +64,34 @@ Mandatory rules:
   Fix Whisper's mistakes (tickers, trading terms: SPY, QQQ, NQ, ES, calls, puts).
 - Audience is US/UK/CA/AU: plain English, no foreign slang.
 - "hook" and "youtube_title" in English, curiosity-driven but not clickbait lies.""",
+    },
+}
+
+
+# ---------------- Trend research targets (research.py) ----------------
+# content_rewards_id = the id at the end of the campaign's Content Rewards URL.
+RESEARCH = {
+    "tjr": {
+        "content_rewards_id": "33c3d5a9-84a9-40c8-b6e4-9904e4816339",
+        "youtube_query": "TJR trades",
+        "language": "en",
+        "notes": "Clips of TJR (day trader/streamer) from his Kick streams.",
+    },
+    "tokyo_girl": {
+        "content_rewards_id": "40046522-56d9-45ad-9198-faea8eca90c6",
+        "youtube_query": "GTA 6 edit",
+        "language": "en",
+        "transcribe": False,   # music-only edits, nothing spoken to transcribe
+        "rules": ("Silent 12-second GTA 6 edits (3 shots x 4s) with on-screen text only; the "
+                  "song Tokyo Girl is added in TikTok. No talking/voiceover/dialogue. Themes: GTA 6 "
+                  "news/rumors, memes & hype, Jason & Lucia couple memes, edits & Vice City views. "
+                  "Caption must credit the song. Original edits only."),
+        "notes": "Our editor controls: the 3 text beats, which visual each beat uses, text case/size, caption + hashtags.",
+    },
+    "bichou": {
+        "content_rewards_id": "ceff4682-947e-40c9-b7df-81a806c89943",
+        "youtube_query": "bichou",
+        "language": "fr",
+        "notes": "French streamer clips (campaign paused).",
     },
 }

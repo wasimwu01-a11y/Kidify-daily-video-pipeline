@@ -28,6 +28,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from common import (  # noqa: E402
     OUTPUT_DIR, load_state, save_state, ask_claude_json, strip_emoji,
     write_ass, ffmpeg_filter_path, run, send_email, EMAIL_SAFE_BYTES,
+    load_playbook, playbook_prompt, log_posted,
 )
 
 ASSET_DIR = os.environ.get("GTA6_ASSET_DIR", "assets/gta6")
@@ -206,14 +207,20 @@ def main():
     theme = THEMES[len(state.get("tokyo_girl_history", [])) % len(THEMES)]
     source_list = ([f"{n}  ({len(v)} photos)" for n, v in photos.items()]
                    + [f"{n}  (video)" for n in videos])
+    pb = load_playbook("tokyo_girl")
+    style = pb.get("style", {})
+    if pb:
+        print(f"Using playbook from {pb.get('updated')}: {pb.get('summary', '')[:200]}")
     script = ask_claude_json(
-        SYSTEM,
+        SYSTEM + playbook_prompt(pb),
         f"Theme for today: {theme}\nRecent ideas to avoid: {json.dumps(history)}\n\n"
         "Available visual sources (use the name before the brackets):\n- "
         + "\n- ".join(source_list),
         max_tokens=900,
     )
     beats = [strip_emoji(b)[:50] for b in script["beats"][:SEGMENTS]]
+    if style.get("subtitle_case") == "upper" or style.get("hook_text") == "upper":
+        beats = [b.upper() for b in beats]
     all_names = list(photos) + list(videos)
     visuals = [v.split("  (")[0].strip() for v in script.get("visuals", [])][:SEGMENTS]
     visuals = [v if v in all_names else random.choice(all_names) for v in visuals]
@@ -238,7 +245,8 @@ def main():
     subs = [{"start": i * SEG_SECONDS, "end": (i + 1) * SEG_SECONDS, "text": b}
             for i, b in enumerate(beats)]
     ass_path = os.path.join(OUTPUT_DIR, "tg.ass")
-    write_ass(ass_path, None, subs, total, sub_y=620)  # clear of TikTok's bottom UI
+    write_ass(ass_path, None, subs, total, sub_y=620,  # clear of TikTok's bottom UI
+              sub_size=84 if style.get("subtitle_size") == "large" else 68)
 
     date_tag = os.environ.get("RUN_DATE", "today")
     final = os.path.join(OUTPUT_DIR, f"tokyo_girl_{date_tag}.mp4")
@@ -251,7 +259,12 @@ def main():
          "-movflags", "+faststart", final])
 
     caption = strip_emoji(script.get("caption", "")).strip()
+    extra = [h for h in pb.get("hashtags", []) if h.lower() not in caption.lower()][:3]
+    if extra:
+        caption = f"{caption} {' '.join(extra)}"
     state.setdefault("tokyo_girl_history", []).append(" / ".join(beats))
+    log_posted(state, {"campaign": "tokyo_girl", "date": date_tag, "hook": beats[0],
+                       "title": caption[:120], "style": style, "visuals": visuals})
     save_state(state)
 
     attach = [final] if os.path.getsize(final) < EMAIL_SAFE_BYTES else []
