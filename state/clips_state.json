@@ -62,6 +62,21 @@
         "Photos: Vice City",
         "Photos: Jason and Lucia"
       ]
+    },
+    {
+      "campaign": "tjr",
+      "video_id": "5LAYjftsfXU",
+      "date": "2026-11-19",
+      "hook": "Is it illegal to do this?",
+      "title": "TJR risked $1M on Nvidia and asked THIS live on stream #TJR #Shorts",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 29
     }
   ],
   "scout_seen": {
@@ -92,34 +107,7 @@
     "ea437ce3-68b5-4cf6-90d0-3fcc39f54010": "2026-11-19"
   },
   "candidates": {},
-  "pending": {
-    "b5e79e": {
-      "token": "oYP3hNGz9f7PbTaR",
-      "campaign": "tjr",
-      "file": "tjr_2ca694b0_1.mp4",
-      "run_id": "44427395761",
-      "title": "TJR risked $1M on Nvidia and asked THIS live on stream #TJR #Shorts",
-      "description": "TJR risked $1M on Nvidia and asked THIS live on stream\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
-      "tags": [
-        "TJR",
-        "TJR Trades",
-        "trading",
-        "day trading",
-        "stocks"
-      ],
-      "language": "en",
-      "hook": "Is it illegal to do this?",
-      "style": {
-        "hook_text": "sentence",
-        "subtitle_case": "sentence",
-        "subtitle_size": "large",
-        "words_per_caption": 4,
-        "framing": "big_center"
-      },
-      "length_s": 29,
-      "created": "2026-11-19"
-    }
-  },
+  "pending": {},
   "last_used": {
     "tjr": "2026-11-19"
   }
