@@ -2,12 +2,14 @@
   "processed_vods": [
     "8d4a0e1e-b13e-4940-9894-c32075795b71",
     "bf076e44-4967-448d-8532-8ebbfd532eb1",
-    "35cdaed3-078a-4697-a8a3-b36897849cec"
+    "35cdaed3-078a-4697-a8a3-b36897849cec",
+    "2ca694b0-1b46-46a4-b317-2cc608f0a5ea"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
     "Me calling in sick the day GTA 6 drops / Boss: are you okay? / Me driving a speedboat through Vice City: yeah",
-    "You: let's do one more job then we're done / Lucia: / You, already planning the next heist:"
+    "You: let's do one more job then we're done / Lucia: / You, already planning the next heist:",
+    "You on November 19th at 6 AM: / No plans. No people. Just this. / PC players watching from a distance:"
   ],
   "posted": [
     {
@@ -42,6 +44,83 @@
         "Clip: Lucia Caminos Video Clip",
         "Clip: Jason Duval Video Clip"
       ]
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-19",
+      "hook": "You on November 19th at 6 AM:",
+      "title": "Console players are about to live in that sunset for 200 hours straight\n\n#GTA6 #ViceCity #GTA6November19 #ConsoleWin #Gr",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Trailer 2",
+        "Photos: Vice City",
+        "Photos: Jason and Lucia"
+      ]
     }
-  ]
+  ],
+  "scout_seen": {
+    "65724060-69de-4dc7-a523-4843b7358871": "2026-11-19",
+    "b8cf722b-8dd2-444b-b3cc-b1a7d23104ba": "2026-11-19",
+    "b5ff48d7-ec63-443a-b767-3a430a6f71f4": "2026-11-19",
+    "188c3e39-7850-4896-94df-e7a5be0cfec3": "2026-11-19",
+    "373e9c40-dfc5-4a6d-bab8-6c2f96dda100": "2026-11-19",
+    "200ea21b-be80-4db8-b552-8e32b148604e": "2026-11-19",
+    "c0c37381-e244-4643-98bd-edbff4bc1465": "2026-11-19",
+    "e4a9465f-d415-4e30-bf53-e46014958bc6": "2026-11-19",
+    "86842687-ba2b-4638-a024-995dcf3d25a3": "2026-11-19",
+    "7e5c4c7a-1d93-49bb-8214-ca3a4ba60c62": "2026-11-19",
+    "7b094e71-4021-4c56-95ad-e1c0c3cd7f1a": "2026-11-19",
+    "705f6e21-38af-408c-9e55-c77e4611bf09": "2026-11-19",
+    "c49840ae-ca22-4745-8a42-b675847e0355": "2026-11-19",
+    "2eaa14fb-6927-4136-897e-b096e0d907d6": "2026-11-19",
+    "5f6b6ac5-9878-4ad6-b90f-c2f2a3392e91": "2026-11-19",
+    "60e19a6d-066c-4090-8728-02eb6bd789ef": "2026-11-19",
+    "91e82bdd-2106-4283-a927-edac2c6dfe26": "2026-11-19",
+    "e815a623-badd-4516-906c-b6cfce227ff9": "2026-11-19",
+    "2ade1fa0-ef91-40c6-af02-6ec52d2f5685": "2026-11-19",
+    "6fe4c1aa-c8ca-4836-836b-01ab2540b337": "2026-11-19",
+    "14d3e6c7-be7a-4650-b9fd-e35cb38a0ed2": "2026-11-19",
+    "19859ab5-057c-4cff-847c-93155c896827": "2026-11-19",
+    "791ad52c-a938-48b3-8f7e-f43ca10b110c": "2026-11-19",
+    "9b248ec0-0be4-4223-bab1-202b5013c0e7": "2026-11-19",
+    "ea437ce3-68b5-4cf6-90d0-3fcc39f54010": "2026-11-19"
+  },
+  "candidates": {},
+  "pending": {
+    "b5e79e": {
+      "token": "oYP3hNGz9f7PbTaR",
+      "campaign": "tjr",
+      "file": "tjr_2ca694b0_1.mp4",
+      "run_id": "44427395761",
+      "title": "TJR risked $1M on Nvidia and asked THIS live on stream #TJR #Shorts",
+      "description": "TJR risked $1M on Nvidia and asked THIS live on stream\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
+      "tags": [
+        "TJR",
+        "TJR Trades",
+        "trading",
+        "day trading",
+        "stocks"
+      ],
+      "language": "en",
+      "hook": "Is it illegal to do this?",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 29,
+      "created": "2026-11-19"
+    }
+  },
+  "last_used": {
+    "tjr": "2026-11-19"
+  }
 }
