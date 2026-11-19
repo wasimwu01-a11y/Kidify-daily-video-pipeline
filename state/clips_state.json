@@ -97,6 +97,21 @@
         "Photos: Vice City",
         "Photos: Jason and Lucia"
       ]
+    },
+    {
+      "campaign": "tjr",
+      "video_id": "u3IzFvy6p7o",
+      "date": "2026-11-19",
+      "hook": "He promised WHAT to the Nasdaq?",
+      "title": "TJR offered to be the Nasdaq's slave and it still wrecked him #TJR #Shorts",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 20
     }
   ],
   "scout_seen": {
@@ -131,34 +146,7 @@
     "f7ac5280-4d8b-4f96-9c49-351a0c1f6477": "2026-11-19"
   },
   "candidates": {},
-  "pending": {
-    "3ee7b9": {
-      "token": "RcMIbbqZz0eDTgRl",
-      "campaign": "tjr",
-      "file": "tjr_45a746b3_1.mp4",
-      "run_id": "44594395910",
-      "title": "TJR offered to be the Nasdaq's slave and it still wrecked him #TJR #Shorts",
-      "description": "TJR offered to be the Nasdaq's slave and it still wrecked him\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
-      "tags": [
-        "TJR",
-        "TJR Trades",
-        "trading",
-        "day trading",
-        "stocks"
-      ],
-      "language": "en",
-      "hook": "He promised WHAT to the Nasdaq?",
-      "style": {
-        "hook_text": "sentence",
-        "subtitle_case": "sentence",
-        "subtitle_size": "large",
-        "words_per_caption": 4,
-        "framing": "big_center"
-      },
-      "length_s": 20,
-      "created": "2026-11-19"
-    }
-  },
+  "pending": {},
   "last_used": {
     "tjr": "2026-11-19"
   }
