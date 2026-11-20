@@ -4,14 +4,16 @@
     "bf076e44-4967-448d-8532-8ebbfd532eb1",
     "35cdaed3-078a-4697-a8a3-b36897849cec",
     "2ca694b0-1b46-46a4-b317-2cc608f0a5ea",
-    "45a746b3-9044-442b-9598-cc74cf176ab1"
+    "45a746b3-9044-442b-9598-cc74cf176ab1",
+    "4464d22a-d709-43b1-a9cc-4919359e7f33"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
     "Me calling in sick the day GTA 6 drops / Boss: are you okay? / Me driving a speedboat through Vice City: yeah",
     "You: let's do one more job then we're done / Lucia: / You, already planning the next heist:",
     "You on November 19th at 6 AM: / No plans. No people. Just this. / PC players watching from a distance:",
-    "Pause Trailer 2 at exactly 0:47: / That building sign is a rumored map hint / Rockstar been trolling us for months"
+    "Pause Trailer 2 at exactly 0:47: / That building sign is a rumored map hint / Rockstar been trolling us for months",
+    "You on November 19th: / Your boss when you call in sick: / The therapy bill after 72hrs straight:"
   ],
   "posted": [
     {
@@ -112,6 +114,24 @@
         "framing": "big_center"
       },
       "length_s": 20
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-20",
+      "hook": "You on November 19th:",
+      "title": "Some sacrifices are just worth making. You know who you are.\n\n#GTA6 #November19 #GTA6Hype #GamerLife #Rockstar #gta6edit",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Launch Trailer",
+        "Photos: Jason Duval",
+        "Photos: Vice City"
+      ]
     }
   ],
   "scout_seen": {
@@ -143,7 +163,14 @@
     "783abdca-1e2f-489e-a8b4-1c802a571872": "2026-11-19",
     "051002dd-5c46-43d0-a446-43f2957ba3a9": "2026-11-19",
     "f0b0fbac-c754-45e5-96f6-aef8796dac91": "2026-11-19",
-    "f7ac5280-4d8b-4f96-9c49-351a0c1f6477": "2026-11-19"
+    "f7ac5280-4d8b-4f96-9c49-351a0c1f6477": "2026-11-19",
+    "ab601e43-9404-4375-8e1e-2b49db1aef26": "2026-11-20",
+    "c7a8e7c2-6989-4361-914f-f9571578a9b9": "2026-11-20",
+    "2badbd14-942f-4098-b310-a76fa99813d6": "2026-11-20",
+    "3d9ef19f-1256-47ca-b630-e33e2c923969": "2026-11-20",
+    "acfaab94-d1ca-4ed0-9834-7d69b5a4cb4b": "2026-11-20",
+    "c8248144-389f-411c-9940-5abbb0a5f2ce": "2026-11-20",
+    "e9a910b6-2d87-41af-9438-6b568f3436c3": "2026-11-20"
   },
   "candidates": {},
   "pending": {},
