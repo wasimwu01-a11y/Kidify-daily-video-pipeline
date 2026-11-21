@@ -1,24 +1,24 @@
 {
-  "updated": "2026-11-18",
-  "summary": "The highest-performing TJR clips (1M–3.2M views) share one core mechanic: a sharp contrast between 'ordinary path' and 'TJR's path' that lands within the first 2 seconds, either as a visual juxtaposition (graduation vs. Koenigsegg delivery) or a punchy on-screen statement that doubles as the hook ('same age btw.', 'Mindset…'). Luxury lifestyle and aspirational/motivational moments consistently outperform trading-specific content. Very short clips (7–18s) dominate; anything beyond 30s drops off sharply. The caption is almost always minimal — one line or even one word — letting the visual and on-screen text carry the weight. Relatability triggers ('they think success is graduating', 'same age btw') drive massive share/save behaviour because viewers send them to friends.",
+  "updated": "2026-11-21",
+  "summary": "Top TJR clips (1M–3.9M views) consistently open within 2 seconds on a sharp contrast or ironic juxtaposition — 'ordinary world' (graduation, DoorDash, same-age peers) smashed against TJR's reality (Koenigsegg, cash stacks, luxury cars) — and resolve that tension fast. Lifestyle and mindset clips dominate; trading mechanics rarely appear in the top tier. Clips under 20 seconds dramatically outperform longer ones, with the sweet spot at 7–18s. On-screen text does the heavy lifting: a single declarative statement or ironic label planted in the first 2 seconds (e.g. 'same age btw.', 'The last day on GTA 5') earns the watch. Captions are stripped to one line or one word — the visual IS the caption.",
   "moments_to_pick": [
-    "TJR delivering a one-liner mindset or money quote (e.g. a crisp sentence about financial freedom, silence, or not caring what others think)",
-    "TJR reacting with genuine emotion — laugh, disbelief, jaw-drop — to a big number, a car, or unexpected news",
-    "TJR doing or saying something that implicitly contrasts his lifestyle with a 'normal' 23-year-old's (buying a car, paying cash, skipping college talk)",
-    "A memorable stream moment where TJR says something quotable about wealth, work ethic, or his goals in plain language",
-    "TJR interacting with a famous car, exotic purchase, or flex moment that has a specific dollar figure attached",
-    "Stream reactions to a big P&L swing (win side only per campaign rules) — genuine shock or celebration"
+    "TJR delivering a one-liner money or mindset quote in 1–2 crisp sentences — especially anything about silence, not explaining yourself, or skipping the conventional path",
+    "TJR reacting with genuine surprise, disbelief, or loud celebration to a big number, an unexpected trade win, or a ridiculous purchase — face fully visible and expressive",
+    "TJR physically with a car, exotic item, or large sum of cash — especially if a specific dollar figure is said aloud or visible on screen",
+    "A moment where TJR's lifestyle implicitly contrasts with a 'normal' person his age (mentioning peers, college, jobs, or social media critics)",
+    "TJR saying something self-aware or funny about his own wealth, reputation, or haters — quotable, clean, no anger",
+    "A milestone reaction moment (trade hit, subscriber count, purchase unlocked) with visible emotion — joy or disbelief only, never frustration at people"
   ],
   "hook_examples": [
-    "He said this at 23…",
-    "TJR just paid HOW MUCH? 😳",
-    "Nobody his age thinks like this.",
-    "This is what 23 looks like for TJR.",
-    "He chose THIS over college. 👀",
-    "Most people his age are doing what exactly?"
+    "He bought WHAT at 23?",
+    "TJR said this and nobody could argue. 👀",
+    "Same age. Different planet.",
+    "Their plan vs. his plan.",
+    "He skipped the degree for THIS.",
+    "TJR just dropped a number nobody expected. 😳"
   ],
-  "title_formula": "Lead with a concrete, specific fact or action ('TJR paid $X for…', 'TJR just said the quiet part out loud') + one emotional word or emoji. Keep under 60 characters. Never start with 'When' or 'Watch'. Example: 'TJR paid $3.5M for a car he can't even rev 😭' → write original variation like 'TJR droppe",
-  "caption_formula": "One punchy sentence max — either the quotable line from the clip itself OR a contrast statement (e.g. 'Their path vs. his path.'). Follow with a line break then hashtags. No emojis in the sentence unless a single one at the end. Do NOT write a paragraph.",
+  "title_formula": "Lead with a concrete fact or action featuring TJR + one emotional reaction word or emoji. Keep under 60 characters. Formula: 'TJR [specific action or purchase] and [brief punchline or reaction]'. Examples of the pattern (write original): 'TJR paid cash for something most people finance their whole l",
+  "caption_formula": "One punchy line only — either the exact quotable line from the clip OR a contrast statement framing TJR vs. the conventional path. No paragraph. One optional emoji at the end of the line. Line break, then hashtags on the next line. Example structure: 'He doesn't explain himself. He just wins. 💸\\n\\n#",
   "hashtags": [
     "#tjr",
     "#tjrtrades",
@@ -39,13 +39,13 @@
     "framing": "big_center"
   },
   "avoid": [
-    "Clips longer than 25 seconds — engagement collapses after that point in this niche",
-    "On-screen text in ALL CAPS for subtitles — top clips all use sentence case; it reads cleaner on the face-cam framing",
-    "Captions longer than one sentence — the 1M+ posts use one line or even one word",
-    "Trading jargon in titles or captions (SPY, NQ, calls, puts) unless the moment is purely a reaction — the viral clips are lifestyle/mindset, not ticker talk",
-    "Any clip that could read as mocking TJR, showing a loss angrily, or taking a quote out of context to embarrass him",
+    "Clips over 25 seconds — views collapse sharply; the 37s 'DoorDash millionaire' clip gets 452K vs 3.9M for sub-10s clips, confirming the pattern",
+    "ALL CAPS subtitles — every million-view clip uses sentence case; it reads cleaner against TJR's face-cam framing",
+    "Captions longer than one sentence — the top 7 posts use one line or one word maximum; paragraphs signal low-effort reposts to the algorithm",
+    "Trading jargon (SPY, NQ, ES, calls, puts, full-porting) in titles or captions unless the clip is purely a reaction moment with no explanation needed",
+    "Clips that could read as mocking TJR, showing him losing his temper, or making him look incompetent — campaign rule, and also algorithmically penalised as negative content",
     "Gambling or casino references per campaign rules"
   ],
-  "experiment": "Test one clip where the on-screen hook text appears as a question in the bottom third (not centre) for the first 3 seconds only, then disappears — leaving just TJR's face filling the frame with large-text subtitles. This mimics the 'clean face reveal after text' pattern seen in the GTA5 clip (#4, 1.",
-  "our_results_note": "not enough data yet"
+  "experiment": "Try a 'split-label' hook: in the first 2 seconds show TWO stacked text labels side by side — 'Their life at 23:' on one half, 'TJR at 23:' on the other, each with a one-word or one-emoji answer below it — then cut hard to TJR's face filling the frame with no hook text. This mirrors the contrast mech",
+  "our_results_note": "Three posts published; only 2 and 3 have meaningful data (890 and 369 views respectively). The 890-view post ('Is it illegal to do this?' hook, Nvidia trade risk) outperformed the more jargon-adjacent hook ('He promised WHAT to the Nasdaq?') by 2.4x, confirming that curiosity-driven mystery hooks be"
 }

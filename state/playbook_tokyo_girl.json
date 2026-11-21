@@ -1,31 +1,31 @@
 {
-  "updated": "2026-11-18",
-  "summary": "The two top-performing clips (354K and 255K views) both use a single relatable 'you/us' meme sentence that stays on screen for the entire clip — the text IS the joke, the footage is just atmosphere. The hook names a specific date (November 19th) or a universally shared gamer tension, which triggers immediate self-identification. Sentence-case white text, centered, no subtitles, no voiceover, just 3 slowly-cutting Vice City/GTA 6 trailer shots behind one static punchline. Rank 3 (15K) used the same formula but picked a narrower scenario (sneaking from girlfriend) that alienated non-gamers and shot in a dark, low-contrast scene — proving visual readability and broad relatability are what separate top from mid.",
+  "updated": "2026-11-21",
+  "summary": "The game has launched (GTA 6 is now out on PS5/Xbox), so the November 19th countdown angle is dead — pivot immediately to post-launch reaction memes, graphics/detail shock, and Jason & Lucia couple content. The two top in-campaign clips (551K and 354K) both use a single relatable 'us/you' sentence that holds for the entire clip with high-contrast trailer footage as pure atmosphere — the text IS the joke. The 341K clip (rank 3) proves that even a meme-animal overlay works if the sentence is universally funny and the background is bright and readable. Rank 5 (109K, our closest sister clip) used the Tokyo Girl song, a simple 'chemistry ❤️' label, and clean trailer cuts — proving the song + clean emotional framing also converts. The lowest performer (15K) used a dark, low-readability scene wit",
   "moments_to_pick": [
-    "Broad 'us gamers' meme tied to the November 19th launch date — the more people who can see themselves in it, the better",
-    "PC vs console tension moments (e.g., PC players locked out, 30fps jokes) — highest relatability in ranks 1 & 2",
-    "Jason & Lucia couple dynamic used as a stand-in for a real-life relationship meme (e.g., choosing GTA 6 over a partner)",
-    "Vice City neon/nightlife b-roll shots for visual atmosphere behind a static joke — colorful, high-contrast frames only",
-    "Hype countdown moments: anything framing the 19th as an event bigger than a holiday or life milestone",
-    "Platform/regional divide memes (console vs PC, country pricing, New Zealand trick) — trending hard per YouTube data"
+    "Post-launch shock/awe moments — first reaction to GTA 6 graphics or detail ('the way this game looks on PS5 is actually illegal')",
+    "PC players watching console players play RIGHT NOW — platform jealousy peaked the moment the game dropped",
+    "Jason & Lucia couple chemistry used as a real-life relationship stand-in ('this is us' format with a punchy label)",
+    "Bright Vice City neon nightlife shots — beach, strip, neon signs at night; high-contrast, colorful, text stays readable",
+    "30fps vs 60fps discourse — still live and driving comments post-launch",
+    "Real-world GTA 6 marketing crossover (Ferrari in Selfridges etc.) used as proof the game is bigger than gaming"
   ],
   "hook_examples": [
-    "Us on November 19th calling in sick with 'food poisoning': 🤒",
-    "POV: GTA 6 just dropped and you're still at work pretending to care:",
-    "Jason and Lucia watching PC players wait 2 more years: 💀",
-    "Every gamer on the planet November 19th at 12:01 AM:",
-    "The way GTA 6 is about to make therapy appointments go up 📈",
-    "Bro said he doesn't care about GTA 6. Bro has not seen the graphics 😭"
+    "13 years of waiting for THIS 😭🌴",
+    "POV: GTA 6 just dropped and you're still at work:",
+    "The graphics are actually making people emotional fr 💀",
+    "Jason and Lucia > any real couple right now 🥀",
+    "PC players watching PS5 owners right now:",
+    "Nobody told me GTA 6 would hit this different 🌊"
   ],
-  "title_formula": "[Relatable gamer scenario] + specific detail that stings (platform, date, fps number) + 1-2 emojis. Keep under 60 chars. E.g.: 'PC Players On November 19th 😭🖥️' or 'GTA 6 Has Us Calling In Sick 💀'",
-  "caption_formula": "1 short punchy sentence mirroring the on-screen joke (do NOT repeat it word for word — rephrase or add context) + line break + '🎵 Tokyo Girl — Miri Ben-Ari' (song credit required by campaign rules) + line break + hashtag block. Keep the whole caption under 150 chars excluding hashtags.",
+  "title_formula": "Post-launch reaction angle + specific detail (platform, year wait, character name) + 1-2 emojis, under 60 chars. E.g.: 'GTA 6 Finally Out And We're Not Okay 😭🌴' or 'PC Players Watching PS5 Owners Right Now 💀'",
+  "caption_formula": "1 short punchy sentence that rephrases (not copies) the on-screen joke, adding a beat of extra context or emotion + line break + '🎵 Tokyo Girl — Miri Ben-Ari' (required song credit) + line break + hashtag block. Total under 150 chars excluding hashtags.",
   "hashtags": [
     "#gta6",
     "#gta6edit",
     "#gtavi",
-    "#november19",
     "#rockstargames",
-    "#jasonandlucia"
+    "#jasonandlucia",
+    "#vicecity"
   ],
   "target_length": [
     10,
@@ -39,13 +39,13 @@
     "framing": "blur_fill"
   },
   "avoid": [
-    "Dark, low-contrast shots where text becomes hard to read — rank 3's bedroom scene hurt readability badly",
-    "Scenarios too niche to relate to (sneaking from a specific partner type, regional jokes only 1 country gets)",
-    "Splitting the joke across 3 separate text beats — top clips hold ONE sentence the whole 12s; punching it up per beat loses the punchline",
-    "Putting the song title or credit inside the on-screen text overlay — keep credit in caption only per campaign rules",
-    "Voiceover, dialogue audio, or any sound other than Tokyo Girl added in TikTok/IG",
-    "Using footage from other creators' edits — only original GTA 6 trailer/gameplay sourced clips"
+    "Any November 19th launch-countdown framing — the game is out, that angle is expired and will read as outdated",
+    "Dark or low-contrast shots (night interiors, dim bedrooms) where white sentence text becomes unreadable — rank 6's 15K performance is the proof",
+    "Niche scenarios fewer than 50% of GTA fans can place themselves in (hyper-regional jokes, single-console-owner household gags)",
+    "Splitting the punchline across 3 separate text beats — the 551K and 354K clips both hold ONE sentence the full 12s; fragmented jokes lose the laugh",
+    "Putting song credit or 'Tokyo Girl' anywhere in the on-screen text overlay — caption only per campaign rules",
+    "Any audio other than Tokyo Girl by Miri Ben-Ari added in TikTok/IG — no voiceover, no dialogue, no ambient game audio"
   ],
-  "experiment": "Try a 3-beat escalating text structure on ONE clip this cycle: Beat 1 sets the relatable setup (e.g., 'You on November 19th:'), Beat 2 adds the twist ('Your boss:'), Beat 3 lands the punchline ('The hospital bill:') — each beat synced to a new shot cut. This breaks from the static single-sentence fo",
-  "our_results_note": "not enough data yet"
+  "experiment": "Try a 3-beat escalating structure on exactly ONE clip this cycle to test against the static single-sentence control: Beat 1 (shot 1, 0–4s) sets the POV setup in 5–7 words, e.g. 'You after 13 years of waiting:'; Beat 2 (shot 2, 4–8s) raises the stakes, e.g. 'The first 10 minutes of GTA 6:'; Beat 3 (s",
+  "our_results_note": "No posts live yet — zero data of our own. All weighting is from campaign peers and trending benchmarks. Prioritize replicating the single static sentence + bright footage formula (proven at 354K–551K) before experimenting with 3-beat structure."
 }

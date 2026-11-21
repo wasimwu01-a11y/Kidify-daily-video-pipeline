@@ -5,7 +5,8 @@
     "35cdaed3-078a-4697-a8a3-b36897849cec",
     "2ca694b0-1b46-46a4-b317-2cc608f0a5ea",
     "45a746b3-9044-442b-9598-cc74cf176ab1",
-    "4464d22a-d709-43b1-a9cc-4919359e7f33"
+    "4464d22a-d709-43b1-a9cc-4919359e7f33",
+    "b8a76138-9318-41c9-9fea-7f9bb6a1511e"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
@@ -13,7 +14,8 @@
     "You: let's do one more job then we're done / Lucia: / You, already planning the next heist:",
     "You on November 19th at 6 AM: / No plans. No people. Just this. / PC players watching from a distance:",
     "Pause Trailer 2 at exactly 0:47: / That building sign is a rumored map hint / Rockstar been trolling us for months",
-    "You on November 19th: / Your boss when you call in sick: / The therapy bill after 72hrs straight:"
+    "You on November 19th: / Your boss when you call in sick: / The therapy bill after 72hrs straight:",
+    "Lucia: stop getting us in trouble / Jason, already starting a police chase: / Lucia driving the getaway car anyway"
   ],
   "posted": [
     {
@@ -132,6 +134,24 @@
         "Photos: Jason Duval",
         "Photos: Vice City"
       ]
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-21",
+      "hook": "Lucia: stop getting us in trouble",
+      "title": "She said stop. She's also the one flooring it. \n\n#GTA6 #JasonAndLucia #GTA6Memes #PartnerInCrime #GTA6PS5 #gta6edit #gta",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Photos: Lucia Caminos",
+        "Clip: Jason Duval Video Clip",
+        "Launch Trailer"
+      ]
     }
   ],
   "scout_seen": {
@@ -170,11 +190,39 @@
     "3d9ef19f-1256-47ca-b630-e33e2c923969": "2026-11-20",
     "acfaab94-d1ca-4ed0-9834-7d69b5a4cb4b": "2026-11-20",
     "c8248144-389f-411c-9940-5abbb0a5f2ce": "2026-11-20",
-    "e9a910b6-2d87-41af-9438-6b568f3436c3": "2026-11-20"
+    "e9a910b6-2d87-41af-9438-6b568f3436c3": "2026-11-20",
+    "079cf4a5-9629-4a7a-b4e8-ca33d5b40258": "2026-11-21"
   },
   "candidates": {},
-  "pending": {},
+  "pending": {
+    "f7b95c": {
+      "token": "9m8cFYvww-7MVzJI",
+      "campaign": "tjr",
+      "file": "tjr_b8a76138_1.mp4",
+      "run_id": "44931317167",
+      "title": "TJR explains why NOT trading is why he's profitable #TJR #Shorts",
+      "description": "TJR explains why NOT trading is why he's profitable\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
+      "tags": [
+        "TJR",
+        "TJR Trades",
+        "trading",
+        "day trading",
+        "stocks"
+      ],
+      "language": "en",
+      "hook": "Why he never wants to trade",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 31,
+      "created": "2026-11-21"
+    }
+  },
   "last_used": {
-    "tjr": "2026-11-19"
+    "tjr": "2026-11-21"
   }
 }
