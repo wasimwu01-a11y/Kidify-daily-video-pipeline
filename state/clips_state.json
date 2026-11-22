@@ -6,7 +6,8 @@
     "2ca694b0-1b46-46a4-b317-2cc608f0a5ea",
     "45a746b3-9044-442b-9598-cc74cf176ab1",
     "4464d22a-d709-43b1-a9cc-4919359e7f33",
-    "b8a76138-9318-41c9-9fea-7f9bb6a1511e"
+    "b8a76138-9318-41c9-9fea-7f9bb6a1511e",
+    "abfe69cc-e0f5-4dfa-91d5-812e5266095a"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
@@ -15,7 +16,8 @@
     "You on November 19th at 6 AM: / No plans. No people. Just this. / PC players watching from a distance:",
     "Pause Trailer 2 at exactly 0:47: / That building sign is a rumored map hint / Rockstar been trolling us for months",
     "You on November 19th: / Your boss when you call in sick: / The therapy bill after 72hrs straight:",
-    "Lucia: stop getting us in trouble / Jason, already starting a police chase: / Lucia driving the getaway car anyway"
+    "Lucia: stop getting us in trouble / Jason, already starting a police chase: / Lucia driving the getaway car anyway",
+    "Nobody warned me Vice City looks like this / Top down. Sun setting. Zero responsibilities. / This is not a game. This is a whole life."
   ],
   "posted": [
     {
@@ -152,6 +154,24 @@
         "Clip: Jason Duval Video Clip",
         "Launch Trailer"
       ]
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-22",
+      "hook": "Nobody warned me Vice City looks like this",
+      "title": "Vice City said take the scenic route and we have no choice but to comply\n\n#GTA6 #ViceCity #GTA6Graphics #Rockstar #Grand",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Launch Trailer",
+        "Photos: Vice City",
+        "An Extended Look (gameplay)"
+      ]
     }
   ],
   "scout_seen": {
@@ -191,7 +211,11 @@
     "acfaab94-d1ca-4ed0-9834-7d69b5a4cb4b": "2026-11-20",
     "c8248144-389f-411c-9940-5abbb0a5f2ce": "2026-11-20",
     "e9a910b6-2d87-41af-9438-6b568f3436c3": "2026-11-20",
-    "079cf4a5-9629-4a7a-b4e8-ca33d5b40258": "2026-11-21"
+    "079cf4a5-9629-4a7a-b4e8-ca33d5b40258": "2026-11-21",
+    "76893dce-b122-4a37-8042-c8d7229d086d": "2026-11-22",
+    "5a0781f5-2721-43cb-bc76-72882dd9b0e9": "2026-11-22",
+    "485fd01a-6710-4cce-a0e7-723de8990827": "2026-11-22",
+    "207a3da1-3aae-4cfb-a263-c8503c687134": "2026-11-22"
   },
   "candidates": {},
   "pending": {
@@ -220,9 +244,35 @@
       },
       "length_s": 31,
       "created": "2026-11-21"
+    },
+    "22a2fe": {
+      "token": "vu-2JiqgjdGhQmha",
+      "campaign": "tjr",
+      "file": "tjr_abfe69cc_1.mp4",
+      "run_id": "45052113910",
+      "title": "TJR explains why skydiving got scarier after the money came #TJR #Shorts",
+      "description": "TJR explains why skydiving got scarier after the money came\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
+      "tags": [
+        "TJR",
+        "TJR Trades",
+        "trading",
+        "day trading",
+        "stocks"
+      ],
+      "language": "en",
+      "hook": "Skydiving hits different when rich",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 55,
+      "created": "2026-11-22"
     }
   },
   "last_used": {
-    "tjr": "2026-11-21"
+    "tjr": "2026-11-22"
   }
 }
