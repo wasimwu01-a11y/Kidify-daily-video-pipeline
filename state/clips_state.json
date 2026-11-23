@@ -7,7 +7,8 @@
     "45a746b3-9044-442b-9598-cc74cf176ab1",
     "4464d22a-d709-43b1-a9cc-4919359e7f33",
     "b8a76138-9318-41c9-9fea-7f9bb6a1511e",
-    "abfe69cc-e0f5-4dfa-91d5-812e5266095a"
+    "abfe69cc-e0f5-4dfa-91d5-812e5266095a",
+    "febb81d6-5de4-487d-974f-afea627bd82e"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
@@ -17,7 +18,8 @@
     "Pause Trailer 2 at exactly 0:47: / That building sign is a rumored map hint / Rockstar been trolling us for months",
     "You on November 19th: / Your boss when you call in sick: / The therapy bill after 72hrs straight:",
     "Lucia: stop getting us in trouble / Jason, already starting a police chase: / Lucia driving the getaway car anyway",
-    "Nobody warned me Vice City looks like this / Top down. Sun setting. Zero responsibilities. / This is not a game. This is a whole life."
+    "Nobody warned me Vice City looks like this / Top down. Sun setting. Zero responsibilities. / This is not a game. This is a whole life.",
+    "Rumor: the GTA 6 map is TWICE trailer size / Theory: Grassrivers area barely shown once / Rockstar saved half the map for after launch"
   ],
   "posted": [
     {
@@ -172,6 +174,24 @@
         "Photos: Vice City",
         "An Extended Look (gameplay)"
       ]
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-23",
+      "hook": "Rumor: the GTA 6 map is TWICE trailer size",
+      "title": "The map we got might not even be half of it \n\n#GTA6 #GTA6Map #Rockstar #GTA6Theory #ViceCity #gta6edit #gtavi #rockstarg",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Trailer 2",
+        "Photos: Grassrivers",
+        "An Extended Look (gameplay)"
+      ]
     }
   ],
   "scout_seen": {
@@ -215,7 +235,9 @@
     "76893dce-b122-4a37-8042-c8d7229d086d": "2026-11-22",
     "5a0781f5-2721-43cb-bc76-72882dd9b0e9": "2026-11-22",
     "485fd01a-6710-4cce-a0e7-723de8990827": "2026-11-22",
-    "207a3da1-3aae-4cfb-a263-c8503c687134": "2026-11-22"
+    "207a3da1-3aae-4cfb-a263-c8503c687134": "2026-11-22",
+    "bb66f9eb-b90e-4dd0-8cee-9f3cd566c9a0": "2026-11-23",
+    "f0828cdc-e8c0-4119-8dc5-3f35f02b8721": "2026-11-23"
   },
   "candidates": {},
   "pending": {
@@ -270,9 +292,35 @@
       },
       "length_s": 55,
       "created": "2026-11-22"
+    },
+    "2ee0e1": {
+      "token": "0dqWp4itabKa6IyT",
+      "campaign": "tjr",
+      "file": "tjr_febb81d6_1.mp4",
+      "run_id": "45276422640",
+      "title": "TJR checks his trade and can't believe the number #TJR #Shorts",
+      "description": "TJR checks his trade and can't believe the number\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
+      "tags": [
+        "TJR",
+        "TJR Trades",
+        "trading",
+        "day trading",
+        "stocks"
+      ],
+      "language": "en",
+      "hook": "He's up $95K and panicking.",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 20,
+      "created": "2026-11-23"
     }
   },
   "last_used": {
-    "tjr": "2026-11-22"
+    "tjr": "2026-11-23"
   }
 }
