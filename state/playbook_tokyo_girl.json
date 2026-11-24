@@ -1,24 +1,24 @@
 {
-  "updated": "2026-11-21",
-  "summary": "The game has launched (GTA 6 is now out on PS5/Xbox), so the November 19th countdown angle is dead — pivot immediately to post-launch reaction memes, graphics/detail shock, and Jason & Lucia couple content. The two top in-campaign clips (551K and 354K) both use a single relatable 'us/you' sentence that holds for the entire clip with high-contrast trailer footage as pure atmosphere — the text IS the joke. The 341K clip (rank 3) proves that even a meme-animal overlay works if the sentence is universally funny and the background is bright and readable. Rank 5 (109K, our closest sister clip) used the Tokyo Girl song, a simple 'chemistry ❤️' label, and clean trailer cuts — proving the song + clean emotional framing also converts. The lowest performer (15K) used a dark, low-readability scene wit",
+  "updated": "2026-11-24",
+  "summary": "Every clip above 350K uses a single sentence of on-screen text that stays locked to the screen for the full clip duration — the text IS the punchline, not a caption for the footage. The top two (2.9M and 913K) both frame Lucia as a lovable but chaotic protagonist the viewer feels protective of, using soft Gen-Z internet language ('fake shower method', 'wdym this is a whole ass criminal') plus 1-2 crying/shocked emojis. Rank 3 (750K) proves a first-person confessional angle ('I almost killed Lucia') hits just as hard as observer framing. Rank 5 (355K) shows platform-envy memes still convert post-launch. The single consistent visual rule across ranks 1, 3, and 5 is bright, readable footage — daytime or well-lit interiors only. The 3-beat escalating experiment from the previous playbook has n",
   "moments_to_pick": [
-    "Post-launch shock/awe moments — first reaction to GTA 6 graphics or detail ('the way this game looks on PS5 is actually illegal')",
-    "PC players watching console players play RIGHT NOW — platform jealousy peaked the moment the game dropped",
-    "Jason & Lucia couple chemistry used as a real-life relationship stand-in ('this is us' format with a punchy label)",
-    "Bright Vice City neon nightlife shots — beach, strip, neon signs at night; high-contrast, colorful, text stays readable",
-    "30fps vs 60fps discourse — still live and driving comments post-launch",
-    "Real-world GTA 6 marketing crossover (Ferrari in Selfridges etc.) used as proof the game is bigger than gaming"
+    "Lucia doing something adorably chaotic or weirdly human in the game world — small animations, idle behaviors, unexpected NPC reactions to her",
+    "Jason accidentally endangering or protecting Lucia — the tension between caring for her and the game's chaos is the proven emotional hook",
+    "Observer/audience POV on Lucia: noticing a detail about her character that makes her feel real or funny ('she really does X wdym')",
+    "First-person confessional: something the player did to or with Lucia/Jason that is funny, embarrassing, or emotional in one sentence",
+    "Platform-envy post-launch: PC players, people without a PS5, people stuck at work while the game is live — universally relatable jealousy",
+    "GTA 6 graphics detail shock: a single environment or animation detail shown across 3 shots that escalates the 'this doesn't look real' reaction"
   ],
   "hook_examples": [
-    "13 years of waiting for THIS 😭🌴",
-    "POV: GTA 6 just dropped and you're still at work:",
-    "The graphics are actually making people emotional fr 💀",
-    "Jason and Lucia > any real couple right now 🥀",
-    "PC players watching PS5 owners right now:",
-    "Nobody told me GTA 6 would hit this different 🌊"
+    "Lucia really said 'not my problem' and walked off 😭✌️",
+    "I cannot be held responsible for what I did to protect her 😭",
+    "She smiles like that but she just robbed three people 😭🫣",
+    "POV: you're Jason watching Lucia handle everything herself:",
+    "The way she moves is actually sending me 😭🌴",
+    "GTA 6 looks so good it should be illegal on 30fps 😭🚨"
   ],
-  "title_formula": "Post-launch reaction angle + specific detail (platform, year wait, character name) + 1-2 emojis, under 60 chars. E.g.: 'GTA 6 Finally Out And We're Not Okay 😭🌴' or 'PC Players Watching PS5 Owners Right Now 💀'",
-  "caption_formula": "1 short punchy sentence that rephrases (not copies) the on-screen joke, adding a beat of extra context or emotion + line break + '🎵 Tokyo Girl — Miri Ben-Ari' (required song credit) + line break + hashtag block. Total under 150 chars excluding hashtags.",
+  "title_formula": "Lead with the specific Lucia/Jason moment or player reaction in plain spoken language + 1 concrete detail (her name, an action, a platform) + 1-2 emojis, under 60 chars. Pattern: '[What she/he/I did] [specific detail] [emoji]'. E.g.: 'Lucia Really Said Goodbye Like That 😭🌴' or 'I Accidentally Sent J",
+  "caption_formula": "One short sentence that rephrases the on-screen joke with a slight new angle or extra beat of emotion (never copy the hook text word for word) + line break + '🎵 Tokyo Girl — Passive' (required song credit) + line break + hashtag block. Keep the sentence under 12 words. Total under 150 chars excludin",
   "hashtags": [
     "#gta6",
     "#gta6edit",
@@ -28,8 +28,8 @@
     "#vicecity"
   ],
   "target_length": [
-    10,
-    13
+    11,
+    14
   ],
   "style": {
     "hook_text": "sentence",
@@ -39,13 +39,13 @@
     "framing": "blur_fill"
   },
   "avoid": [
-    "Any November 19th launch-countdown framing — the game is out, that angle is expired and will read as outdated",
-    "Dark or low-contrast shots (night interiors, dim bedrooms) where white sentence text becomes unreadable — rank 6's 15K performance is the proof",
-    "Niche scenarios fewer than 50% of GTA fans can place themselves in (hyper-regional jokes, single-console-owner household gags)",
-    "Splitting the punchline across 3 separate text beats — the 551K and 354K clips both hold ONE sentence the full 12s; fragmented jokes lose the laugh",
-    "Putting song credit or 'Tokyo Girl' anywhere in the on-screen text overlay — caption only per campaign rules",
-    "Any audio other than Tokyo Girl by Miri Ben-Ari added in TikTok/IG — no voiceover, no dialogue, no ambient game audio"
+    "Any launch-countdown or 'November 19th' framing — the game is out and that angle reads as outdated immediately",
+    "Dark, low-contrast, or night-interior shots where white sentence text becomes unreadable — this is the single biggest performance killer shown in the data",
+    "Splitting the punchline across 3 separate text beats on the main clip — the 2.9M and 750K clips both hold ONE sentence the full clip; fragmented jokes lose the laugh before it lands",
+    "Overly niche scenarios fewer than 60% of GTA fans can self-insert into (hyper-specific single-player build choices, regional references)",
+    "Putting song credit or 'Tokyo Girl' in the on-screen text overlay — caption only per campaign rules",
+    "Any audio other than Tokyo Girl added in TikTok/IG — no voiceover, no dialogue, no game audio"
   ],
-  "experiment": "Try a 3-beat escalating structure on exactly ONE clip this cycle to test against the static single-sentence control: Beat 1 (shot 1, 0–4s) sets the POV setup in 5–7 words, e.g. 'You after 13 years of waiting:'; Beat 2 (shot 2, 4–8s) raises the stakes, e.g. 'The first 10 minutes of GTA 6:'; Beat 3 (s",
-  "our_results_note": "No posts live yet — zero data of our own. All weighting is from campaign peers and trending benchmarks. Prioritize replicating the single static sentence + bright footage formula (proven at 354K–551K) before experimenting with 3-beat structure."
+  "experiment": "On exactly ONE clip this cycle, test a 3-beat escalating structure instead of the static single sentence: Beat 1 (0–4s) sets the observer POV in 5–7 words, e.g. 'Lucia the second she gets out of jail:'; Beat 2 (4–8s) escalates with her action, e.g. 'Already planning the next job 😭'; Beat 3 (8–12s) d",
+  "our_results_note": "No posts live yet — zero data of our own. All weighting is from campaign peers. The static single-sentence formula is proven at 750K–2.9M in this exact campaign; replicate that before scaling the 3-beat experiment. First-person Lucia confessional angle (rank 3, 750K) is underused relative to its per"
 }

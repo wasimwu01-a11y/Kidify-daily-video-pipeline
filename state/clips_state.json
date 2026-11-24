@@ -8,7 +8,8 @@
     "4464d22a-d709-43b1-a9cc-4919359e7f33",
     "b8a76138-9318-41c9-9fea-7f9bb6a1511e",
     "abfe69cc-e0f5-4dfa-91d5-812e5266095a",
-    "febb81d6-5de4-487d-974f-afea627bd82e"
+    "febb81d6-5de4-487d-974f-afea627bd82e",
+    "95918cf2-b483-4dc9-a893-a8406d2846da"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
@@ -19,7 +20,8 @@
     "You on November 19th: / Your boss when you call in sick: / The therapy bill after 72hrs straight:",
     "Lucia: stop getting us in trouble / Jason, already starting a police chase: / Lucia driving the getaway car anyway",
     "Nobody warned me Vice City looks like this / Top down. Sun setting. Zero responsibilities. / This is not a game. This is a whole life.",
-    "Rumor: the GTA 6 map is TWICE trailer size / Theory: Grassrivers area barely shown once / Rockstar saved half the map for after launch"
+    "Rumor: the GTA 6 map is TWICE trailer size / Theory: Grassrivers area barely shown once / Rockstar saved half the map for after launch",
+    "Me the night before GTA 6 drops: / Zero sleep. Fully showered. Console on. / PC players: we are so back... in 2027."
   ],
   "posted": [
     {
@@ -207,6 +209,24 @@
         "framing": "big_center"
       },
       "length_s": 31
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-24",
+      "hook": "Me the night before GTA 6 drops:",
+      "title": "The pre-launch ritual was not optional  #GTA6 #GTA6Hype #Lucia #GrandTheftAuto6 #RockstarGames #gta6edit #gtavi #jasonan",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Trailer 2",
+        "Photos: Jason and Lucia",
+        "Photos: Misc screenshots"
+      ]
     }
   ],
   "scout_seen": {
@@ -252,7 +272,10 @@
     "485fd01a-6710-4cce-a0e7-723de8990827": "2026-11-22",
     "207a3da1-3aae-4cfb-a263-c8503c687134": "2026-11-22",
     "bb66f9eb-b90e-4dd0-8cee-9f3cd566c9a0": "2026-11-23",
-    "f0828cdc-e8c0-4119-8dc5-3f35f02b8721": "2026-11-23"
+    "f0828cdc-e8c0-4119-8dc5-3f35f02b8721": "2026-11-23",
+    "1391fb95-e8a3-4f0b-b146-d0d786e6aee0": "2026-11-24",
+    "91c5082d-7c89-4359-8653-db87a4ca01d5": "2026-11-24",
+    "c3e0abdc-c0d9-46bf-ad79-c6800cd7d4e3": "2026-11-24"
   },
   "candidates": {},
   "pending": {
@@ -307,9 +330,35 @@
       },
       "length_s": 20,
       "created": "2026-11-23"
+    },
+    "a15e9e": {
+      "token": "R_Lx3fbQigqrFxnL",
+      "campaign": "tjr",
+      "file": "tjr_95918cf2_1.mp4",
+      "run_id": "45483706170",
+      "title": "TJR sees the market nuke and does THIS instead #TJR #Shorts",
+      "description": "TJR sees the market nuke and does THIS instead\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
+      "tags": [
+        "TJR",
+        "TJR Trades",
+        "trading",
+        "day trading",
+        "stocks"
+      ],
+      "language": "en",
+      "hook": "Market nuked. He went to the gym.",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 20,
+      "created": "2026-11-24"
     }
   },
   "last_used": {
-    "tjr": "2026-11-23"
+    "tjr": "2026-11-24"
   }
 }
