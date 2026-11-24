@@ -192,6 +192,21 @@
         "Photos: Grassrivers",
         "An Extended Look (gameplay)"
       ]
+    },
+    {
+      "campaign": "tjr",
+      "video_id": "4SwyUqiTwGU",
+      "date": "2026-11-24",
+      "hook": "Why he never wants to trade",
+      "title": "TJR explains why NOT trading is why he's profitable #TJR #Shorts",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 31
     }
   ],
   "scout_seen": {
@@ -241,32 +256,6 @@
   },
   "candidates": {},
   "pending": {
-    "f7b95c": {
-      "token": "9m8cFYvww-7MVzJI",
-      "campaign": "tjr",
-      "file": "tjr_b8a76138_1.mp4",
-      "run_id": "44931317167",
-      "title": "TJR explains why NOT trading is why he's profitable #TJR #Shorts",
-      "description": "TJR explains why NOT trading is why he's profitable\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
-      "tags": [
-        "TJR",
-        "TJR Trades",
-        "trading",
-        "day trading",
-        "stocks"
-      ],
-      "language": "en",
-      "hook": "Why he never wants to trade",
-      "style": {
-        "hook_text": "sentence",
-        "subtitle_case": "sentence",
-        "subtitle_size": "large",
-        "words_per_caption": 4,
-        "framing": "big_center"
-      },
-      "length_s": 31,
-      "created": "2026-11-21"
-    },
     "22a2fe": {
       "token": "vu-2JiqgjdGhQmha",
       "campaign": "tjr",
