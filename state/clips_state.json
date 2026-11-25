@@ -227,6 +227,21 @@
         "Photos: Jason and Lucia",
         "Photos: Misc screenshots"
       ]
+    },
+    {
+      "campaign": "tjr",
+      "video_id": "whUeW_Iwq9M",
+      "date": "2026-11-25",
+      "hook": "He's up $95K and panicking.",
+      "title": "TJR checks his trade and can't believe the number #TJR #Shorts",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 20
     }
   ],
   "scout_seen": {
@@ -304,32 +319,6 @@
       },
       "length_s": 55,
       "created": "2026-11-22"
-    },
-    "2ee0e1": {
-      "token": "0dqWp4itabKa6IyT",
-      "campaign": "tjr",
-      "file": "tjr_febb81d6_1.mp4",
-      "run_id": "45276422640",
-      "title": "TJR checks his trade and can't believe the number #TJR #Shorts",
-      "description": "TJR checks his trade and can't believe the number\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
-      "tags": [
-        "TJR",
-        "TJR Trades",
-        "trading",
-        "day trading",
-        "stocks"
-      ],
-      "language": "en",
-      "hook": "He's up $95K and panicking.",
-      "style": {
-        "hook_text": "sentence",
-        "subtitle_case": "sentence",
-        "subtitle_size": "large",
-        "words_per_caption": 4,
-        "framing": "big_center"
-      },
-      "length_s": 20,
-      "created": "2026-11-23"
     },
     "a15e9e": {
       "token": "R_Lx3fbQigqrFxnL",
