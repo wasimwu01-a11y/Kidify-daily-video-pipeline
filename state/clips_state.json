@@ -21,7 +21,8 @@
     "Lucia: stop getting us in trouble / Jason, already starting a police chase: / Lucia driving the getaway car anyway",
     "Nobody warned me Vice City looks like this / Top down. Sun setting. Zero responsibilities. / This is not a game. This is a whole life.",
     "Rumor: the GTA 6 map is TWICE trailer size / Theory: Grassrivers area barely shown once / Rockstar saved half the map for after launch",
-    "Me the night before GTA 6 drops: / Zero sleep. Fully showered. Console on. / PC players: we are so back... in 2027."
+    "Me the night before GTA 6 drops: / Zero sleep. Fully showered. Console on. / PC players: we are so back... in 2027.",
+    "Jason: I had a plan for this / Lucia, already off-script: / Jason helping her anyway"
   ],
   "posted": [
     {
@@ -257,6 +258,24 @@
         "framing": "big_center"
       },
       "length_s": 55
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-25",
+      "hook": "Jason: I had a plan for this",
+      "title": "He had one plan. She had zero interest in it  #GTA6 #Jason #Lucia #GTA6Lucia #partnersincrime #gta6edit #gtavi #rockstar",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Photos: Jason Duval",
+        "Clip: Lucia Caminos Video Clip",
+        "Photos: Jason and Lucia"
+      ]
     }
   ],
   "scout_seen": {
@@ -305,7 +324,13 @@
     "f0828cdc-e8c0-4119-8dc5-3f35f02b8721": "2026-11-23",
     "1391fb95-e8a3-4f0b-b146-d0d786e6aee0": "2026-11-24",
     "91c5082d-7c89-4359-8653-db87a4ca01d5": "2026-11-24",
-    "c3e0abdc-c0d9-46bf-ad79-c6800cd7d4e3": "2026-11-24"
+    "c3e0abdc-c0d9-46bf-ad79-c6800cd7d4e3": "2026-11-24",
+    "098c2c7a-a338-4638-a53f-3de82008151c": "2026-11-25",
+    "ea416af3-f1aa-4b56-9c8b-f2a51e6d6df4": "2026-11-25",
+    "fe4d1c34-4ed5-4895-9995-0d63bb5cb5a8": "2026-11-25",
+    "93b81d7f-211f-4961-95c7-93b2b78f087d": "2026-11-25",
+    "19d077ab-9fe1-4687-aa2e-f016328d462b": "2026-11-25",
+    "fb4b6ff1-4f22-446e-82d8-6bc9e2ba6278": "2026-11-25"
   },
   "candidates": {},
   "pending": {
