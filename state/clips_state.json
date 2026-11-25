@@ -242,6 +242,21 @@
         "framing": "big_center"
       },
       "length_s": 20
+    },
+    {
+      "campaign": "tjr",
+      "video_id": "V96oFGgQ7W4",
+      "date": "2026-11-25",
+      "hook": "Skydiving hits different when rich",
+      "title": "TJR explains why skydiving got scarier after the money came #TJR #Shorts",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 4,
+        "framing": "big_center"
+      },
+      "length_s": 55
     }
   ],
   "scout_seen": {
@@ -294,32 +309,6 @@
   },
   "candidates": {},
   "pending": {
-    "22a2fe": {
-      "token": "vu-2JiqgjdGhQmha",
-      "campaign": "tjr",
-      "file": "tjr_abfe69cc_1.mp4",
-      "run_id": "45052113910",
-      "title": "TJR explains why skydiving got scarier after the money came #TJR #Shorts",
-      "description": "TJR explains why skydiving got scarier after the money came\n\nClip from TJR's Kick stream: https://kick.com/tjr\n\n#TJR #trading #daytrading #stocks #shorts #tjrtrades #tjrclips #motivation #mindset",
-      "tags": [
-        "TJR",
-        "TJR Trades",
-        "trading",
-        "day trading",
-        "stocks"
-      ],
-      "language": "en",
-      "hook": "Skydiving hits different when rich",
-      "style": {
-        "hook_text": "sentence",
-        "subtitle_case": "sentence",
-        "subtitle_size": "large",
-        "words_per_caption": 4,
-        "framing": "big_center"
-      },
-      "length_s": 55,
-      "created": "2026-11-22"
-    },
     "a15e9e": {
       "token": "R_Lx3fbQigqrFxnL",
       "campaign": "tjr",
