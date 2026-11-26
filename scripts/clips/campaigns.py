@@ -39,6 +39,46 @@ CAMPAIGNS = {
 - "hook" et "youtube_title" en français.""",
     },
 
+    # ---------------- ClipUp GTA VI logo campaign ----------------
+    "clipup": {
+        "name": "ClipUp GTA 6",
+        "enabled": True,
+        "content_rewards_id": "802cf95a-ea84-4070-9a96-8a917831cb16",
+        "platforms": ["instagram", "tiktok", "youtube"],
+        "rate": 0.25,                 # Tier 1 views only (US/UK/CA/AU)
+        # no fixed streamer: each day it finds ENGLISH streamers playing GTA VI on Kick.
+        # To limit it to streamers you choose, list them here, e.g. ["kaneljoseph", "gattouz0"]
+        "kick_channel": None,
+        "kick_category": "grand-theft-auto-vi",
+        "kick_language": "English",
+        "kick_channels": [],
+        "require_title": r"gta ?(6|vi)|grand theft auto vi",
+        "language": "en",
+        "clips_per_day": 1,
+        "min_clip": 20.0,
+        "max_clip": 50.0,
+        "needs_approval": False,
+        "no_currency_symbols": False,
+        "skip_title": r"casino|slot|gambl|roobet|stake\b",
+        "prefer_title": r"",
+        "title_suffix": " #gta6 #Clipup #Shorts",
+        "description": "GTA 6 gameplay from {channel}'s Kick stream: https://kick.com/{channel}\n\n#gta6 #Clipup #GTAVI #shorts",
+        "tags": ["gta6", "Clipup", "GTA 6", "GTA VI", "gameplay"],
+        # the ClipUp logo must be on screen for the WHOLE clip, never covered, stretched or recoloured
+        "logo": {"file": "assets/clipup/Hire Clippers — 1B+ Views Generated (1).png", "width": 780},
+        "rules": """You are an editor for the ClipUp GTA 6 logo campaign.
+Mandatory rules:
+- Clip GTA 6 GAMEPLAY moments only: chaotic, funny or crazy things happening
+  in the game, big reactions WHILE PLAYING, wild police chases, glitches,
+  heists, first impressions of the map. Skip just-chatting, menus, loading
+  screens, breaks and anything not showing the game.
+- English only. Never portray the streamer negatively.
+- Skip gambling/casino talk.
+- English subtitles, clean and correctly spelled (fix game terms: Vice City,
+  Leonida, Jason, Lucia, wanted level).
+- "hook" and "youtube_title" in English; make clear it's GTA 6.""",
+    },
+
     # ---------------- TJR (Reach) ----------------
     "tjr": {
         "name": "TJR",
@@ -93,6 +133,12 @@ RESEARCH = {
                   "news/rumors, memes & hype, Jason & Lucia couple memes, edits & Vice City views. "
                   "Caption must credit the song. Original edits only."),
         "notes": "Our editor controls: the 3 text beats, which visual each beat uses, text case/size, caption + hashtags.",
+    },
+    "clipup": {
+        "content_rewards_id": "802cf95a-ea84-4070-9a96-8a917831cb16",
+        "youtube_query": "GTA 6 gameplay funny moments",
+        "language": "en",
+        "notes": "GTA 6 streamer gameplay clips (Kick) with the ClipUp logo overlaid for the whole clip.",
     },
     "bichou": {
         "content_rewards_id": "ceff4682-947e-40c9-b7df-81a806c89943",

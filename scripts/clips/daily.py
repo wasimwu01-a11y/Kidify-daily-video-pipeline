@@ -32,7 +32,7 @@ def main():
     save_state(state)
     camps = all_campaigns(state)
     eligible = [k for k, c in camps.items()
-                if c.get("enabled", True) and c.get("kick_channel")
+                if c.get("enabled", True) and (c.get("kick_channel") or c.get("kick_category"))
                 and "youtube" in c.get("platforms", ["youtube"])]
     forced = os.environ.get("FORCE_CAMPAIGN", "").strip()
     if forced:

@@ -78,7 +78,7 @@ def find_object(s: str, campaign_id: str) -> dict | None:
             except json.JSONDecodeError:
                 continue
             if isinstance(obj, dict) and obj.get("id") == campaign_id and (
-                    "progressPercentage" in obj or "availableBudgetRaw" in obj):
+                    "progressPercentage" in obj or "availableBudgetRaw" in obj or "metrics" in obj):
                 return obj
     return None
 
@@ -88,7 +88,14 @@ def campaign_status(campaign_id: str) -> dict:
     s = unescape_flight(get(f"https://contentrewards.com/c/campaigns/{campaign_id}"))
     obj = find_object(s, campaign_id) or {}
     status = str(obj.get("status", "")).lower()
-    return {"progress": obj.get("progressPercentage"), "left": obj.get("availableBudgetRaw"),
+    progress, left = obj.get("progressPercentage"), obj.get("availableBudgetRaw")
+    m = obj.get("metrics") or {}
+    # campaign pages: {"budget": cents, "metrics": {"budgetProgressBps": 9898, "budgetSpentCents": ...}}
+    if progress is None and m.get("budgetProgressBps") is not None:
+        progress = m["budgetProgressBps"] / 100
+    if left is None and obj.get("budget") is not None and m.get("budgetSpentCents") is not None:
+        left = (obj["budget"] - m["budgetSpentCents"]) / 100
+    return {"progress": progress, "left": left,
             "ended": status in ("ended", "completed", "archived")}
 
 

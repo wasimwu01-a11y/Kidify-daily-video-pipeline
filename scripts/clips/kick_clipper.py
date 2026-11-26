@@ -62,14 +62,41 @@ def list_vods(channel: str) -> list[dict]:
     for item in data:
         video = item.get("video") or {}
         uuid = video.get("uuid") or item.get("uuid") or str(item.get("id"))
+        cats = item.get("categories") or []
         vods.append({
             "uuid": uuid,
             "title": item.get("session_title") or video.get("title") or "",
+            "categories": " ".join(str(c.get("name", "")) for c in cats if isinstance(c, dict)),
+            "created_at": item.get("created_at") or "",
             "duration_s": (item.get("duration") or 0) / 1000,
             "source": item.get("source") or video.get("source"),
             "url": f"https://kick.com/{channel}/videos/{uuid}",
+            "channel": channel,
         })
     return vods
+
+
+def category_channels(cfg: dict, limit: int = 10) -> list[str]:
+    """Streamers currently live in a Kick category, filtered by language, biggest first."""
+    if cfg.get("kick_channels"):
+        return list(cfg["kick_channels"])
+    found = []
+    for page in (1, 2, 3):
+        try:
+            data = kick_get(f"https://kick.com/stream/livestreams/en?limit=24&page={page}"
+                            f"&sort=desc&subcategory={cfg['kick_category']}")
+        except Exception as e:
+            print(f"Category lookup failed: {e}")
+            break
+        for x in data.get("data", []):
+            ch = (x.get("channel") or {}).get("slug") or x.get("slug")
+            lang = str(x.get("language", ""))
+            if ch and lang.lower() in (cfg.get("kick_language", "English").lower(), "en") and ch not in found:
+                found.append(ch)
+        if not data.get("next_page_url"):
+            break
+    print(f"Live {cfg['kick_category']} streamers ({cfg.get('kick_language')}): {found[:limit]}")
+    return found[:limit]
 
 
 def vod_from_url(url: str) -> dict:
@@ -82,14 +109,24 @@ def vod_from_url(url: str) -> dict:
 
 def pick_vod(cfg: dict, state: dict) -> dict | None:
     manual = os.environ.get("VOD_URL", "").strip()
-    if manual and f"kick.com/{cfg['kick_channel']}/" in manual:
+    if manual and cfg.get("kick_channel") and f"kick.com/{cfg['kick_channel']}/" in manual:
         return vod_from_url(manual)
     done = set(state.get("processed_vods", []))
     skip = re.compile(cfg["skip_title"], re.I) if cfg["skip_title"] else None
     prefer = re.compile(cfg["prefer_title"], re.I) if cfg["prefer_title"] else None
+    need = re.compile(cfg["require_title"], re.I) if cfg.get("require_title") else None
+    channels = [cfg["kick_channel"]] if cfg.get("kick_channel") else category_channels(cfg)
+    vods = []
+    for ch in channels:
+        try:
+            vods += list_vods(ch)[:6 if len(channels) > 1 else 15]
+        except Exception as e:
+            print(f"Can't list {ch}'s VODs: {e}")
     fresh = []
-    for vod in list_vods(cfg["kick_channel"])[:15]:  # newest first
+    for vod in vods:  # each channel newest first; channels biggest first
         if vod["uuid"] in done or not vod["source"]:
+            continue
+        if need and not need.search(f"{vod['title']} {vod.get('categories', '')}"):
             continue
         if skip and skip.search(vod["title"]):
             print(f"Skipping VOD (title filter): {vod['title']}")
@@ -282,8 +319,11 @@ def chunk_subs(subs: list[dict], words_per_caption: int) -> list[dict]:
     return out
 
 
-def render_clip(src_url: str, clip: dict, out_path: str, style: dict | None = None):
+def render_clip(src_url: str, clip: dict, out_path: str, style: dict | None = None,
+                logo: dict | None = None):
     st = {**DEFAULT_STYLE, **(style or {})}
+    if logo:
+        st["framing"] = "blur_fill"   # keeps room under the gameplay for the logo
     duration = clip["end"] - clip["start"]
     ass_path = out_path.replace(".mp4", ".ass")
     subs = chunk_subs(clip["subs"], st["words_per_caption"])
@@ -296,8 +336,12 @@ def render_clip(src_url: str, clip: dict, out_path: str, style: dict | None = No
     # blur_fill: 1080x608 frame centred (y 656-1264); big_center: 1512x851 cropped to 1080 wide
     fg_h = 851 if big else 608
     top_of_video = (1920 - fg_h) // 2
-    write_ass(ass_path, hook, subs, duration,
-              sub_y=top_of_video + fg_h + 40, title_y=max(top_of_video - 230, 180),
+    if logo:
+        # hook at the top, subtitles just ABOVE the gameplay, logo BELOW it: nothing covers the logo
+        sub_y, title_y = top_of_video - 200, 190
+    else:
+        sub_y, title_y = top_of_video + fg_h + 40, max(top_of_video - 230, 180)
+    write_ass(ass_path, hook, subs, duration, sub_y=sub_y, title_y=title_y,
               sub_size=84 if st["subtitle_size"] == "large" else 68)
     fg = "[b]scale=1512:-2,crop=1080:ih[fg];" if big else "[b]scale=1080:-2[fg];"
     vf = (
@@ -305,10 +349,17 @@ def render_clip(src_url: str, clip: dict, out_path: str, style: dict | None = No
         "[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
         "boxblur=20:2,eq=brightness=-0.12[bg];"
         + fg +
-        f"[bg][fg]overlay=(W-w)/2:(H-h)/2,ass='{ffmpeg_filter_path(ass_path)}',fps=30[v]"
+        f"[bg][fg]overlay=(W-w)/2:(H-h)/2,ass='{ffmpeg_filter_path(ass_path)}',fps=30"
     )
+    logo_inputs = []
+    if logo:
+        # same proportions as the file (no stretch/crop/recolour), large and fully on screen
+        vf += f"[base];[1:v]scale={int(logo['width'])}:-1[lg];[base][lg]overlay=(W-w)/2:{top_of_video + fg_h + 45}[v]"
+        logo_inputs = ["-loop", "1", "-i", logo["file"]]
+    else:
+        vf += "[v]"
     run(["ffmpeg", "-y", "-nostdin", *http_opts(src_url),
-         "-ss", f"{clip['start']:.2f}", "-i", src_url, "-t", f"{duration:.2f}",
+         "-ss", f"{clip['start']:.2f}", "-i", src_url, *logo_inputs, "-t", f"{duration:.2f}",
          "-filter_complex", vf, "-map", "[v]", "-map", "0:a?",
          "-c:v", "libx264", "-preset", "veryfast", "-crf", "23",
          "-maxrate", "2800k", "-bufsize", "5600k", "-pix_fmt", "yuv420p",
@@ -346,6 +397,9 @@ def main(campaign: str, state: dict | None = None, quiet_no_vod: bool = False) -
                        f"No new usable {cfg['name']} VOD on kick.com/{cfg['kick_channel']} since the last run.")
         return False
     print(f"{tag} Clipping VOD: {vod['title']} ({vod['url']})")
+    if cfg.get("logo") and not os.path.exists(cfg["logo"]["file"]):
+        send_email(f"{tag} Logo file missing", f"Upload the logo to {cfg['logo']['file']} in the repo.")
+        return False
     low_url, best_url = variant_urls(vod["source"])
 
     audio = load_audio(low_url)
@@ -375,12 +429,12 @@ def main(campaign: str, state: dict | None = None, quiet_no_vod: bool = False) -
         out = os.path.join(OUTPUT_DIR, f"{campaign}_{vod['uuid'][:8]}_{i}.mp4")
         print(f"Rendering clip {i}: {clip['start']:.0f}-{clip['end']:.0f}s - {clip['hook']}")
         style = {**DEFAULT_STYLE, **pb.get("style", {})}
-        render_clip(best_url, clip, out, style)
+        render_clip(best_url, clip, out, style, cfg.get("logo"))
 
         title = (clip["youtube_title"] or clip["hook"] or cfg["name"]) + cfg["title_suffix"]
         extra = [h for h in pb.get("hashtags", []) if h.lower() not in cfg["description"].lower()
                  and h.lower() not in title.lower()][:4]
-        description = f"{clip['youtube_title']}\n\n{cfg['description']}" + (
+        description = f"{clip['youtube_title']}\n\n{cfg['description'].replace('{channel}', vod.get('channel') or cfg.get('kick_channel') or '')}" + (
             " " + " ".join(extra) if extra else "")
         attached = os.path.getsize(out) < EMAIL_SAFE_BYTES
         info = (f"{cfg['name']} clip: {clip['hook']}\n"
