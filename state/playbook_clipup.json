@@ -1,0 +1,51 @@
+{
+  "updated": "2026-11-26",
+  "summary": "Top clips are built around one jaw-dropping GTA 6 gameplay detail that feels impossible or absurd — a self-aware NPC, a hidden hell dimension, unhinged in-game radio — paired with a static hook text card that stays on screen the entire clip so scroll-stoppers read it even without sound. Clips under 30 seconds dominate the top 3 spots, but a single longer clip (rank 5, ~64s) proves a mystery/tutorial-style reveal can hold viewers when each second shows something new. The winning face-cam clips (ranks 3 and 6) use irony: the streamer says one thing on camera while the game immediately does the opposite, creating instant comedic tension. Trending YouTube Shorts confirm that NPC reactions and big-streamer first-impression chaos are the two highest-ceiling categories right now. Every top perfor",
+  "moments_to_pick": [
+    "NPC doing something physically or logically impossible — fighting back in a way that breaks expectations, glitching through the world, or showing awareness of the player",
+    "Streamer making a confident claim on camera ('this car will stay perfect') and the game immediately destroying it within seconds",
+    "In-game audio or dialogue that is shockingly dark, funny, or absurd — radio ads, NPC one-liners, police scanner chatter",
+    "Secret or hidden location discovered mid-stream — a garage, building, or zone that teleports or transforms the character",
+    "Wild police chase where the wanted level escalates faster than the streamer expects, forcing a panicked reaction",
+    "First-time reactions to a Vice City landmark, animal, or physics moment the streamer clearly did not anticipate"
+  ],
+  "hook_examples": [
+    "GTA 6 NPCs can actually fight back now…",
+    "This garage in Vice City sends you somewhere terrifying",
+    "He said 'I won't crash it' — then GTA 6 happened",
+    "The GTA 6 police are on a completely different level 😭",
+    "Nobody told him Lucia could do THIS in GTA 6",
+    "GTA 6 has a secret the map doesn't show you 👀"
+  ],
+  "title_formula": "Start with the punchline or the shocking detail in 5-8 words, then add 'in GTA 6' so the game is confirmed early. Add one emotional emoji at the end. Example: 'This NPC Knew It Was a Simulation in GTA 6 😭' or 'He Swore He Wouldn't Crash It… GTA 6 Had Other Plans 💀'. Never use clickbait that the clip",
+  "caption_formula": "One sentence that teases the moment without fully spoiling it, written in English, conversational tone, as if texting a friend. Add 1-2 relevant emojis inline. End with a soft engagement question like 'Did you know this was in the game?' or 'Has this happened to you yet?'. Then a line break and hash",
+  "hashtags": [
+    "#GTA6",
+    "#GTAVI",
+    "#GTA6Gameplay",
+    "#GTA6Funny",
+    "#GTA6Clips",
+    "#GTA6NPC"
+  ],
+  "target_length": [
+    20,
+    45
+  ],
+  "style": {
+    "hook_text": "sentence",
+    "subtitle_case": "sentence",
+    "subtitle_size": "large",
+    "words_per_caption": 3,
+    "framing": "big_center"
+  },
+  "avoid": [
+    "Loading screens, menus, or any frame without active GTA 6 gameplay visible",
+    "Clips where the streamer is just talking to chat with no on-screen game action",
+    "Hook text that disappears after 2 seconds — the top clips keep it pinned the whole clip",
+    "Full-sentence subtitles with 6-8 words — the winning style is 1-3 punchy words per flash",
+    "Casino or gambling gameplay per campaign rules",
+    "Negative framing of the streamer — the irony hook works because the streamer looks confident, not foolish"
+  ],
+  "experiment": "For one clip this cycle, open with a pill-shaped white text box at the top of the frame (mimicking rank 5's style: 'How to [do X] in GTA 6 🔥') instead of a plain hook card — this tutorial-style framing drove 1.7M views and has not been tested on our own account yet.",
+  "our_results_note": "not enough data yet"
+}

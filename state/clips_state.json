@@ -9,7 +9,8 @@
     "b8a76138-9318-41c9-9fea-7f9bb6a1511e",
     "abfe69cc-e0f5-4dfa-91d5-812e5266095a",
     "febb81d6-5de4-487d-974f-afea627bd82e",
-    "95918cf2-b483-4dc9-a893-a8406d2846da"
+    "95918cf2-b483-4dc9-a893-a8406d2846da",
+    "2f0b8f92-a48a-41a5-86e5-29d017acce71"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
@@ -330,7 +331,8 @@
     "fe4d1c34-4ed5-4895-9995-0d63bb5cb5a8": "2026-11-25",
     "93b81d7f-211f-4961-95c7-93b2b78f087d": "2026-11-25",
     "19d077ab-9fe1-4687-aa2e-f016328d462b": "2026-11-25",
-    "fb4b6ff1-4f22-446e-82d8-6bc9e2ba6278": "2026-11-25"
+    "fb4b6ff1-4f22-446e-82d8-6bc9e2ba6278": "2026-11-25",
+    "401f9458-d426-47fb-9f8f-83002a162cb5": "2026-11-26"
   },
   "candidates": {},
   "pending": {
@@ -363,5 +365,8 @@
   },
   "last_used": {
     "tjr": "2026-11-24"
-  }
+  },
+  "retired": [
+    "tjr"
+  ]
 }
