@@ -297,6 +297,21 @@
         "Photos: Vice City",
         "Clip: Official Cover Art Landscape"
       ]
+    },
+    {
+      "campaign": "clipup",
+      "video_id": "WwfC1PUAmWU",
+      "date": "2026-11-26",
+      "hook": "GTA 6 NPCs have LAWYERS now…",
+      "title": "This GTA 6 NPC Lawyer Said Something Terrifying #gta6 #Clipup #Shorts",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 3,
+        "framing": "big_center"
+      },
+      "length_s": 50
     }
   ],
   "scout_seen": {
@@ -382,32 +397,6 @@
       },
       "length_s": 20,
       "created": "2026-11-24"
-    },
-    "b40299": {
-      "token": "vJKKpyKaQooXYLm1",
-      "campaign": "clipup",
-      "file": "clipup_eac4f291_1.mp4",
-      "run_id": "45885735386",
-      "title": "This GTA 6 NPC Lawyer Said Something Terrifying #gta6 #Clipup #Shorts",
-      "description": "This GTA 6 NPC Lawyer Said Something Terrifying\n\nGTA 6 gameplay from ratedepicz's Kick stream: https://kick.com/ratedepicz\n\n#gta6 #Clipup #GTAVI #shorts #GTA6Gameplay #GTA6Funny #GTA6Clips #GTA6NPC",
-      "tags": [
-        "gta6",
-        "Clipup",
-        "GTA 6",
-        "GTA VI",
-        "gameplay"
-      ],
-      "language": "en",
-      "hook": "GTA 6 NPCs have LAWYERS now…",
-      "style": {
-        "hook_text": "sentence",
-        "subtitle_case": "sentence",
-        "subtitle_size": "large",
-        "words_per_caption": 3,
-        "framing": "big_center"
-      },
-      "length_s": 50,
-      "created": "2026-11-26"
     }
   },
   "last_used": {
