@@ -10,7 +10,8 @@
     "abfe69cc-e0f5-4dfa-91d5-812e5266095a",
     "febb81d6-5de4-487d-974f-afea627bd82e",
     "95918cf2-b483-4dc9-a893-a8406d2846da",
-    "2f0b8f92-a48a-41a5-86e5-29d017acce71"
+    "2f0b8f92-a48a-41a5-86e5-29d017acce71",
+    "eac4f291-131c-4fb6-b199-4256662fc52f"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
@@ -23,7 +24,8 @@
     "Nobody warned me Vice City looks like this / Top down. Sun setting. Zero responsibilities. / This is not a game. This is a whole life.",
     "Rumor: the GTA 6 map is TWICE trailer size / Theory: Grassrivers area barely shown once / Rockstar saved half the map for after launch",
     "Me the night before GTA 6 drops: / Zero sleep. Fully showered. Console on. / PC players: we are so back... in 2027.",
-    "Jason: I had a plan for this / Lucia, already off-script: / Jason helping her anyway"
+    "Jason: I had a plan for this / Lucia, already off-script: / Jason helping her anyway",
+    "Vice City really said come lose yourself here / No mission. No timer. Just this drive. / This is not a game. This is a whole life."
   ],
   "posted": [
     {
@@ -277,6 +279,24 @@
         "Clip: Lucia Caminos Video Clip",
         "Photos: Jason and Lucia"
       ]
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-26",
+      "hook": "Vice City really said come lose yourself here",
+      "title": "Vice City got no business looking this good  #GTA6 #ViceCity #GTA6Edit #Rockstar #GamingTikTok #gtavi #rockstargames #ja",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Launch Trailer",
+        "Photos: Vice City",
+        "Clip: Official Cover Art Landscape"
+      ]
     }
   ],
   "scout_seen": {
@@ -332,7 +352,8 @@
     "93b81d7f-211f-4961-95c7-93b2b78f087d": "2026-11-25",
     "19d077ab-9fe1-4687-aa2e-f016328d462b": "2026-11-25",
     "fb4b6ff1-4f22-446e-82d8-6bc9e2ba6278": "2026-11-25",
-    "401f9458-d426-47fb-9f8f-83002a162cb5": "2026-11-26"
+    "401f9458-d426-47fb-9f8f-83002a162cb5": "2026-11-26",
+    "9a53cf91-e0ac-4157-bed0-81eb7095827d": "2026-11-26"
   },
   "candidates": {},
   "pending": {
@@ -361,10 +382,37 @@
       },
       "length_s": 20,
       "created": "2026-11-24"
+    },
+    "b40299": {
+      "token": "vJKKpyKaQooXYLm1",
+      "campaign": "clipup",
+      "file": "clipup_eac4f291_1.mp4",
+      "run_id": "45885735386",
+      "title": "This GTA 6 NPC Lawyer Said Something Terrifying #gta6 #Clipup #Shorts",
+      "description": "This GTA 6 NPC Lawyer Said Something Terrifying\n\nGTA 6 gameplay from ratedepicz's Kick stream: https://kick.com/ratedepicz\n\n#gta6 #Clipup #GTAVI #shorts #GTA6Gameplay #GTA6Funny #GTA6Clips #GTA6NPC",
+      "tags": [
+        "gta6",
+        "Clipup",
+        "GTA 6",
+        "GTA VI",
+        "gameplay"
+      ],
+      "language": "en",
+      "hook": "GTA 6 NPCs have LAWYERS now…",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 3,
+        "framing": "big_center"
+      },
+      "length_s": 50,
+      "created": "2026-11-26"
     }
   },
   "last_used": {
-    "tjr": "2026-11-24"
+    "tjr": "2026-11-24",
+    "clipup": "2026-11-26"
   },
   "retired": [
     "tjr"
