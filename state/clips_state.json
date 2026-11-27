@@ -11,7 +11,8 @@
     "febb81d6-5de4-487d-974f-afea627bd82e",
     "95918cf2-b483-4dc9-a893-a8406d2846da",
     "2f0b8f92-a48a-41a5-86e5-29d017acce71",
-    "eac4f291-131c-4fb6-b199-4256662fc52f"
+    "eac4f291-131c-4fb6-b199-4256662fc52f",
+    "6913345e-f969-4ba3-9505-e11b7869f120"
   ],
   "tokyo_girl_history": [
     "PAUSE the trailer at 1:19... / Theory: that sign spells VICE CITY 2 / Rockstar hides everything in plain sight",
@@ -25,7 +26,8 @@
     "Rumor: the GTA 6 map is TWICE trailer size / Theory: Grassrivers area barely shown once / Rockstar saved half the map for after launch",
     "Me the night before GTA 6 drops: / Zero sleep. Fully showered. Console on. / PC players: we are so back... in 2027.",
     "Jason: I had a plan for this / Lucia, already off-script: / Jason helping her anyway",
-    "Vice City really said come lose yourself here / No mission. No timer. Just this drive. / This is not a game. This is a whole life."
+    "Vice City really said come lose yourself here / No mission. No timer. Just this drive. / This is not a game. This is a whole life.",
+    "Rumor: there is a whole region Rockstar never show / Every trailer cuts north of Grassrivers. Every sin / Theory: they saved an entire area for post-launch"
   ],
   "posted": [
     {
@@ -312,6 +314,24 @@
         "framing": "big_center"
       },
       "length_s": 50
+    },
+    {
+      "campaign": "tokyo_girl",
+      "date": "2026-11-27",
+      "hook": "Rumor: there is a whole region Rockstar never show",
+      "title": "Rockstar really said not yet. Not one frame north. \n#GTA6 #GTA6Map #GTA6Theory #GTA6Rumor #Rockstar #gta6edit #gtavi #ro",
+      "style": {
+        "hook_text": "sentence",
+        "subtitle_case": "sentence",
+        "subtitle_size": "large",
+        "words_per_caption": 8,
+        "framing": "blur_fill"
+      },
+      "visuals": [
+        "Trailer 2",
+        "Photos: Grassrivers",
+        "An Extended Look (gameplay)"
+      ]
     }
   ],
   "scout_seen": {
@@ -368,7 +388,12 @@
     "19d077ab-9fe1-4687-aa2e-f016328d462b": "2026-11-25",
     "fb4b6ff1-4f22-446e-82d8-6bc9e2ba6278": "2026-11-25",
     "401f9458-d426-47fb-9f8f-83002a162cb5": "2026-11-26",
-    "9a53cf91-e0ac-4157-bed0-81eb7095827d": "2026-11-26"
+    "9a53cf91-e0ac-4157-bed0-81eb7095827d": "2026-11-26",
+    "463491d6-3df2-4dd2-ae32-1d1d5d8b1735": "2026-11-27",
+    "6711aef7-f017-4b92-a02b-2dad1e211ea9": "2026-11-27",
+    "98afe516-3a9d-405d-a76a-67375d3120a7": "2026-11-27",
+    "3b30ef83-f6ec-4d93-b734-b4f90fb703a4": "2026-11-27",
+    "b2c1b695-bbba-4267-9d19-79385f637ae4": "2026-11-27"
   },
   "candidates": {},
   "pending": {

@@ -1,24 +1,24 @@
 {
-  "updated": "2026-11-24",
-  "summary": "Every clip above 350K uses a single sentence of on-screen text that stays locked to the screen for the full clip duration — the text IS the punchline, not a caption for the footage. The top two (2.9M and 913K) both frame Lucia as a lovable but chaotic protagonist the viewer feels protective of, using soft Gen-Z internet language ('fake shower method', 'wdym this is a whole ass criminal') plus 1-2 crying/shocked emojis. Rank 3 (750K) proves a first-person confessional angle ('I almost killed Lucia') hits just as hard as observer framing. Rank 5 (355K) shows platform-envy memes still convert post-launch. The single consistent visual rule across ranks 1, 3, and 5 is bright, readable footage — daytime or well-lit interiors only. The 3-beat escalating experiment from the previous playbook has n",
+  "updated": "2026-11-27",
+  "summary": "Every clip above 350K locks a single sentence of on-screen text for the full duration — the text is the punchline, not a label for the footage. The top two (2.9M and 784K) both frame Lucia as a chaotic-but-lovable protagonist using soft Gen-Z internet language plus 1-2 crying/shocked emojis. Rank 4 (355K) confirms platform-envy and community-relatable memes convert strongly even after launch. Rank 6 (342K) proves a visual-showcase angle ('how I dress Lucia') with a slow outfit reveal across 3 shots hits almost as hard — the text stays static and minimal, letting the visuals do the escalation. The consistent separating factor between top and bottom performers is bright, well-lit footage with white sentence-case text readable from frame one; dark shots and fragmented multi-beat text consiste",
   "moments_to_pick": [
-    "Lucia doing something adorably chaotic or weirdly human in the game world — small animations, idle behaviors, unexpected NPC reactions to her",
-    "Jason accidentally endangering or protecting Lucia — the tension between caring for her and the game's chaos is the proven emotional hook",
-    "Observer/audience POV on Lucia: noticing a detail about her character that makes her feel real or funny ('she really does X wdym')",
-    "First-person confessional: something the player did to or with Lucia/Jason that is funny, embarrassing, or emotional in one sentence",
-    "Platform-envy post-launch: PC players, people without a PS5, people stuck at work while the game is live — universally relatable jealousy",
-    "GTA 6 graphics detail shock: a single environment or animation detail shown across 3 shots that escalates the 'this doesn't look real' reaction"
+    "Lucia doing something weirdly human or adorably chaotic in an idle or ambient animation — the smaller and more specific the detail, the stronger the 'wdym she really does this' reaction",
+    "Jason accidentally endangering or over-protecting Lucia — the tension between his loyalty and the game's chaos is the proven emotional hook at 784K",
+    "First-person player confessional about something funny, embarrassing, or emotional the player did to/with Lucia or Jason in one sentence ('I almost killed Lucia' format, proven at 784K)",
+    "Visual showcase: 3 shots of the same subject escalating — outfit changes, location beauty, or a detail that gets closer/more impressive each shot (proven at 342K with Lucia outfits)",
+    "Platform-envy or community-relatable jealousy meme — PC players waiting, people at work, anyone who can't play yet; universally self-insertable and proven at 355K",
+    "A single GTA 6 environment or animation detail shown across 3 bright daytime shots that escalates the 'this cannot be a video game' reaction"
   ],
   "hook_examples": [
-    "Lucia really said 'not my problem' and walked off 😭✌️",
-    "I cannot be held responsible for what I did to protect her 😭",
-    "She smiles like that but she just robbed three people 😭🫣",
-    "POV: you're Jason watching Lucia handle everything herself:",
-    "The way she moves is actually sending me 😭🌴",
-    "GTA 6 looks so good it should be illegal on 30fps 😭🚨"
+    "Lucia really said 'not today' and walked away ✌️😭",
+    "I did not mean to do that to her I am so sorry 😭🫣",
+    "She just got out and she's already running the city 😭🌴",
+    "The way Jason looks at her is genuinely sending me 😭",
+    "POV: me dressing Lucia like she's going somewhere nice 😭👗",
+    "GTA 6 graphics are actually an attack on my mental health 😭🌴"
   ],
-  "title_formula": "Lead with the specific Lucia/Jason moment or player reaction in plain spoken language + 1 concrete detail (her name, an action, a platform) + 1-2 emojis, under 60 chars. Pattern: '[What she/he/I did] [specific detail] [emoji]'. E.g.: 'Lucia Really Said Goodbye Like That 😭🌴' or 'I Accidentally Sent J",
-  "caption_formula": "One short sentence that rephrases the on-screen joke with a slight new angle or extra beat of emotion (never copy the hook text word for word) + line break + '🎵 Tokyo Girl — Passive' (required song credit) + line break + hashtag block. Keep the sentence under 12 words. Total under 150 chars excludin",
+  "title_formula": "Lead with the specific Lucia/Jason moment or player reaction in plain spoken language + one concrete detail (her name, an action, a location) + 1-2 emojis, under 60 characters. Pattern: '[What she/he/I did] [specific detail] [emoji]'. Examples: 'Lucia Really Walked Out Like That 😭✌️' or 'I Nearly Lo",
+  "caption_formula": "One short sentence (under 12 words) that reframes the on-screen joke with a slight new angle or extra emotional beat — never copy the hook text word for word. Line break. '🎵 Tokyo Girl — Passive' (required song credit, always present). Line break. Hashtag block. Total under 150 characters excluding ",
   "hashtags": [
     "#gta6",
     "#gta6edit",
@@ -39,13 +39,13 @@
     "framing": "blur_fill"
   },
   "avoid": [
-    "Any launch-countdown or 'November 19th' framing — the game is out and that angle reads as outdated immediately",
-    "Dark, low-contrast, or night-interior shots where white sentence text becomes unreadable — this is the single biggest performance killer shown in the data",
-    "Splitting the punchline across 3 separate text beats on the main clip — the 2.9M and 750K clips both hold ONE sentence the full clip; fragmented jokes lose the laugh before it lands",
-    "Overly niche scenarios fewer than 60% of GTA fans can self-insert into (hyper-specific single-player build choices, regional references)",
-    "Putting song credit or 'Tokyo Girl' in the on-screen text overlay — caption only per campaign rules",
+    "Dark, low-contrast, or night-interior shots where white sentence text becomes unreadable — the single biggest performance killer visible across all ranked clips",
+    "Splitting the punchline across 3 separate text beats on the main clip — the 2.9M and 784K clips both hold ONE sentence the full clip; fragmented jokes lose the laugh before it lands",
+    "Any launch-date or countdown framing — the game is live and that reads as outdated immediately",
+    "Overly niche scenarios fewer than 60% of GTA fans can self-insert into (hyper-specific build choices, regional references, in-game UI screenshots without context)",
+    "Putting song credit or 'Tokyo Girl' anywhere in the on-screen text overlay — caption only per campaign rules",
     "Any audio other than Tokyo Girl added in TikTok/IG — no voiceover, no dialogue, no game audio"
   ],
-  "experiment": "On exactly ONE clip this cycle, test a 3-beat escalating structure instead of the static single sentence: Beat 1 (0–4s) sets the observer POV in 5–7 words, e.g. 'Lucia the second she gets out of jail:'; Beat 2 (4–8s) escalates with her action, e.g. 'Already planning the next job 😭'; Beat 3 (8–12s) d",
-  "our_results_note": "No posts live yet — zero data of our own. All weighting is from campaign peers. The static single-sentence formula is proven at 750K–2.9M in this exact campaign; replicate that before scaling the 3-beat experiment. First-person Lucia confessional angle (rank 3, 750K) is underused relative to its per"
+  "experiment": "On exactly ONE clip this cycle, test the visual-showcase escalation format proven at 342K: Beat 1 (0–4s) wide establishing shot with the static hook sentence already visible, e.g. 'Vice City actually looks like this at golden hour 😭🌴'; Beat 2 (4–8s) a tighter mid shot of the same scene or subject, s",
+  "our_results_note": "No posts live yet — zero data of our own. All weighting is from campaign peers. The static single-sentence joke formula is proven at 342K–2.9M in this exact campaign and must be the default for every clip until we have our own numbers. The visual-showcase format (rank 6, 342K) is underused relative "
 }
